@@ -1,5 +1,4 @@
-Django==4.0.4
-python
+Django>=3.2
 whitenoise==6.1.0
 django-bootstrap-datepicker-plus==4.0.0
 django-import_export==2.8.0
