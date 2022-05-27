@@ -1,0 +1,2849 @@
+{% load static %}
+<!--<html lang="en">-->
+<html lang="en-gb" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PDF2WORD</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+<!--  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">-->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="{% url 'indexing_data5' %}" class="logo d-flex align-items-center">
+        <img src="{% static 'images/CNX_log.jpg' %}" alt="">
+        <span class="d-none d-lg-block">CNX Protect</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+<!--        <li class="nav-item dropdown">-->
+
+<!--          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">-->
+<!--            <i class="bi bi-bell"></i>-->
+<!--            <span class="badge bg-primary badge-number">4</span>-->
+<!--          </a>&lt;!&ndash; End Notification Icon &ndash;&gt;-->
+
+<!--          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">-->
+<!--            <li class="dropdown-header">-->
+<!--              You have 4 new notifications-->
+<!--              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <hr class="dropdown-divider">-->
+<!--            </li>-->
+
+<!--            <li class="notification-item">-->
+<!--              <i class="bi bi-exclamation-circle text-warning"></i>-->
+<!--              <div>-->
+<!--                <h4>Lorem Ipsum</h4>-->
+<!--                <p>Quae dolorem earum veritatis oditseno</p>-->
+<!--                <p>30 min. ago</p>-->
+<!--              </div>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--              <hr class="dropdown-divider">-->
+<!--            </li>-->
+
+<!--            <li class="notification-item">-->
+<!--              <i class="bi bi-x-circle text-danger"></i>-->
+<!--              <div>-->
+<!--                <h4>Atque rerum nesciunt</h4>-->
+<!--                <p>Quae dolorem earum veritatis oditseno</p>-->
+<!--                <p>1 hr. ago</p>-->
+<!--              </div>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--              <hr class="dropdown-divider">-->
+<!--            </li>-->
+
+<!--            <li class="notification-item">-->
+<!--              <i class="bi bi-check-circle text-success"></i>-->
+<!--              <div>-->
+<!--                <h4>Sit rerum fuga</h4>-->
+<!--                <p>Quae dolorem earum veritatis oditseno</p>-->
+<!--                <p>2 hrs. ago</p>-->
+<!--              </div>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--              <hr class="dropdown-divider">-->
+<!--            </li>-->
+
+<!--            <li class="notification-item">-->
+<!--              <i class="bi bi-info-circle text-primary"></i>-->
+<!--              <div>-->
+<!--                <h4>Dicta reprehenderit</h4>-->
+<!--                <p>Quae dolorem earum veritatis oditseno</p>-->
+<!--                <p>4 hrs. ago</p>-->
+<!--              </div>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--              <hr class="dropdown-divider">-->
+<!--            </li>-->
+<!--            <li class="dropdown-footer">-->
+<!--              <a href="#">Show all notifications</a>-->
+<!--            </li>-->
+
+<!--          </ul>&lt;!&ndash; End Notification Dropdown Items &ndash;&gt;-->
+
+<!--        </li>&lt;!&ndash; End Notification Nav &ndash;&gt;-->
+
+<!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="{% static 'img/profile-img.jpg' %}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{user.username}}</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              {% if user.is_authenticated %}
+
+<!--                                    <li> <h4 style= "font-size:1vw;">-->
+<!--                                            <h4 style= "font-size:1.25vw; color:yellow;">-->
+                                         {{user.username}}
+<!--              <h6>Sumithra R</h6>-->
+              <span>, Data Scientist</span>
+                                              {% endif %}
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="account/logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="https://app.powerbi.com/links/8OnEUJ60_5?ctid=599e51d6-2f8c-4347-8e59-1f795a51a98c&pbi_source=linkShare&bookmarkGuid=4d2dc58f-c1df-4981-997f-a54e1c8a8e31">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Out-Of-Box</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'experiment' %}">
+              <i class="bi bi-circle"></i><span>Contract Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-accordion.html">
+              <i class="bi bi-circle"></i><span>FMEA</span>
+            </a>
+          </li>
+
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>On-Demand</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'Contract_Library1' %}">
+              <i class="bi bi-circle"></i><span>Contract Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-layouts.html">
+              <i class="bi bi-circle"></i><span>FMEA</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+      <li class="nav-item" href="{% url 'indexing_data5' %}">
+        <a class="nav-link collapsed" href="{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">
+          <i class="ri-arrow-down-circle-line"></i>
+          <span>Download</span>
+        </a>
+      </li>
+      <!-- End Forms Nav -->
+
+      <!-- End Tables Nav -->
+
+      <!-- End Charts Nav -->
+
+      <!-- End Icons Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <!-- End F.A.Q Page Nav -->
+
+<!--      <a href= "{{df_filepath_out}}" download rel="noopener noopener" target="_blank">-->
+<!--                                <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download Output for single file</i></h9></br>-->
+<!--                            </a>-->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <!-- End Register Page Nav -->
+
+      <!-- End Login Page Nav -->
+
+      <!-- End Error 404 Page Nav -->
+
+      <!-- End Blank Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+<main id="main" class="main">
+    <div class="pagetitle">
+      <h1>On-Demand</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'indexing_data5' %}">Home</a></li>
+          <li class="breadcrumb-item active">Contract Library</li>
+        </ol>
+      </nav>
+    </div>
+<!--<section id="objective" class="section">-->
+<!--     <div class="title-box text-center"><h2 class="title" style="color:white">Action</h2></div>-->
+<!--                            <div class="container">-->
+ <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js"></script>
+
+<section class="section dashboard">
+    <div class="container">
+     <div class="card-body">
+          <div class="row">
+                <div class="col-md-25">
+                    <div class="content-tab-1">
+                        <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Generate Contract report for Single or few files:</h3>
+                        <div class="tab2-services-box" >
+                            <div class="container">
+                            <div class="row" >
+                            <div class="col-md-25">
+					        <div class="content-tab-1">
+						    <ul class="nav">
+							<li class="active" style="background-color:#C1D82F ">
+                                <a aria-expanded="true" href="#tab-content-1" data-toggle="tab">
+								<i class="fa fa-briefcase" ></i>
+								<h4><b>select few files for execution</b></h4>
+<!--                                    <h6 style="color: white"> select files for execution </h6>-->
+								</a>
+								<div class="tab-arrow"></div>
+							</li>
+<!--                            <li class="active"style="background-color:#C1D82F ">-->
+<!--								<a aria-expanded="true" href="#tab-content-4" data-toggle="tab">-->
+<!--								<i class="icon-global"></i>-->
+<!--								<h4><b>Keyword Search</b></h4>-->
+<!--								</a>-->
+<!--								<div class="tab-arrow"></div>-->
+<!--							</li>-->
+                            </ul>
+						<div class="tab-content-main">
+                            <div class="container">
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="tab-content-1">
+                                        <div class="col-md-25">
+                                            <div class="tab2-services-box">
+                                                <div class="services-info" >
+                                                    <h4 style="color:white"> Choose pdf file to convert into word </h4>
+                                                    <form method = "post" action="read_file1" enctype="multipart/form-data">
+                                                         {% csrf_token %}
+<!--                                                             <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be search"><br>-->
+                                                        <div class ="form-group">
+<!--                                                                <label> Note File </label>-->
+                                                            <p> <input type= "file" name = "notesfile1" placeholder="Report Attachment" class = "form-control"></p>
+<!--                                                                <input type= file required name = "notesfile" class = "form-control">-->
+                                                            <p><input type = "submit" value = "Upload" /></p>
+                                                        </div>
+                                                        <form method = "post" action="read_file1" enctype="multipart/form-data">
+<!--                                                             <a href="{% url 'read_file' %}" class="btn btn-info">-->
+<!--                                                                <i class="fa fa-link"></i>-->
+<!--                                                                 <b>Add File to the list: </b>-->
+<!--                                                                </a>-->
+<!--                                                             {% if file.notesfile % }-->
+                                                            <a href="{{file.notesfile1.url}}"></a>
+                                                             <!--&lt;!&ndash;                                                             <li> <h4 style ="color:yellow;">Hello, {{user.username}}</h4></li>&ndash;&gt;-->
+<!--                                                             {% for message in messages %}-->
+<!--                                                             <h5 style ="color:red;">-->
+<!--                                                                 {{message}}-->
+<!--                                                             </h5>-->
+<!--                                                             {% endfor %}-->
+                                                        </form>
+                                                        <form action="pdfword" method="post"></form><!--                                                        <a href="keyword_list.html"></a>-->
+                                                    </form>
+<!--                                                         <form enctype = "multipart/form-data" action = "save_file" method = "post">-->
+<!--                                                         <p>File: <input type = "file" name = "filename" /></p>-->
+<!--                                                             <p><input type = "submit" value = "Upload" /></p>-->
+<!--                                                         </form>-->
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+						    </div><!--/.tab-content-main--><!--/.tab-content-main-->
+					    </div>
+
+				</div>
+                </div> <!--/.row-->
+                </div> <!--/.container-->
+                </div>
+                    <a href="{{file.notesfile1.url}}"></a>
+                     <!--&lt;!&ndash;                                                             <li> <h4 style ="color:yellow;">Hello, {{user.username}}</h4></li>&ndash;&gt;-->
+                        <h5 style ="color:yellow;">
+                            {% for F_count in read_files %}
+                         Number of file selected: {{F_Count}}
+                            {% endfor %}
+                        </h5>
+                        {% for message in messages %}
+                        <h5 class="blink" style ="color:powdergreen;">
+                         {{message}}
+                        </h5>
+                        {% endfor %}
+     <div class="container">
+          <div class="row">
+                <div class="col-md-18">
+					<div class="content-tab-1">
+						<ul class="nav">
+                            <li class="active"style="background-color:#C1D82F ">
+								<a aria-expanded="true" href="#tab-content-4" data-toggle="tab">
+								<i class="icon-global"></i>
+								<h4><b>Select Keyword to be Search</b></h4>
+								</a>
+								<div class="tab-arrow"></div>
+							</li>
+						</ul>
+						<div class="tab-content-main">
+								<div class="container">
+
+                                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                                                            crossorigin="anonymous"></script>
+
+
+                           <p><a href="{% url 'pdfword' %}" class="btn btn-info">
+                             Generate result for single file
+                           </a><form action="pdfword" method="post"></form>
+                           </p>
+<!--                        <h5 style ="color:Blue;">Number of file selected:{{df_filepath_out}} </h5>-->
+<!--                            <a href= "{{df_filepath_trk}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h7 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h7>-->
+<!--                           </a>-->
+<!--                           <a href= "{{df_filepath_out}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: Output file</i></h9></br>-->
+<!--                           </a>-->
+<!--                        <br> <h6 style="color:white" > Here the result for the page number: {{PP5}}</h6></br>-->
+<!--                       <br style ="color:yellow;"> </br>-->
+<!--<div class="crop">-->
+                        <
+                            <a href= "{{df_filepath_out}}" download rel="noopener noopener" target="_blank">
+                                <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download Output doc file</i></h9></br>
+                            </a>
+                            </div>
+                            <br>
+
+<!--                            <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to home page ">-->
+<!--    <h7 style ="color:white;" >-->
+<!--        <img src="{% static 'images/homepage1.png' %}" alt="">-->
+<!--    </h7>-->
+<!-- </a>-->
+<!--                                                    </li>-->
+
+<!--                                                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to previous page ">-->
+<!--<a href="{% url 'indexing_data1' %}">-->
+<!--     <img src="{% static 'images/previous.jfif' %}" alt="">-->
+<!--&lt;!&ndash;    <h6 style ="color:Red; ">Back to previous page</h6>&ndash;&gt;-->
+<!--</a>-->
+<!--     </li>-->
+
+                            </div>
+                    </div>
+                    <br>
+                </div>
+          </div>
+     </div>
+
+            </div> <!--/.row-->
+      </div> <!--/.container-->
+</div>
+          </div> <!--/.row-->
+
+      </div>
+
+<!--   BATCH PROCESSING-->
+<!-- <div class="tab2-services-box">-->
+                        <div class="content-tab-1">
+<!--                            <div class="tab2-services-box" >-->
+                        <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Generate Contract report for Batch processing:</h3>
+                        <a aria-expanded="true" href="#tab-content-2" data-toggle="tab">
+                          <h6 style ="color:yellow;"><u>Click here </u> </h6>
+                            <div class="container">
+									<div class="tab-content">
+                                        <div class="tab-pane" id="tab-content-2">
+                                            <div class="col-md-10">
+                                                <div class="tab2-services-box">
+                                                <a href="{% url 'Contract_library' %}" class="btn btn-info">
+                                                 Generate Contract Reports
+                                                </a>
+                                                <h6 style="color:yellow;text-transform: capitalize"> <p class="blink">Reports will display soon...</p></h6>
+<!--                                                <h6 style="color:yellow;">  {{path}} </h6>-->
+
+<!--                                                <h8 style="color:white;">  <span>Selected File path is:</span></h8>-->
+                                                <span> <h6 style="color:red;"> Selected File path is:</h6></span>
+                                                <h6 style="color:red;">{{path}} </h6>
+                                                <form action="Contract_library#tab-content-2" method="post"></form>
+<!--                            <a href= "{{df_filepath_trk1}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h7 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h7>-->
+<!--                           </a>-->
+                           <a href= "{{df_filepath_out1}}" download rel="noopener noopener" target="_blank">
+                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: Output file</i></h9></br>
+                           </a>
+                                                <a href= "{{df_filepath_trk1}}" download rel="noopener noopener" target="_blank">
+                                                    <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h9></br>
+                                                </a>
+<!--                                                df_filepath_trk1-->
+<!--                           <a href= "{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h9 class ="small" style ="color:white;"> <i class="fa fa-link"> click here to download: Execution file</i></h9>-->
+<!--                           </a>-->
+                                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                                                            crossorigin="anonymous"></script>
+<!--						  </div>-->
+                                                                              <br>
+ <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to home page ">
+    <h7 style ="color:white;" >
+        <img src="{% static 'images/homepage1.png' %}" alt="">
+    </h7>
+ </a>
+                                                    </li>
+
+                                                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to previous page ">
+<a href="{% url 'indexing_data1' %}">
+     <img src="{% static 'images/previous.jfif' %}" alt="">
+<!--    <h6 style ="color:Red; ">Back to previous page</h6>-->
+</a>
+     </li>
+                    </div>
+                </div>
+          </div>
+      </div>
+                            </div>
+                        </a>
+                    </div>
+<!--                        </div>-->
+                                <!--       INDEXING PROBLEM -->
+                        <div class="content-tab-3">
+<!--                            <div class="tab2-services-box" >-->
+                        <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Indexing Based Search:</h3>
+                        <a aria-expanded="true" href="#tab-content-5" data-toggle="tab">
+                          <h6 style ="color:yellow;"><u>Click here </u> </h6>
+                            <div class="container">
+									<div class="tab-content">
+                                        <div class="tab-pane" id="tab-content-5">
+                                            <div class="col-md-8">
+                                                <label for="cars"  style ="color:yellow;" > Select the following actions from the below drop-down button:</label>
+                                                <div class="tab2-services-box">
+<!--                                    <form action="/action_page.php">-->
+<!--                                                    <label style ="color:yellow;" for="cars"> Choose MSA in the below drop-down button: </label>-->
+<!--                                                    <form action="{% url 'insert_MSA_item' %}" method="post" autocomplete="off">-->
+<!--                                            {% csrf_token %}-->
+<!--                                            <div class="input-group">-->
+<!--                                                <input type="text" class="form-control" name="account">-->
+<!--                                                <div class="input-group-append text-info">-->
+<!--                                                    {% for keyss in MSA_list %}-->
+<!--                                                    <option value="opel"><h5 style="color:white"> {{ keyss.account }}</h5></option>-->
+<!--                                                    {% endfor %}-->
+<!--                                                    <button type="submit" class="btn btn-sm text-info">-->
+<!--                                                        <i class="fa fa-plus-circle fa-lg"></i>-->
+<!--                                                    </button>-->
+                                                    <form action="/action_page.php">
+                                                      <label for="cars"  style ="color:yellow;" > MSA/Process:</label>
+                                                      <select name="cars" id="cars" style ="color:red;">
+                                                        <option value="opel">Abbottdiabetes</option>
+                                                        <option value="opel">Acer</option>
+                                                        <option value="opel">Acoustic(</option>
+                                                        <option value="opel">Adobe</option>
+                                                        <option value="opel">Advancedreimbursement</option>
+                                                        <option value="opel">Aerotek,</option>
+                                                        <option value="opel">Aetnalife</option>
+                                                        <option value="opel">Allianz</option>
+                                                        <option value="opel">Altaruminstitute</option>
+                                                        <option value="opel">Amazon
+                                                        <option value="opel">Americanexpress</option>
+                                                        <option value="opel">Amherst</option>
+                                                        <option value="opel">Anthem</option>
+                                                        <option value="opel">Aptos</option>
+                                                        <option value="opel">Ascensiadiabetes</option>
+                                                        <option value="opel">Atheneusa
+                                                        <option value="opel">Autodesk</option>
+                                                        <option value="opel">Avista</option>
+                                                        <option value="opel">Barclaysus</option>
+                                                        <option value="opel">Belkin</option>
+                                                        <option value="opel">Bosch</option>
+                                                        <option value="opel">CarTrawler</option>
+                                                        <option value="opel">Catalina</option>
+                                                        <option value="opel">Centrinex</option>
+                                                        <option value="opel">Cigna</option>
+                                                        <option value="opel">Cignacorporate</option>
+                                                        <option value="opel">Ciscosystems</option>
+                                                        <option value="opel">Dell-cnxc</option>
+                                                        <option value="opel">GoDaddy</option>
+                                                        <option value="opel">Google</option>
+                                                        <option value="audi">Audi</option>
+                                                      </select>
+                                                      <br><br>
+<!--                                                      <input type="submit" value="Submit">-->
+                                                    </form>
+
+                                                    <form action="/action_page.php">
+                                                      <label for="Theme"  style ="color:yellow;" >Theme/Topic:</label>
+                                                      <select name="cars" id="Theme" style ="color:red;">
+                                                        <option value="opel">Penalties (client)</option>
+                                                        <option value="opel">Point of Contact</option>
+                                                        <option value="opel">Health Insurance</option>
+                                                        <option value="opel">Cyber Liability Insurance</option>
+                                                        <option value="opel">PCI</option>
+                                                        <option value="opel">Other Security Requirement</option>
+                                                        <option value="opel">Liability</option>
+                                                        <option value="opel">Fraud Prevention</option>
+                                                        <option value="opel">Penetration testing</option>
+                                                        <option value="opel">BCP/ DR</option>
+                                                        <option value="opel">GDPR</option>
+                                                        <option value="opel">ISO 27001 / ISO 22301</option>
+                                                        <option value="opel">Call Recording</option>
+                                                        <option value="opel">Background Checks required as per client requirement</option>
+                                                        <option value="opel">SSAE 18</option>
+                                                        <option value="opel">Recording Devices</option>
+                                                        <option value="opel">Client ID Management</option>
+                                                        <option value="opel">Record Management</option>
+                                                        <option value="opel">WAH allowed as per client contract</option>
+                                                        <option value="opel">Location Requirements</option>
+                                                        <option value="opel">Physical Security</option>
+                                                        <option value="opel">Social Engineering</option>
+                                                        <option value="opel">Admin Permission for Endpoint</option>
+                                                        <option value="opel">Personnel</option>
+                                                      </select>
+                                                      <br><br>
+                                                      <input type="submit" value="Submit">
+                                                    </form>
+
+                                                    <form action="{% url 'MSA_list' %}" method="post" autocomplete="off">
+                                                    </form>
+                                                    <a href="{% url 'master_data' %}" >
+                                                    Generate Report:
+                                                    <div class="container">
+                                                    <div class="row">
+<!--                                                    <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--&lt;!&ndash;                    <img src="{% static 'images/images (2).jif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                    <span><br>MSA</span>-->
+<!--                                                    <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_1}}</pre>-->
+<!--                                                    </div>-->
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                &lt;!&ndash;                    <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                        <span><br>Keywords</span>-->
+<!--                                                        <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_2}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                        &lt;!&ndash;                    <img src="{% static 'images/keyword.png' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                            <span><br>Sentence</span>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_3}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                        &lt;!&ndash;                    <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                            <span><br>Theme/Topic</span>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_4}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                        &lt;!&ndash;                    <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                            <span><br>File Name</span>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_5}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                        &lt;!&ndash;                    <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                            <span><br>File creation</span>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_6}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                            </div>-->
+                                                        <a href= "{{DF17_1}}" download rel="noopener noopener" target="_blank">
+                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download the Output file</i></h9></br>
+                           </a>
+                                                    </div>
+                                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                                                            crossorigin="anonymous"></script>
+<!--&lt;!&ndash;						  </div>&ndash;&gt;-->
+                                                                              <br>
+
+                                                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to home page ">
+    <a href="{% url 'indexing_data5' %}">
+    <h7 style ="color:white;" >
+        <img src="{% static 'images/homepage1.png' %}" alt="">
+    </h7>
+ </a>
+                                                    </li>
+
+                                                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to previous page ">
+<a href="{% url 'indexing_data1' %}">
+     <img src="{% static 'images/previous.jfif' %}" alt="">
+<!--    <h6 style ="color:Red; ">Back to previous page</h6>-->
+</a>
+     </li>
+
+<!--                                                        -->
+<!--    <h5 style ="color:Red; ">Back to previous page</h5>-->
+<!-- </a>-->
+                    </div>
+                                        </div>
+                                        </div>
+                </div>
+          </div>
+                        </a>
+      </div>
+                        </a>
+<!--                        </div>-->
+
+<!--        </div>-->
+<!--                </div>-->
+<!--          </div>-->
+<!--      </div>-->
+                        <script>
+                        $(document).ready(function(){
+                        $('[data-toggle="tooltip"]').tooltip();
+                           });
+                        </script>
+  </section>
+</main>
+
+  <!-- Recent Activity -->
+          <!-- End Recent Activity -->
+          <!-- Budget Report -->
+<!-- End Budget Report -->
+          <!-- Website Traffic -->
+
+  <!-- End Website Traffic -->
+          <!-- News & Updates Traffic -->
+          <!-- End News & Updates -->
+        <!-- End Right side columns -->
+ <!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Concentrix</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://scholar.google.com/citations?user=fDvDh2MAAAAJ&hl=en">SUMITHRA R</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/chart.js/chart.min.js' %}"></script>
+  <script src="{% static 'vendor/echarts/echarts.min.js' %}"></script>
+  <script src="{% static 'vendor/quill/quill.min.js' %}"></script>
+  <script src="{% static 'vendor/simple-datatables/simple-datatables.js' %}"></script>
+  <script src="{% static 'vendor/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+<head>
+<!--        <link rel="icon" href="https://sih.gov.in/img/favicon-sih.png" type="image/png" sizes="16x16">-->
+<!--        <meta charset="utf-8">-->
+<!--         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+<!--        <meta name="description" content="">-->
+<!--        <meta name="csrf-token" content="GUadl22FEAcvXziHLGdpYQSHHpzk0A4nXTRCVewh">-->
+<!--        <meta name="author" content="">-->
+<!--        <title>Smart India Hackathon 2022</title>-->
+
+<!--	&lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-2SFBJN4W5W"></script>-->
+<!--<script>-->
+<!--  window.dataLayer = window.dataLayer || [];-->
+<!--  function gtag(){dataLayer.push(arguments);}-->
+<!--  gtag('js', new Date());-->
+
+<!--  gtag('config', 'G-2SFBJN4W5W');-->
+<!--</script>-->
+
+<!--    &lt;!&ndash; CSS&ndash;&gt;-->
+<!--    &lt;!&ndash;<link type="text/css" rel="stylesheet"  href="https://sih.gov.in/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>&ndash;&gt;-->
+
+<!--<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet" type="text/css">-->
+<!--<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">-->
+
+<!--	<link href="https://sih.gov.in/css/mobile-menu.css" rel="stylesheet" type="text/css">-->
+<!--	<link href="https://sih.gov.in/css/bootstrap.css" rel="stylesheet" type="text/css">-->
+<!--	<link href="https://sih.gov.in/css/bootstrap-select.css" rel="stylesheet" type="text/css">-->
+<!--	<link href="https://sih.gov.in/css/font-awesome.css" rel="stylesheet" type="text/css">-->
+<!--	<link href="https://sih.gov.in/css/slick.css" rel="stylesheet" type="text/css">-->
+<!--	<link href="https://sih.gov.in/css/style_new.css" rel="stylesheet" type="text/css">-->
+<!--	<link href="https://sih.gov.in/css/responsive.css" rel="stylesheet" type="text/css">-->
+<!--	<link href="https://sih.gov.in/css/animate.css" rel="stylesheet" type="text/css">-->
+<!--	<link href="https://sih.gov.in/css/bs_leftnavi.css" rel="stylesheet" type="text/css">-->
+
+<!--  &lt;!&ndash; JS&ndash;&gt;-->
+<!--  &lt;!&ndash; <script src="https://sih.gov.in/lib/jquery-3.0.0.min.js" type="text/javascript"></script> &ndash;&gt;-->
+<!--  &lt;!&ndash; <link href="https://sih.gov.in/dataTable/css/jquery.dataTables.css" rel="stylesheet" />-->
+<!--  <script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script> &ndash;&gt;-->
+<!--  <script src="https://sih.gov.in/lib/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>-->
+<!--  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+<!--  <script type="text/javascript" src=" https://sih.gov.in/js/typeahead.js"></script>-->
+
+<!--  <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>-->
+<!--  <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>-->
+<!-- </head>-->
+
+<!--<body>-->
+
+<!--&lt;!&ndash; <a href="#" class="scrollup">Scroll</a> &ndash;&gt;-->
+
+<!--<div class="d-none d-sm-block">-->
+
+<!--    <nav class="navbar navbar-expand-md navbar-dark fixed-top mb-5" id="banner">-->
+<!--        <a class="navbar-brand" href="https://sih.gov.in/"><span><img src="https://sih.gov.in/img1/SIH2022-white-logo.png" class="img-responsive"></span></a>-->
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+
+<!--  <div class="collapse navbar-collapse" id="collapsibleNavbar">-->
+<!--        <ul class="navbar-nav ml-auto">-->
+<!--      <li class="nav-item dropdown">-->
+<!--        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--          Discover about SIH-->
+<!--        </a>-->
+<!--        <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+
+
+<!--          <div class="container">-->
+<!--            <div class="row">-->
+<!--              <ul class="nav nav-tabs navTabs" id="myTab2" role="tablist">-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link active" data-toggle="tab" href="#disSIH1" role="tab" aria-controls="disSIH1">SIH 2022</a>-->
+<!--  </li>-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link" data-toggle="tab" href="#disSIH2" role="tab" aria-controls="disSIH2">Past Events</a>-->
+<!--  </li>-->
+<!--  &lt;!&ndash; <li class="nav-item">-->
+<!--    <a class="nav-link" data-toggle="tab" href="#disSIH3" role="tab" aria-controls="disSIH3">Learning Resources</a>-->
+<!--  </li>-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link" data-toggle="tab" href="#disSIH4" role="tab" aria-controls="disSIH4">Success Stories</a>-->
+<!--  </li> &ndash;&gt;-->
+<!--</ul>-->
+
+
+
+<!--<div class="tab-content tabContentMenu">-->
+<!--  <div class="tab-pane active" id="disSIH1" role="tabpanel">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                &lt;!&ndash; <h3>Classified further into:</h3> &ndash;&gt;-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/sih2022"> About SIH 2022</a></li>-->
+<!--                    &lt;!&ndash; <li><a href="https://sih.gov.in/organisingCommittee"> About Us</a></li>&ndash;&gt;-->
+<!--                    <li><a href="https://sih.gov.in/sih2022#sih-process-flow"> SIH 2022 Process Flow</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/SIH2022Themes"> SIH 2022 Themes</a></li>-->
+<!--                    &lt;!&ndash; <li><a href="https://sih.gov.in/sih2022#sih2020themes"> SIH 2022 Themes</a></li> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <li><a href="https://sih.gov.in/sih2020PS"> Problem Statements</a></li> &ndash;&gt;-->
+<!--                   &lt;!&ndash; <li><a href="https://sih.gov.in/sih2022PS"> Problem Statements</a></li>&ndash;&gt;-->
+<!--					<li><a href="https://sih.gov.in/sih2022PS"> Problem Statements</a></li>-->
+<!--                    &lt;!&ndash; <li><a href="#"> Policy and Process</a></li> &ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="tab-pane" id="disSIH2" role="tabpanel">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-4">-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/sih2017"> SIH 2017</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2018Software"> SIH 2018 Software</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2018Hardware"> SIH 2018 Hardware</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2019"> SIH 2019 Software</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2019Hard"> SIH 2019 Hardware</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--			<div class="col-md-4">-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/sih2020Software"> SIH 2020 Software</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2020Hardware"> SIH 2020 Hardware</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="tab-pane" id="disSIH3" role="tabpanel">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/importantResources"> Learning Material</a></li>-->
+<!--                    <li><a target="_BLANK" href="https://sih.gov.in/letters/SIH_2020_traning_ad.pdf"> Online Training</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="tab-pane" id="disSIH4" role="tabpanel">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://mic.gov.in/micoutcome.php" target="_BLANK"> Winning Ideas </a></li>-->
+<!--        					<li><a href="https://sih.gov.in/videoPrototypes"> Video Prototypes </a></li>-->
+<!--        					&lt;!&ndash; <li><a href="#"> Feedback by Students </a></li> &ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.col-md-4  &ndash;&gt;-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;  /.container  &ndash;&gt;-->
+<!--        </div>-->
+<!--      </li>-->
+
+
+
+
+
+<!--     &lt;!&ndash; <li class="nav-item dropdown">-->
+<!--        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Social Media</a>-->
+<!--        <div class="dropdown-menu dropdown-menu-cust-social-media">-->
+<!--            <a class="dropdown-item" href="https://sih.gov.in/mediaNewsUpdate">News Updates</a>-->
+<!--            <a class="dropdown-item" href="https://sih.gov.in/mediaSocialMedia">Social Wall</a>-->
+<!--            <a class="dropdown-item" href="#">Supporters</a>-->
+<!--            <a class="dropdown-item" href="https://sih.gov.in/testimonials">Testimonials</a>-->
+<!--            <a class="dropdown-item" href="https://sih.gov.in/organisingCommittee">Organising committee</a>-->
+<!--        </div>-->
+<!--      </li> &ndash;&gt;-->
+
+<!--      <li class="nav-item dropdown">-->
+<!--  <a class="nav-link" href="https://sih.gov.in/implementationTeam" id="navbarDropdown">implementation Team</a>-->
+<!--    &lt;!&ndash; <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--    <div class="container">-->
+<!--            <div class="row">-->
+<!--        <ul class="nav nav-tabs navTabs" id="myTab2" role="tablist">-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link active" data-toggle="tab" href="#newsSIH1" role="tab" aria-controls="newsSIH1">News Update</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" data-toggle="tab" href="#socialSIH1" role="tab" aria-controls="socialSIH1">Social Wall</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" data-toggle="tab" href="#testimonialsSIH1" role="tab" aria-controls="testimonialsSIH1">Testimonials</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" data-toggle="tab" href="#messagesSIH1" role="tab" aria-controls="messagesSIH1">Messages</a>-->
+<!--          </li>-->
+<!--        </ul>-->
+
+<!--        <div class="tab-content tabContentMenu">-->
+<!--          <div class="tab-pane active" id="newsSIH1" role="tabpanel">-->
+<!--            <div class="container">-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                  <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/mediaNewsUpdate#pm-message"> Address by PM</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/mediaNewsUpdate#press-conf"> Press Conference</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/mediaNewsUpdate#speech-interview"> Speeches & Interviews</a></li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="tab-pane" id="socialSIH1" role="tabpanel">-->
+<!--            <div class="container">-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                  <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/mediaSocialMedia"> Social Media News</a></li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="tab-pane" id="testimonialsSIH1" role="tabpanel">-->
+<!--            <div class="container">-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                  <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/testimonials#testimonialStudents"> Testimonials by Students</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/testimonials#testimonialOrganization"> Testimonials by Organizations</a></li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="tab-pane" id="messagesSIH1" role="tabpanel">-->
+<!--            <div class="container">-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                  <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/messages"> Messages</a></li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>&ndash;&gt;-->
+<!--</li>-->
+
+<!--<li class="nav-item">-->
+<!--       &lt;!&ndash;  <a class="nav-link" href="http://cs.co/sih202001" target="_BLANK">International Hackathon</a> &ndash;&gt;-->
+<!--        <a class="nav-link" href="https://mic.gov.in/hackathon" target="_BLANK">International Hackathon</a>-->
+<!--      </li>-->
+
+
+<!--<li class="nav-item dropdown">-->
+<!--        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--          Partner/Challenger-->
+<!--        </a>-->
+<!--        <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+
+
+<!--          <div class="container">-->
+<!--            <div class="row">-->
+<!--              <ul class="nav nav-tabs navTabs" id="myTab2" role="tablist">-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link active" data-toggle="tab" href="#disSIH1" role="tab" aria-controls="disSIH1">Partner/Challenger</a>-->
+<!--  </li>-->
+<!--  &lt;!&ndash; <li class="nav-item">-->
+<!--    <a class="nav-link" data-toggle="tab" href="#disSIH2" role="tab" aria-controls="disSIH2">Challenger</a>-->
+<!--  </li> &ndash;&gt;-->
+<!--  &lt;!&ndash; <li class="nav-item">-->
+<!--    <a class="nav-link" data-toggle="tab" href="#disSIH3" role="tab" aria-controls="disSIH3">Learning Resources</a>-->
+<!--  </li>-->
+<!--  <li class="nav-item">-->
+<!--    <a class="nav-link" data-toggle="tab" href="#disSIH4" role="tab" aria-controls="disSIH4">Success Stories</a>-->
+<!--  </li> &ndash;&gt;-->
+<!--</ul>-->
+
+
+
+<!--<div class="tab-content tabContentMenu">-->
+<!--  <div class="tab-pane active" id="disSIH1" role="tabpanel">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                &lt;!&ndash; <h3>Classified further into:</h3> &ndash;&gt;-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/partner"> Partners/Sponsors</a></li>-->
+<!--                     <li><a href="https://sih.gov.in/challenger"> Challengers</a></li>-->
+<!--                 &lt;!&ndash;   <li><a href="https://sih.gov.in/sih2022#sih-process-flow"> SIH 2022 Process Flow</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2022#sih2020themes"> SIH 2022 Themes</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2020PS"> Problem Statements</a></li>  &ndash;&gt;-->
+<!--                    &lt;!&ndash; <li><a href="#"> Policy and Process</a></li> &ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="tab-pane" id="disSIH2" role="tabpanel">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-4">-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/Challenger">Challengers</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2018Software"> SIH 2018 Software</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2018Hardware"> SIH 2018 Hardware</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2019"> SIH 2019 Software</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2019Hard"> SIH 2019 Hardware</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--			<div class="col-md-4">-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/sih2020Software"> SIH 2020 Software</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2020Hardware"> SIH 2020 Hardware</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="tab-pane" id="disSIH3" role="tabpanel">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://sih.gov.in/importantResources"> Learning Material</a></li>-->
+<!--                    <li><a target="_BLANK" href="https://sih.gov.in/letters/SIH_2020_traning_ad.pdf"> Online Training</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="tab-pane" id="disSIH4" role="tabpanel">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <ul class="pastEventList">-->
+<!--                    <li><a href="https://mic.gov.in/micoutcome.php" target="_BLANK"> Winning Ideas </a></li>-->
+<!--        					<li><a href="https://sih.gov.in/videoPrototypes"> Video Prototypes </a></li>-->
+<!--        					&lt;!&ndash; <li><a href="#"> Feedback by Students </a></li> &ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.col-md-4  &ndash;&gt;-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;  /.container  &ndash;&gt;-->
+<!--        </div>-->
+<!--      </li>-->
+
+
+
+<!--    &lt;!&ndash;  <li class="nav-item dropdown">-->
+<!--        <a class="nav-link dropdown-toggle" href="https://www.sih.gov.in/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--          New Announcement-->
+<!--        </a> &ndash;&gt;-->
+
+<!--        &lt;!&ndash; <div class="dropdown-menu forScrollMenu" aria-labelledby="navbarDropdown">-->
+<!--     &lt;!&ndash;     <div class="container">-->
+<!--            <div class="row">-->
+<!--			  <div class="col-md-4">-->
+<!--                <div class="newAnnBg">-->
+<!--                    <h3>Hardware finale results</h3>-->
+<!--                    <p>SIH 2020, Hardware finale results.</p>-->
+<!--                    <a href="https://sih.gov.in/hardwareFinalResult2020">View More</a>-->
+<!--                </div>-->
+<!--				<div class="newBox">-->
+<!--					<p>New</p>-->
+<!--				 </div>-->
+<!--              </div>-->
+<!--              <div class="col-md-4">-->
+<!--                <div class="newAnnBg">-->
+<!--                    <h3>Software finale results</h3>-->
+<!--                    <p>SIH 2020, Software finale results.</p>-->
+<!--                    <a href="https://sih.gov.in/SoftwarefinalResult2020">View More</a>-->
+<!--                </div>-->
+<!--				<div class="newBox">-->
+<!--					<p>New</p>-->
+<!--				 </div>-->
+<!--              </div> &ndash;&gt;-->
+<!--			  &lt;!&ndash; <div class="col-md-4">-->
+<!--                <div class="newAnnBg">-->
+<!--                    <h3>Software edition results</h3>-->
+<!--                    <p>SIH 2020, Software edition results.</p>-->
+<!--                    <a href="https://sih.gov.in/SoftwarefinalResult">View More</a>-->
+<!--                </div>-->
+<!--              </div> &ndash;&gt;-->
+<!--              &lt;!&ndash; <div class="col-md-4">-->
+<!--                  <div class="newAnnBg">-->
+<!--                    <h3>Hardware edition results</h3>-->
+<!--                    <p>SIH 2020, Hardware edition results.</p>-->
+<!--                    <a href="https://sih.gov.in/hwResultPhase1">View More</a>-->
+<!--                </div>-->
+<!--				 <div class="newBox">-->
+<!--					<p>New</p>-->
+<!--				 </div>-->
+<!--              </div> &ndash;&gt;-->
+
+<!--			  &lt;!&ndash; <div class="col-md-4">-->
+<!--                  <div class="newAnnBg1">-->
+<!--                    <h3>Hardware Edition - Phase 2 Evaluation</h3>-->
+<!--                    <p>List of videos submitted on SIH portal. </p>-->
+<!--                    <a target="_BLANK" href="https://sih.gov.in/letters/SIH_Hardware_Edition-2020.pdf">View More</a>-->
+<!--                </div>-->
+<!--				 <div class="newBox">-->
+<!--					<p>New</p>-->
+<!--				 </div>-->
+<!--              </div> &ndash;&gt;-->
+
+<!--			  &lt;!&ndash; <div class="col-md-4">-->
+<!--                  <div class="newAnnBg1">-->
+<!--                    <h3>Hardware edition results</h3>-->
+<!--                    <p>SIH 2020, Hardware Teams Selected for L3E.</p>-->
+<!--                    <a target="_BLANK" href="https://sih.gov.in/hardwareShortlistedL3E">View More</a>-->
+<!--                </div>-->
+<!--				 <div class="newBox">-->
+<!--					<p>New</p>-->
+<!--				 </div>-->
+<!--              </div>-->
+
+<!--            </div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;  /.container  &ndash;&gt;-->
+<!--        &lt;!&ndash;</div> &ndash;&gt;-->
+<!--        </li>-->
+
+
+
+<!--        &lt;!&ndash; <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Support</a>-->
+<!--            <div class="dropdown-menu dropdown-menu-cust">-->
+<!--                <a class="dropdown-item" href="https://sih.gov.in/faqs">FAQs</a>-->
+<!--                <a class="dropdown-item" href="https://sih.gov.in/contactUs">Contact Us</a>-->
+<!--            </div>-->
+<!--        </li> &ndash;&gt;-->
+
+<!--        <li class="nav-item dropdown">-->
+<!--          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>-->
+<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--            <div class="container">-->
+<!--                    <div class="row">-->
+<!--                <ul class="nav nav-tabs navTabs" id="myTab2" role="tablist">-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link active" data-toggle="tab" href="#faqSIH1" role="tab" aria-controls="faqSIH1">FAQs</a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" data-toggle="tab" href="#contactSIH2" role="tab" aria-controls="contactSIH2">Reach Us</a>-->
+<!--                  </li>-->
+<!--                </ul>-->
+
+<!--                <div class="tab-content tabContentMenu">-->
+<!--                   <div class="tab-pane active" id="faqSIH1" role="tabpanel">-->
+<!--                    <div class="container">-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-12">-->
+<!--                          <ul class="pastEventList">-->
+<!--                            <li><a href="https://sih.gov.in/faqs#college-spoc"> For Company SPOC</a></li>-->
+<!--                            <li><a href="https://sih.gov.in/faqs#team"> For Team</a></li>-->
+<!--                          </ul>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="tab-pane" id="contactSIH2" role="tabpanel">-->
+<!--                    <div class="container">-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-12">-->
+<!--                          <ul class="pastEventList">-->
+<!--                            <li><a href="https://sih.gov.in/contactUs"> Contact us</a></li>-->
+<!--                          </ul>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </li>-->
+
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="/signin">Login/Register <img src="https://sih.gov.in/img1/login.png" alt=""></a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</ul>-->
+<!--    </div>-->
+<!--</nav>-->
+<!--</div>-->
+<!--&lt;!&ndash; Desktop Menu End  &ndash;&gt;-->
+
+<!--&lt;!&ndash; Mobile Menu Start  &ndash;&gt;-->
+<!--<div class="d-block d-sm-none">-->
+<!--<header class="nav-top">-->
+<!--	<a class="navbar-brand" href="https://www.sih.gov.in/"><span><img src="https://sih.gov.in/img1/SMART-INDIA-HACKATHON-2020.png" class="img-responsive"></span></a>-->
+<!--	<span class="hamburger material-icons" id="ham">menu</span>-->
+<!--</header>-->
+
+<!--<nav class="nav-drill">-->
+<!--  <ul class="nav-items nav-level-1">-->
+<!--    <li class="nav-item-mobile nav-expand">-->
+<!--			<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--				Discover about SIH-->
+<!--			</a>-->
+<!--			<ul class="nav-items nav-expand-content">-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						SIH 2022-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2022">-->
+<!--								 About SIH 2022-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/organisingCommittee">-->
+<!--								 About Us-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2022#sih-process-flow">-->
+<!--								 SIH 2022 Process Flow-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							&lt;!&ndash; <a class="nav-link-mobile" href="https://sih.gov.in/sih2022#sih2020themes">-->
+<!--								 SIH 2022 Themes-->
+<!--							</a> &ndash;&gt;-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/SIH2022Themes">-->
+<!--								 SIH 2022 Themes-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2022PS">-->
+<!--								 Problem Statements-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Past Events-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2017">-->
+<!--								  SIH 2017-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2018Software">-->
+<!--								  SIH 2018 Software-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2018Hardware">-->
+<!--								 SIH 2018 Hardware-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2019">-->
+<!--								  SIH 2019 Software-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2019Hard">-->
+<!--								  SIH 2019 Hardware-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2020Software">-->
+<!--								  SIH 2020 Software-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/sih2020Hardware">-->
+<!--								  SIH 2020 Hardware-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--				&lt;!&ndash; <li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Learning Resources-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/importantResources">-->
+<!--								   Learning Material-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/letters/SIH_2020_traning_ad.pdf" target="_BLANK">-->
+<!--								   Online Training-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li> &ndash;&gt;-->
+<!--			&lt;!&ndash;	<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Success Stories-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://mic.gov.in/micoutcome.php" target="_BLANK">-->
+<!--								    Winning Ideas-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/videoPrototypes">-->
+<!--								    Video Prototypes-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li> &ndash;&gt;-->
+<!--			</ul>-->
+<!--		</li>-->
+<!--    &lt;!&ndash; <li class="nav-item-mobile nav-expand">-->
+<!--			<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--				News & Media-->
+<!--			</a>-->
+<!--			<ul class="nav-items nav-expand-content">-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						News Update-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/mediaNewsUpdate#pm-message">-->
+<!--								  Address by PM-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						 <li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/mediaNewsUpdate#press-conf">-->
+<!--								  Press Conference-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/mediaNewsUpdate#speech-interview">-->
+<!--								  Speeches & Interviews-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Social Wall-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/mediaSocialMedia">-->
+<!--								   Social Media News-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Testimonials-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/testimonials#testimonialStudents">-->
+<!--								    Testimonials by Students-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/testimonials#testimonialOrganization">-->
+<!--								    Testimonials by Organizations-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Messages-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/messages">-->
+<!--								     Messages-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</li> &ndash;&gt;-->
+<!--		<li class="nav-item-mobile">-->
+<!--			<a class="nav-link-mobile" href="https://sih.gov.in/implementationTeam" target="_BLANK">-->
+<!--				Implementation Team-->
+<!--			</a>-->
+<!--		</li>-->
+
+<!--    <li class="nav-item-mobile">-->
+<!--			<a class="nav-link-mobile" href="https://mic.gov.in/hackathon" target="_BLANK">-->
+<!--				International Hackathon-->
+<!--			</a>-->
+<!--		</li>-->
+<!--    &lt;!&ndash; <li class="nav-item-mobile nav-expand">-->
+<!--			<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--				 New Announcement-->
+<!--			</a>-->
+<!--			<ul class="nav-items nav-expand-content">-->
+<!--				 <li class="nav-item-mobile">-->
+<!--					<div class="container newMobileWhite">-->
+<!--						<div class="row">-->
+<!--						  <div class="col-md-12">-->
+<!--							<div class="newAnnBg">-->
+<!--								<h3>Software edition results</h3>-->
+<!--								<p>SIH 2020, Software edition results.</p>-->
+<!--								<a href="https://sih.gov.in/SoftwarefinalResult">View More</a>-->
+<!--							</div>-->
+<!--						  </div>-->
+<!--						  <div class="col-md-12">-->
+<!--							<div class="newAnnBg">-->
+<!--								<h3>Hardware edition results</h3>-->
+<!--								<p>SIH 2020, Hardware edition results.</p>-->
+<!--								<a href="https://sih.gov.in/hwResultPhase1">View More</a>-->
+<!--							</div>-->
+<!--							 <div class="newBox">-->
+<!--								<p>New</p>-->
+<!--							 </div>-->
+<!--						  </div>-->
+<!--						  <div class="col-md-12">-->
+<!--							  <div class="newAnnBg">-->
+<!--								<h3>Hardware Edition - Phase 2 Evaluation</h3>-->
+<!--								<p>List of videos submitted on SIH portal. </p>-->
+<!--								<a target="_BLANK" href="https://sih.gov.in/letters/SIH_Hardware_Edition-2020.pdf">View More</a>-->
+<!--							</div>-->
+<!--							 <div class="newBox">-->
+<!--								<p>New</p>-->
+<!--							 </div>-->
+<!--						  </div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</li> &ndash;&gt;-->
+
+<!--		<li class="nav-item-mobile nav-expand">-->
+<!--			<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--				Partner/Challenger-->
+<!--			</a>-->
+<!--			<ul class="nav-items nav-expand-content">-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Partner-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/partner">-->
+<!--								   Partners/Sponsors-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/challenger">-->
+<!--								   Challengers-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Challenger-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/partner">-->
+<!--								    Partners/Sponsors-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/challenger">-->
+<!--								   Challengers-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</li>-->
+
+<!--    <li class="nav-item-mobile nav-expand">-->
+<!--			<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--				Support-->
+<!--			</a>-->
+<!--			<ul class="nav-items nav-expand-content">-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						FAQs-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/faqs#college-spoc">-->
+<!--								   For Company SPOC-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/faqs#team">-->
+<!--								   For Team-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--				<li class="nav-item-mobile nav-expand">-->
+<!--					<a class="nav-link-mobile nav-expand-link" href="#">-->
+<!--						Reach Us-->
+<!--					</a>-->
+<!--					<ul class="nav-items nav-expand-content">-->
+<!--						<li class="nav-item-mobile">-->
+<!--							<a class="nav-link-mobile" href="https://sih.gov.in/contactUs">-->
+<!--								    Contact us-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</li>-->
+<!--		<li class="nav-item-mobile">-->
+<!--			<a class="nav-link-mobile" href="/signin">-->
+<!--				<img src="https://sih.gov.in/img1/login.png" alt=""> Login/Register-->
+<!--			</a>-->
+<!--		</li>-->
+<!--  </ul>-->
+
+<!--</nav>-->
+<!--</div>-->
+
+
+
+<!--White Hour Solutions-->
+
+
+<!--<div id="demo" class="carousel slide" data-ride="carousel">-->
+<!--  &lt;!&ndash; The slideshow &ndash;&gt;-->
+<!--  <div class="carousel-inner">-->
+<!--    <div class="carousel-item active">-->
+<!--      <img src="img/problem-statement-bg.jpg" alt="Slide One" width="1100" height="500">-->
+<!--      <div class="carousel-caption">-->
+<!--        <h3 class="prob-statement">Problem Statement</h3>-->
+<!--        <p class="contact-us-para">Solutions</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;<section class="psBox1">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--				<div class="col-md-12">-->
+<!--					<h2>PROBLEM STATEMENTS</h2>-->
+<!--				</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section> &ndash;&gt;-->
+
+<!--<section class="total-statement">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <div class="statement-box">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-6">-->
+<!--                            <h3>Total Statements</h3>-->
+<!--                            <p>As per available data</p>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-3">-->
+<!--                            <div class="hard">-->
+<!--                                <h3>102</h3>-->
+<!--                                <p>Hardware</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-3">-->
+<!--                            <div class="soft">-->
+<!--                                <h3>457</h3>-->
+<!--                                <p>Software</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--</section>-->
+
+
+<!--<section class="prob-statement-panel">-->
+<!--    <div class="container">-->
+<!--        <div class="row catBox">-->
+<!--            <div class="col-md-4">-->
+<!--                <div class="labelBox">-->
+<!--                    <label>Select Theme/School</label>-->
+<!--                </div>-->
+<!--                <div class="short-by-box">-->
+<!--                    <select name="sort-by" id="technology"  class="sortByPS">-->
+<!--                        <option value="QWxs" selected>All</option>-->
+<!--                                                    <option value="MQ==" >Agriculture, FoodTech & Rural Development </option>-->
+<!--                                                    <option value="Mg==" >Blockchain & Cybersecurity </option>-->
+<!--                                                    <option value="Mw==" >Clean & Green Technology </option>-->
+<!--                                                    <option value="NA==" >Fitness & Sports</option>-->
+<!--                                                    <option value="NQ==" >Heritage & Culture </option>-->
+<!--                                                    <option value="Ng==" >MedTech / BioTech / HealthTech </option>-->
+<!--                                                    <option value="Nw==" >Miscellaneous </option>-->
+<!--                                                    <option value="OA==" >Renewable / Sustainable Energy </option>-->
+<!--                                                    <option value="OQ==" >Robotics and Drones </option>-->
+<!--                                                    <option value="MTA=" >Smart Automation </option>-->
+<!--                                                    <option value="MTE=" >Smart Vehicles </option>-->
+<!--                                                    <option value="MTI=" >Travel & Tourism </option>-->
+<!--                                                    <option value="MTM=" >Transportation & Logistics </option>-->
+<!--                                                    <option value="MTQ=" >Disaster Management</option>-->
+<!--                                                    <option value="MTU=" >Smart Education</option>-->
+<!--                                            </select>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4">-->
+<!--                <div class="labelBox">-->
+<!--                    <label>Category</label>-->
+<!--                </div>-->
+<!--                <div class="short-by-box">-->
+<!--                    <select name="sort-by" id="category" class="sortByPS">-->
+<!--                        <option value="QWxs"  selected>All</option>-->
+<!--                        <option value="U29mdHdhcmU="  >Software</option>-->
+<!--                        <option value="SGFyZHdhcmU="  >Hardware</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4">-->
+<!--                <div class="labelBox">-->
+<!--                    <label>Organization</label>-->
+<!--                </div>-->
+<!--                <div class="short-by-box">-->
+<!--                    <select name="sort-by" id="organization"  data-live-search="true" data-live-search-style="startsWith" class="sortByPS">-->
+<!--                        <option value="QWxs"  >All</option>-->
+<!--                                                    <option value="QUlDVEUsIE1JQy1TdHVkZW50IElubm92YXRpb24=" >AICTE, MIC-Student Innovation</option>-->
+<!--                                                    <option value="QWxsIEluZGlhIENvdW5jaWwgZm9yIFRlY2huaWNhbCBFZHVjYXRpb24gKEFJQ1RFKS4=" >All India Council for Technical Education (AICTE).</option>-->
+<!--                                                    <option value="QXV0b2Rlc2sgSW5kaWEgUHZ0LiBMdGQu" >Autodesk India Pvt. Ltd.</option>-->
+<!--                                                    <option value="QmFqYWogRmluc2VydiBIZWFsdGg=" >Bajaj Finserv Health</option>-->
+<!--                                                    <option value="Q2VudHJhbCBHcm91bmQgV2F0ZXIgQm9hcmQgKENHV0IpLCBNaW5pc3RyeSBvZiBKYWwgU2hha3Rp" >Central Ground Water Board (CGWB), Ministry of Jal Shakti</option>-->
+<!--                                                    <option value="Q2VudHJhbCBXYXRlciBDb21taXNzaW9uIChDV0MpLCBNaW5pc3RyeSBvZiBKYWwgU2hha3Rp" >Central Water Commission (CWC), Ministry of Jal Shakti</option>-->
+<!--                                                    <option value="Q29hbCBJbmRpYSBMaW1pdGVk" >Coal India Limited</option>-->
+<!--                                                    <option value="Q29tbXVuaWNhdGlvbiBhbmQgSW5mb3JtYXRpb24gc2VydmljZSwgTUhB" >Communication and Information service, MHA</option>-->
+<!--                                                    <option value="Q3liZXIgQ3JpbWUgVW5pdCwgU3BlY2lhbCBDZWxsLCBEZWxoaSBQb2xpY2UsIE1IQQ==" >Cyber Crime Unit, Special Cell, Delhi Police, MHA</option>-->
+<!--                                                    <option value="RGFpcnkgRGl2aXNpb24sIERlcGFydG1lbnQgb2YgQW5pbWFsIEh1c2JhbmRyeSAmIERhaXJ5aW5nLCBNaW5pc3RyeSBvZiBGaXNoZXJpZXMsIEFuaW1hbCBIdXNiYW5kcnkgJiBEYWlyeWluZw==" >Dairy Division, Department of Animal Husbandry & Dairying, Ministry of Fisheries, Animal Husbandry & Dairying</option>-->
+<!--                                                    <option value="RGVmZW5jZSBSZXNlYXJjaCBhbmQgRGV2ZWxvcG1lbnQgT3JnYW5pc2F0aW9uIChEUkRPKSwgTWluaXN0cnkgb2YgRGVmZW5jZS4=" >Defence Research and Development Organisation (DRDO), Ministry of Defence.</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBFbXBvd2VybWVudCBvZiBQZXJzb25zIHdpdGggRGlzYWJpbGl0aWVzKERpdnlhbmdqYW4pICwgTWluaXN0cnkgb2YgU29jaWFsIEp1c3RpY2UgYW5kIEVtcG93ZXJtZW50" >Department of Empowerment of Persons with Disabilities(Divyangjan) , Ministry of Social Justice and Empowerment</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBGb29kICYgUHVibGljIERpc3RyaWJ1dGlvbiwgTWluaXN0cnkgb2YgQ29uc3VtZXIgQWZmYWlycyBGb29kIGFuZCBQdWJsaWMgRGlzdHJpYnV0aW9u" >Department of Food & Public Distribution, Ministry of Consumer Affairs Food and Public Distribution</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBQb3N0LCBNaW5pc3RyeSBvZiBQb3N0" >Department of Post, Ministry of Post</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBTY2hvb2wgRWR1Y2F0aW9uICYgTGl0ZXJhY3kgKERvU0VMKSwgTWluaXN0cnkgb2YgRWR1Y2F0aW9uLg==" >Department of School Education & Literacy (DoSEL), Ministry of Education.</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBTY2llbmNlICYgVGVjaG5vbG9neSAoRG9TVCksIE1pbmlzdHJ5IG9mIFNjaWVuY2UgYW5kIFRlY2hub2xvZ3ku" >Department of Science & Technology (DoST), Ministry of Science and Technology.</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBTb2NpYWwgSnVzdGljZSAmIEVtcG93ZXJtZW50LCBNaW5pc3RyeSBvZiBTb2NpYWwgSnVzdGljZSBhbmQgRW1wb3dlcm1lbnQ=" >Department of Social Justice & Empowerment, Ministry of Social Justice and Empowerment</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBTcGFjZSwgSW5kaWFuIFNwYWNlIFJlc2VhcmNoIE9yZ2FuaXNhdGlvbiAoSVNSTyku" >Department of Space, Indian Space Research Organisation (ISRO).</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBTcG9ydHMgKERvUyksIE1pbmlzdHJ5IG9mIFlvdXRoIEFmZmFpcnMgJiBTcG9ydHMu" >Department of Sports (DoS), Ministry of Youth Affairs & Sports.</option>-->
+<!--                                                    <option value="RGVwYXJ0bWVudCBvZiBUZWxlY29tbXVuaWNhdGlvbnMgKERvVCksIE1pbmlzdHJ5IG9mIENvbW11bmljYXRpb25zLg==" >Department of Telecommunications (DoT), Ministry of Communications.</option>-->
+<!--                                                    <option value="ZUNvdXJ0cywgRGVwYXJ0bWVudCBvZiBKdXN0aWNlLCBNaW5pc3RyeSBvZiBMYXcgJiBKdXN0aWNl" >eCourts, Department of Justice, Ministry of Law & Justice</option>-->
+<!--                                                    <option value="R2FzIEF1dGhvcml0eSBvZiBJbmRpYSBMdGQgKEdBSUwpLg==" >Gas Authority of India Ltd (GAIL).</option>-->
+<!--                                                    <option value="R292ZXJubWVudCBvZiBNYWhhcmFzaHRyYS4=" >Government of Maharashtra.</option>-->
+<!--                                                    <option value="R292ZXJubWVudCBvZiBSYWphc3RoYW4g" >Government of Rajasthan </option>-->
+<!--                                                    <option value="R292ZXJubWVudCBvZiBVdHRhcmFraGFuZA==" >Government of Uttarakhand</option>-->
+<!--                                                    <option value="SW5kaWEgTWV0ZW9yb2xvZ2ljYWwgRGVwYXJ0bWVudCAoSU1EKSwgTWluaXN0cnkgb2YgRWFydGggU2NpZW5jZXMgKE1vRVMpLg==" >India Meteorological Department (IMD), Ministry of Earth Sciences (MoES).</option>-->
+<!--                                                    <option value="SW5kaWFuIENvdW5jaWwgZm9yIEN1bHR1cmFsIFJlbGF0aW9ucyAoSUNDUiku" >Indian Council for Cultural Relations (ICCR).</option>-->
+<!--                                                    <option value="SW5kaWFuIEtub3dsZWRnZSBTeXN0ZW0gKElLUyksIEFsbCBJbmRpYSBDb3VuY2lsIGZvciBUZWNobmljYWwgRWR1Y2F0aW9uIChBSUNURSk=" >Indian Knowledge System (IKS), All India Council for Technical Education (AICTE)</option>-->
+<!--                                                    <option value="SW5kaWFuIE5hdGlvbmFsIENlbnRyZSBmb3IgT2NlYW4gSW5mb3JtYXRpb24gU2VydmljZXMgKElOQ09JUyksIE1pbmlzdHJ5IG9mIEVhcnRoIFNjaWVuY2VzIChNb0VTKS4=" >Indian National Centre for Ocean Information Services (INCOIS), Ministry of Earth Sciences (MoES).</option>-->
+<!--                                                    <option value="SW50ZXJuYXRpb25hbCBDb3VuY2lsIGZvciBDaXJjdWxhciBFY29ub215IChJQ0NFKS4=" >International Council for Circular Economy (ICCE).</option>-->
+<!--                                                    <option value="SVRCUCwgTUhB" >ITBP, MHA</option>-->
+<!--                                                    <option value="TWFkaHlhIFByYWRlc2ggUG9saWNlLg==" >Madhya Pradesh Police.</option>-->
+<!--                                                    <option value="TWF0aFdvcmtz" >MathWorks</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgQXl1cnZlZGEsIFlvZ2EsIE5hdHVyb3BhdGh5LCBVbmFuaSwgU2lkZGhhLCBTb3dhLVJpZ3BhIGFuZCBIb21vZW9wYXRoeSAoQVlVU0gpLg==" >Ministry of Ayurveda, Yoga, Naturopathy, Unani, Siddha, Sowa-Rigpa and Homoeopathy (AYUSH).</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgQ2hlbWljYWxzIGFuZCBGZXJ0aWxpemVycw==" >Ministry of Chemicals and Fertilizers</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgQ29uc3VtZXIgQWZmYWlycw==" >Ministry of Consumer Affairs</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgQ3VsdHVyZQ==" >Ministry of Culture</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgRWxlY3Ryb25pY3MgYW5kIEluZm9ybWF0aW9uIFRlY2hub2xvZ3kgKE1FSVRZKS4=" >Ministry of Electronics and Information Technology (MEITY).</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgRXh0ZXJuYWwgQWZmYWlycyAoTUVBKQ==" >Ministry of External Affairs (MEA)</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgRmluYW5jZQ==" >Ministry of Finance</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgSG91c2luZyBhbmQgVXJiYW4gQWZmYWlycw==" >Ministry of Housing and Urban Affairs</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgTGFib3VyICYgRW1wbG95bWVudA==" >Ministry of Labour & Employment</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgTWljcm8sIFNtYWxsICYgTWVkaXVtIEVudGVycHJpc2VzIChNU01FKS4=" >Ministry of Micro, Small & Medium Enterprises (MSME).</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgTWluZXM=" >Ministry of Mines</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgUG9ydHMsIFNoaXBwaW5nICYgV2F0ZXJ3YXlz" >Ministry of Ports, Shipping & Waterways</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgUnVyYWwgRGV2ZWxvcG1lbnQ=" >Ministry of Rural Development</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgU2tpbGwgRGV2ZWxvcG1lbnQgYW5kIEVudHJlcHJlbmV1cnNoaXAgKE1TREUpLg==" >Ministry of Skill Development and Entrepreneurship (MSDE).</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgU29jaWFsIEp1c3RpY2UgYW5kIEVtcG93ZXJtZW50LCBDb21wb3NpdGUgUmVnaW9uYWwgQ2VudHJlIChDUkMgU3JpbmFnYXIpLCBEZXBhcnRtZW50IG9mIEVtcG93ZXJtZW50IG9mIFBlcnNvbnMgd2l0aCBEaXNhYmlsaXRpZXMuCg==" >Ministry of Social Justice and Empowerment, Composite Regional Centre (CRC Srinagar), Department of Empowerment of Persons with Disabilities.-->
+<!--</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgU29jaWFsIEp1c3RpY2UgYW5kIEVtcG93ZXJtZW50LCBDb21wb3NpdGUgUmVnaW9uYWwgQ2VudHJlIChDUkMgU3JpbmFnYXIpLCBEZXBhcnRtZW50IG9mIEVtcG93ZXJtZW50IG9mIFBlcnNvbnMgd2l0aCBEaXNhYmlsaXRpZXMu" >Ministry of Social Justice and Empowerment, Composite Regional Centre (CRC Srinagar), Department of Empowerment of Persons with Disabilities.</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgVG91cmlzbQ==" >Ministry of Tourism</option>-->
+<!--                                                    <option value="TmFyY290aWNzIENvbnRyb2wgQnVyZWF1IChOQ0IpLg==" >Narcotics Control Bureau (NCB).</option>-->
+<!--                                                    <option value="TkFUR1JJRCwgTUhB" >NATGRID, MHA</option>-->
+<!--                                                    <option value="TmF0aW9uYWwgQXNzZXNzbWVudCBhbmQgQWNjcmVkaXRhdGlvbiBDb3VuY2lsIChOQUFDKS4=" >National Assessment and Accreditation Council (NAAC).</option>-->
+<!--                                                    <option value="TmF0aW9uYWwgQ291bmNpbCBvZiBFZHVjYXRpb25hbCBSZXNlYXJjaCBhbmQgVHJhaW5pbmcgKE5DRVJUKSwgRGVwYXJ0bWVudCBvZiBTY2hvb2wgRWR1Y2F0aW9uICYgTGl0ZXJhY3kgKERvU0VMKS4=" >National Council of Educational Research and Training (NCERT), Department of School Education & Literacy (DoSEL).</option>-->
+<!--                                                    <option value="TmF0aW9uYWwgRGlnaXRhbCBFZHVjYXRpb24gQXJjaGl0ZWN0dXJlIChOREVBUiksIERlcGFydG1lbnQgb2YgU2Nob29sIEVkdWNhdGlvbiAmIExpdGVyYWN5IChEb1NFTCku" >National Digital Education Architecture (NDEAR), Department of School Education & Literacy (DoSEL).</option>-->
+<!--                                                    <option value="TmF0aW9uYWwgRGlzYXN0ZXIgUmVzcG9uc2UgRm9yY2UgKE5EUkYpLg==" >National Disaster Response Force (NDRF).</option>-->
+<!--                                                    <option value="TmF0aW9uYWwgSW5zdGl0dXRlIGZvciBFbXBvd2VybWVudCBvZiBQZXJzb25zIHdpdGggTXVsdGlwbGUgRGlzYWJpbGl0aWVzIChOSUVQTUQpLCBNaW5pc3RyeSBvZiBTb2NpYWwgSnVzdGljZSAmIEVtcG93ZXJtZW50Lg==" >National Institute for Empowerment of Persons with Multiple Disabilities (NIEPMD), Ministry of Social Justice & Empowerment.</option>-->
+<!--                                                    <option value="TmF0aW9uYWwgSW5zdGl0dXRlIG9mIERlc2lnbiBNYWRoeWEgUHJhZGVzaA==" >National Institute of Design Madhya Pradesh</option>-->
+<!--                                                    <option value="TmF0aW9uYWwgSW5zdGl0dXRlIG9mIE9jZWFuIFRlY2hub2xvZ3kgKE5JT1QpLCBNaW5pc3RyeSBvZiBFYXJ0aCBTY2llbmNlcyAoTW9FUyku" >National Institute of Ocean Technology (NIOT), Ministry of Earth Sciences (MoES).</option>-->
+<!--                                                    <option value="TklGVEVNIFRoYW5qYXZ1ciAsTWluaXN0cnkgb2YgRm9vZCBQcm9jZXNzaW5nIEluZHVzdHJpZXMgKE1vRlBJKQ==" >NIFTEM Thanjavur ,Ministry of Food Processing Industries (MoFPI)</option>-->
+<!--                                                    <option value="Tm9ydGggRWFzdGVybiBDYW5lIGFuZCBCYW1ib28gRGV2ZWxvcG1lbnQgQ291bmNpbCAoTkVDQkRDKS4=" >North Eastern Cane and Bamboo Development Council (NECBDC).</option>-->
+<!--                                                    <option value="UG9saWN5IFBsYW5uaW5nIENlbGwsIE1pbmlzdHJ5IG9mIEluZm9ybWF0aW9uICYgQnJvYWRjYXN0aW5n" >Policy Planning Cell, Ministry of Information & Broadcasting</option>-->
+<!--                                                    <option value="U3RhcnR1cCBJbmRpYSBTZWN0aW9uLCBEZXBhcnRtZW50IGZvciBQcm9tb3Rpb24gb2YgSW5kdXN0cnkgYW5kIEludGVybmFsIFRyYWRlIChEUElUKSwgTWluaXN0cnkgb2YgQ29tbWVyY2UgYW5kIEluZHVzdHJ5Lg==" >Startup India Section, Department for Promotion of Industry and Internal Trade (DPIT), Ministry of Commerce and Industry.</option>-->
+<!--                                                    <option value="U3dhY2hoIEJoYXJhdCBNaXNzaW9uIChHcmFtZWVuKSwgRGVwYXJ0bWVudCBvZiBEcmlua2luZyBXYXRlciAmIFNhbml0YXRpb24sIE1pbmlzdHJ5IG9mIEphbCBTaGFrdGk=" >Swachh Bharat Mission (Grameen), Department of Drinking Water & Sanitation, Ministry of Jal Shakti</option>-->
+<!--                                                    <option value="VW5pdmVyc2l0eSBHcmFudHMgQ29tbWlzc2lvbiAoVUdDKS4=" >University Grants Commission (UGC).</option>-->
+<!--                                                    <option value="Vm9sdm8=" >Volvo</option>-->
+<!--                                                    <option value="V2hpdGUgSG91ciBTb2x1dGlvbnM=" selected>White Hour Solutions</option>-->
+<!--                                            </select>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--&lt;!&ndash;<div class="col-md-3">-->
+<!--                <div class="labelBox">-->
+<!--                    <label>Organization</label>-->
+<!--                </div>-->
+<!--                <div class="short-by-box">-->
+<!--                    <select name="sort-by" id="organization"  data-live-search="true" data-live-search-style="startsWith" class="sortByPS">-->
+<!--                        <option value="QWxs"  >All</option>-->
+<!--                                                    <option value="" ></option>-->
+<!--                                                    <option value="MQ==" >1</option>-->
+<!--                                                    <option value="MTA=" >10</option>-->
+<!--                                                    <option value="Mg==" >2</option>-->
+<!--                                                    <option value="Mw==" >3</option>-->
+<!--                                                    <option value="NA==" >4</option>-->
+<!--                                                    <option value="NQ==" >5</option>-->
+<!--                                                    <option value="Ng==" >6</option>-->
+<!--                                                    <option value="Nw==" >7</option>-->
+<!--                                                    <option value="OA==" >8</option>-->
+<!--                                                    <option value="OQ==" >9</option>-->
+<!--                                                    <option value="YmI=" >bb</option>-->
+<!--                                                    <option value="QmhhcmF0IEVsZWN0cm9uaWNzIExpbWl0ZWQ=" >Bharat Electronics Limited</option>-->
+<!--                                                    <option value="QnRlY2g=" >Btech</option>-->
+<!--                                                    <option value="Q2VudHJhbCBNaW5pc3RyeQ==" >Central Ministry</option>-->
+<!--                                                    <option value="Y29sbGVnZQ==" >college</option>-->
+<!--                                                    <option value="Q29tcHV0ZXIgU2NpZW5jZQ==" >Computer Science</option>-->
+<!--                                                    <option value="RGVmZW5zZQ==" >Defense</option>-->
+<!--                                                    <option value="RWR1Y2F0aW9u" >Education</option>-->
+<!--                                                    <option value="ZWR1Y2F0aW9uYWw=" >educational</option>-->
+<!--                                                    <option value="RWR1Y2F0aW9uYWwgSW5zdGl0dXRpb24=" >Educational Institution</option>-->
+<!--                                                    <option value="Rk1DRw==" >FMCG</option>-->
+<!--                                                    <option value="R292ZXJubWVudA==" >Government</option>-->
+<!--                                                    <option value="R09WRVJOTUVOVCBQT0xZVEVDSE5JQyBDT0xMRUdF" >GOVERNMENT POLYTECHNIC COLLEGE</option>-->
+<!--                                                    <option value="R292dA==" >Govt</option>-->
+<!--                                                    <option value="R292dC4=" >Govt.</option>-->
+<!--                                                    <option value="aW5zdGl0dXRpb24=" >institution</option>-->
+<!--                                                    <option value="TWluaXN0cnkgb2YgU2tpbGwgRGV2ZWxvcG1lbnQgYW5kIEVudHJlcHJlbmV1cnNoaXA=" >Ministry of Skill Development and Entrepreneurship</option>-->
+<!--                                                    <option value="TklFTElU" >NIELIT</option>-->
+<!--                                                    <option value="UG9seXRlY2huaWM=" >Polytechnic</option>-->
+<!--                                                    <option value="UG9seXRlY2huaWMgY29sbGVnZS1Hb3Z0IEFpZGVk" >Polytechnic college-Govt Aided</option>-->
+<!--                                                    <option value="UFNV" >PSU</option>-->
+<!--                                                    <option value="c2VsZg==" >self</option>-->
+<!--                                                    <option value="U3RhdGUgR292ZXJubWVudA==" >State Government</option>-->
+<!--                                                    <option value="U3R1ZGVudA==" >Student</option>-->
+<!--                                                    <option value="VEVDSE5JQ0FMIEVEVUNBVElPTg==" >TECHNICAL EDUCATION</option>-->
+<!--                                                    <option value="VGVjaG5pY2FsIEVkdWNhdGlvbiBJbnN0aXR1dGlvbg==" >Technical Education Institution</option>-->
+<!--                                                    <option value="VEVDSE5JQ0FMIElOU1RJVFVURQ==" >TECHNICAL INSTITUTE</option>-->
+<!--                                                    <option value="VXR0YXJha2hhbmQgQm9hcmQgb2YgVGVjaG5pY2FsIEVkdWNhdGlvbg==" >Uttarakhand Board of Technical Education</option>-->
+<!--                                            </select>-->
+<!--                </div>-->
+<!--            </div> &ndash;&gt;-->
+
+
+<!--        </div>-->
+<!--        <div class="row catBox1">-->
+<!--            <div class="col mx-1">-->
+<!--                <div class="radioButPS">-->
+<!--                    <label><input type="radio" name="organization_type" value="QWxs" checked> <span class="Filter_label">All</span></label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col mx-1">-->
+<!--                <div class="radioButPS">-->
+<!--                    <label><input type="radio" name="organization_type" value="Mg=="  > <span class="Filter_label">State Government</span></label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col mx-1">-->
+<!--                <div class="radioButPS">-->
+<!--                    <label><input type="radio" name="organization_type" value="MQ=="  > <span class="Filter_label">Central Ministry</span></label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col mx-1">-->
+<!--                <div class="radioButPS">-->
+<!--                    <label><input type="radio" name="organization_type" value="Nw=="  > <span class="Filter_label">Industry Personnel</span></label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col mx-1">-->
+<!--                <div class="radioButPS">-->
+<!--                    <label><input type="radio" name="organization_type" value="OQ=="  > <span class="Filter_label">Student Innovation</span></label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="container wrapper">-->
+
+
+
+<!--  <table id="dataTablePS" class="table table-striped table-bordered" style="width:100%">-->
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            &lt;!&ndash; <th>Logo</th> &ndash;&gt;-->
+<!--			<th>S.No.</th>-->
+<!--			<th>Organization</th>-->
+<!--            <th>Problem Statement Title</th>-->
+<!--            <th>Category</th>-->
+<!--            <th>PS Number</th>-->
+<!--          &lt;!&ndash;  <th>Submitted Idea(s) Count</th> &ndash;&gt;-->
+<!--            <th>Domain Bucket</th>-->
+<!--        </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+
+
+
+<!--        <tr>-->
+<!--             <td class="colomn_border">1</td>-->
+<!--&lt;!&ndash;<td></td>&ndash;&gt;-->
+
+
+<!--        <td class="colomn_border">White Hour Solutions</td>-->
+<!--        <td class="colomn_border"><a style ="font-size:15px ;margin-bottom: 4px !important; cursor: pointer"-->
+<!--            data-toggle="modal" data-target="#ViewProblemStatement572"-->
+<!--            >Hosting a blockchain code on to a cloud network in order to create a prototype app in the Healthcare sector</a>-->
+<!--            <div id="ViewProblemStatement572" class="modal fade" role="dialog">-->
+<!--                <div class="modal-dialog">-->
+
+<!--                &lt;!&ndash; Modal content&ndash;&gt;-->
+<!--             <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <button type="button" class="close PSclose" data-dismiss="modal">&times;</button>-->
+<!--					<div class="row">-->
+<!--						<div class="col-md-6">-->
+<!--							<div class="psLogoModal">-->
+<!--								<img class="navbar-brand" src="https://sih.gov.in/img/logo.png" />-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-md-6">-->
+<!--							<div class="psTitleModalTop">-->
+<!--								<h6 class="modal-title"> Problem Statement Details  </h6>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+
+<!--                    <table id="settings" class="table table-bordered table-hover">-->
+<!--                        <thead>-->
+<!--                            <tr>-->
+<!--                            <th style="vertical-align: top;">Description</th>-->
+<!--                            <td>-->
+<!--                                <div class="style-2" style="overflow-y: auto; min-height:20px; max-height: 200px; width:100%;"> Hosting a blockchain code on to a cloud network in order to create a prototype app in the Healthcare sector. Problem Statement short description in a short paragraph Who we are - A young start-up in the Health Tech space. What we plan to achieve – Create a blockchain application to store and share patient records with Doctors and Health care intermediaries. Where we are currently – The team has built the code and UI/UX designs for the application, but we need help to host the program on a network and create a prototype. What we need – We need young professionals to help solve the hosting issue and build the prototype. White Hour Solutions (WHS) LLP., is a young start-up looking to provide a solution for patient to record, store and share their Personal Health Records (PHRs). The PHRs would be interoperable between the patient and other Healthcare intermediaries. We plan to do this by providing an application which can be used through mobile phones, computers or tablets. We are currently at the phase where we have the codes developed and the designs for the app, but need help with hosting it on the cloud and building the prototype. All support and assistance will be provided for the same.</div>-->
+<!--                               </td>-->
+<!--                            </tr>-->
+
+<!--                            <tr>-->
+<!--                                <th>Organization</th>-->
+<!--                            <td>White Hour Solutions </td>-->
+
+<!--                            </tr>-->
+
+<!--                            <tr>-->
+<!--                            <th>Category</th>-->
+<!--                            <td>Software</td>-->
+<!--                            </tr>-->
+
+<!--                            <tr>-->
+<!--                            <th>Domain Bucket</th>-->
+<!--                            <td>MedTech / BioTech / HealthTech </td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                              <th>Youtube Link</th>-->
+<!--                              <td>-->
+<!--                                    <a href=" " target="_blank"> </a>-->
+<!--                            </td>-->
+<!--                            </tr>-->
+<!--                                                      <tr>-->
+<!--                              <th>Dataset Link</th>-->
+<!--                              <td>-->
+<!--                                                               NA-->
+<!--                                                                                            </td>-->
+<!--                            </tr>-->
+
+<!--                      </thead>-->
+<!--                     </table>-->
+<!--                </div>-->
+
+<!--                </div>-->
+
+<!--                </div>-->
+<!--                </div>-->
+<!--            </td>-->
+
+<!--            <td>Software</td>-->
+<!--            <td>SJ572</td>-->
+<!--          &lt;!&ndash;  <td>0</td> &ndash;&gt;-->
+<!--            <td>MedTech / BioTech / HealthTech </td>-->
+<!--        </tr>-->
+
+
+<!--    </tbody>-->
+<!--    <tfoot>-->
+<!--        <tr>-->
+<!--            &lt;!&ndash;<th class="sortingBottom">Logo</th> &ndash;&gt;-->
+
+<!--		<th class="sortingBottom">S.No.</th>-->
+<!--         <th class="sortingBottom">Organization</th>-->
+
+<!--            <th class="sortingBottom">Problem Statement Title</th>-->
+<!--            <th class="sortingBottom">Category</th>-->
+<!--            <th class="sortingBottom">PS Number</th>-->
+<!--        &lt;!&ndash;    <th class="sortingBottom">Submitted Idea(s) Count</th> &ndash;&gt;-->
+<!--            <th class="sortingBottom">Domain Bucket</th>-->
+<!--        </tr>-->
+<!--    </tfoot>-->
+<!--</table>-->
+
+<!--</div>-->
+
+<!--</section>-->
+
+
+<!--&lt;!&ndash; <section class="sih-theme">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <div class="sih-theme-heading">-->
+<!--                    <p>Smart India Hackathon's</p>-->
+<!--                    <h2>Ministry Details</h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12 index-no-gap">-->
+<!--                <div class="ministryDetails">-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_communication.png" alt="" title="">-->
+<!--                        <h3>AICTE</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_sport.png" alt="" title="">-->
+<!--                        <h3>AICTE-MIC-Student Innovation</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_heritage.png" alt="" title="">-->
+<!--                        <h3>Ali Yavar Jung National Institute of Speech and hearing Disabilities, Mumbai, Department of Empowerment of Persons with Disabilities</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_healthcare.png" alt="" title="">-->
+<!--                        <h3>Autodesk</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_technology.png" alt="" title="">-->
+<!--                        <h3>Central Ground Water Board (CGWB), Ministry of Jal Shakti</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_automobiles.png" alt="" title="">-->
+<!--                        <h3>Coal India Limited</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_agriculture.png" alt="" title="">-->
+<!--                        <h3>Composite Regional Centre, Srinagar, jammu & Kashmir, Department of Empowerment of Persons with Disabilities</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_drone.png" alt="" title="">-->
+<!--                        <h3>CRC Lucknow, Department of Empowerment of Persons with Disabilities</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_waste.png" alt="" title="">-->
+<!--                        <h3>Department of School Education & Literacy, Ministry of Education</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_tourism.png" alt="" title="">-->
+<!--                        <h3>Department of Social Justice & Empowerment, Ministry of Social Justice and Empowerment</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_renewable.png" alt="" title="">-->
+<!--                        <h3>GAIL (India) Limited</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_security.png" alt="" title="">-->
+<!--                        <h3>Govt of Maharashtra</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Housing & Urban Affairs Ministry</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>IKS- AICTE</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>IMD, MoES</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>INCOIS(MoES)</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Indian Council for Cultural Relations</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>International Council for Circular Economy</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>ISRO</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>MathWorks</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>MEITY</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Ministry of Ayush</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Ministry of Consumer Affairs</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Ministry of Culture</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Ministry of Mines</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>MSDE</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>NAAC</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Narcotics Control Bureau</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>National Disaster Response Force</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>National Institute for the empowerment of persons with visual disabilities, Department of Empowerment of Persons with Disabilities</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>National Institute of Design Madhya Pradesh</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>National Institute of Ocean Technology</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>National Mission for Clean Ganga (NMCG), Ministry of Jal Shakti</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>National Water Mission (NWM), Ministry of Jal Shakti</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>NIEPID Secundrabad, Department of Empowerment of Persons with Disabilities</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Pandit Deendayal Upadhyaya National Institute for Persons with Physical Disabilities(Divyangjan), Department of Empowerment of Persons with Disabilities</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Police Department - Madhya Pradesh</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>Swami Vivekanand Institute for Rehabilitation, Department of Empowerment of Persons with Disabilities</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--					<div>-->
+<!--                        <img src="https://sih.gov.in/img/icon_education.png" alt="" title="">-->
+<!--                        <h3>UGC</h3>-->
+<!--						<a href="javascript:void();" class="minisReadMore">Read More</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section> &ndash;&gt;-->
+
+
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+
+
+<!--<script type="text/javascript">-->
+<!--    $(document).ready(function() {-->
+<!--    $('#dataTablePS').DataTable({-->
+<!--		"bInfo" : false-->
+<!--	});-->
+<!--});-->
+<!--</script>-->
+
+<!--<script>-->
+<!--$(document).ready( function () {-->
+<!--    $('#table_id').dataTable( {-->
+<!--    "pageLength": 100,-->
+<!--    "order": [[ 5, "asc" ]],-->
+<!--            "paging": false-->
+<!--    });-->
+<!--});-->
+
+<!--$('#technology').on('change', function () {-->
+<!--	// alert("test 1");-->
+<!--    var technologyVal = $("#technology option:selected").val();-->
+<!--    var categoryVal = $("#category option:selected").val();-->
+<!--    var organization = $("#organization option:selected").val();-->
+<!--    var organization_type = $("input[name='organization_type']:checked").val();-->
+<!--    // window.open("https://sih.gov.in/viewAllProblemStatements22-12/"+technologyVal+"/"+categoryVal+"/"+organization+"/"+organization_type,"_self");-->
+
+<!--	window.open("https://sih.gov.in/sih2022PS?technology_bucket="+technologyVal+"&category="+categoryVal+"&organization="+organization+"&organization_type="+organization_type,"_self");-->
+
+<!--});-->
+
+<!--$('#category').on('change', function () {-->
+<!--	//alert("test 2");-->
+<!--    var technologyVal = $("#technology option:selected").val();-->
+<!--    var categoryVal = $("#category option:selected").val();-->
+<!--    var organization = $("#organization option:selected").val();-->
+<!--    var organization_type = $("input[name='organization_type']:checked").val();-->
+<!--    //window.open("https://sih.gov.in/viewAllProblemStatements22-12/"+technologyVal+"/"+categoryVal+"/"+organization+"/"+organization_type,"_self");-->
+<!--	window.open("https://sih.gov.in/sih2022PS?technology_bucket="+technologyVal+"&category="+categoryVal+"&organization="+organization+"&organization_type="+organization_type,"_self");-->
+
+<!--});-->
+
+<!--$('#Complexity').on('change', function () {-->
+<!--    var technologyVal = $("#technology option:selected").val();-->
+<!--    var categoryVal = $("#category option:selected").val();-->
+<!--    var organization = $("#organization option:selected").val();-->
+<!--    var organization_type = $("input[name='organization_type']:checked").val();-->
+<!--    //window.open("https://sih.gov.in/viewAllProblemStatements22-12/"+technologyVal+"/"+categoryVal+"/"+organization+"/"+organization_type,"_self");-->
+
+<!--	window.open("https://sih.gov.in/sih2022PS?technology_bucket="+technologyVal+"&category="+categoryVal+"&organization="+organization+"&organization_type="+organization_type,"_self");-->
+
+<!--});-->
+
+<!--$('#User').on('change', function () {-->
+<!--	//alert("test 3");-->
+<!--    var technologyVal = $("#technology option:selected").val();-->
+<!--    var categoryVal = $("#category option:selected").val();-->
+<!--    var organization = $("#organization option:selected").val();-->
+<!--    var organization_type = $("input[name='organization_type']:checked").val();-->
+<!--    window.open("https://sih.gov.in/sih2022PS/"+technologyVal+"/"+categoryVal+"/"+organization+"/"+organization_type,"_self");-->
+<!--});-->
+
+<!--$('#organization').on('change', function () {-->
+<!--	//alert("test 4");-->
+<!--    var technologyVal = $("#technology option:selected").val();-->
+<!--    var categoryVal = $("#category option:selected").val();-->
+<!--    var organization = $("#organization option:selected").val();-->
+<!--    var organization_type = $("input[name='organization_type']:checked").val();-->
+<!--    //window.open("https://sih.gov.in/viewAllProblemStatements22-12/"+technologyVal+"/"+categoryVal+"/"+organization+"/"+organization_type,"_self");-->
+
+<!--	window.open("https://sih.gov.in/sih2022PS?technology_bucket="+technologyVal+"&category="+categoryVal+"&organization="+organization+"&organization_type="+organization_type,"_self");-->
+
+<!--});-->
+
+<!--$("input[name='organization_type']").on('change', function () {-->
+<!--	//alert("test 5");-->
+<!--    var technologyVal = $("#technology option:selected").val();-->
+<!--    var categoryVal = $("#category option:selected").val();-->
+<!--    var organization = $("#organization option:selected").val();-->
+<!--    var organization_type = $("input[name='organization_type']:checked").val();-->
+<!--    //window.open("https://sih.gov.in/viewAllProblemStatements22-12/"+technologyVal+"/"+categoryVal+"/"+organization+"/"+organization_type,"_self");-->
+<!--	window.open("https://sih.gov.in/sih2022PS?technology_bucket="+technologyVal+"&category="+categoryVal+"&organization="+organization+"&organization_type="+organization_type,"_self");-->
+
+<!--});-->
+<!--</script>-->
+
+
+<!--    <footer style="padding-top:30px;">-->
+<!--    <div class="container">-->
+<!--        &lt;!&ndash;<div class="row footer-line">-->
+<!--            <div class="col-md-2">-->
+<!--                <h3>ABOUT SIH</h3>-->
+<!--                <ul>-->
+<!--                    <li><a href="https://sih.gov.in/about">About SIH</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/messages">Messages</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/organisingCommittee">Organising committee</a></li>-->
+<!--                    <li><a href="#">More>></a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="col-md-2">-->
+<!--                <h3>Past Event</h3>-->
+<!--                <ul>-->
+<!--                    <li><a href="https://sih.gov.in/sih2017">SIH-2017</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2018Software">SIH-2018 Software</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/sih2018Hardware">SIH-2018 Hardware</a></li>-->
+<!--                    <li><a href="#">More>></a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="col-md-2">-->
+<!--                <h3>Media</h3>-->
+<!--                <ul>-->
+<!--                    <li><a href="https://sih.gov.in/mediaNewsUpdate">News Updates</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/mediaSocialMedia">Social Wall</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/supporters">Supporters</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="col-md-6">-->
+<!--                <h3>Learning Resources</h3>-->
+<!--                <ul>-->
+<!--                    <li><a href="https://sih.gov.in/letters/SIH_2020_traning_ad.pdf" target="_blank">Online Training Sessions</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/testimonials">Testimonials</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="col-md-6">-->
+<!--                <h3>Support</h3>-->
+<!--                <ul>-->
+<!--                    <li><a href="https://sih.gov.in/faqs">FAQs</a></li>-->
+<!--                    <li><a href="https://sih.gov.in/contactUs">Contact Us</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="col-md-2">-->
+<!--                <h3>Advertisement</h3>-->
+<!--                <ul>-->
+<!--                    <li><a href="#">Link 1</a></li>-->
+<!--                    <li><a href="#">Link 2</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div> &ndash;&gt;-->
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--				<div class="follow-box">-->
+<!--                   <h3>Follow Us</h3>-->
+<!--                   <ul class="follow-box-copyright">-->
+<!--                       <li><a href="https://www.facebook.com/mhrdInnovation/" target="_blank"><i class="fa fa-facebook"></i>&lt;!&ndash; <img src="img/fb-icon.png" alt=""> &ndash;&gt;</a></li>-->
+<!--                       <li><a href="https://www.instagram.com/mhrd.innovationcell/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>&lt;!&ndash; <img src="img/insta-icon.png" alt=""> &ndash;&gt;</a></li>-->
+<!--                       <li><a href="https://twitter.com/SIH2022_MIC" target="_blank"><i class="fa fa-twitter"></i>&lt;!&ndash; <img src="img/twitter-icon.png" alt=""> &ndash;&gt;</a></li>-->
+
+<!--                       &lt;!&ndash;<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i>&ndash;&gt;&lt;!&ndash; <img src="img/in-icon.png" alt=""> &ndash;&gt;&lt;!&ndash;</a></li>&ndash;&gt;-->
+<!--                   </ul>-->
+<!--                   <p style="margin-top: 15px;">© 2021-22 Smart India Hackathon. All rights reserved</p>-->
+<!--               </div>-->
+<!--            </div>-->
+
+<!--            <div class="col-md-6">-->
+<!--                <div class="follow-box flo-box">-->
+<!--                    <h3>Contact Us</h3>-->
+<!--                    <ul class="follow-box-contact">-->
+<!--                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+91 11 29581316">+91 11 29581316</a></li>-->
+<!--                        <li><i class="fa fa-envelope"></i> Email: <a href="mailto:sih@aicte-india.org">sih@aicte-india.org</a></li>-->
+<!--                        <li class="app-down" style="display: none;"><i class="fa fa-download"></i> <a href="https://play.google.com/store/apps/details?id=com.psl.sihapps&amp;hl=en">Smart India Hackathon App Download</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+
+
+<!--&lt;!&ndash; Registration in Modal &ndash;&gt;-->
+<!--<div class="modal fade" id="Registeration_type_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">Select Registration Type</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-4">-->
+<!--                <div class="logo-modal">-->
+<!--                    <img src="https://sih.gov.in/img/logo.png" class="img-responsive" alt="Logo">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-8">-->
+<!--                <div class="content-modal">-->
+
+<!--		&lt;!&ndash;	<div class="form-group">-->
+<!--                      <input style="transform:scale(1.3);" type="radio" name="User_Register_Type"  value="1"  onclick="SendUserToItsPage(1)">-->
+<!--                        <span class="sign_up_type" style="color:#03132E">Problem Statement Creaters/Challengers</span>-->
+<!--                    </div> &ndash;&gt;-->
+
+<!--		<div class="form-group">-->
+<!--                        <input style="transform:scale(1.3);" type="radio" name="User_Register_Type" value="igottwo" onclick="SendUserToItsPage(2)">-->
+<!--                        <span class="sign_up_type" style="color:#03132E">College Faculty SPOC</span>-->
+<!--                    </div>-->
+
+<!--		<div class="form-group">-->
+<!--                        <input style="transform:scale(1.3);" type="radio" name="User_Register_Type" value="igottwo" onclick="SendUserToItsPage(6)">-->
+<!--                        <span class="sign_up_type" style="color:#03132E">School Faculty SPOC</span>-->
+<!--                    </div>-->
+
+
+<!--                    <div class="form-group" style="display: none;">-->
+<!--                        <input style="transform:scale(1.3);" type="radio" name="User_Register_Type" value="igottwo" onclick="SendUserToItsPage(2)">-->
+<!--                        <span class="sign_up_type" style="color:#03132E">College Faculty SPOC</span>-->
+<!--                    </div>-->
+<!--                    <div id="div1" style="display: none;">-->
+<!--                            <input style="transform:scale(1.3);" type="radio" value="2" name="User_Register_Type" onclick="SendUserToItsPage(2)">-->
+<!--                            <span class="sign_up_type" style="color:orange;">Existing Users</span> &nbsp;-->
+<!--                            <input style="transform:scale(1.3);" type="radio" value="2" name="User_Register_Type" onclick="SendUserToItsPage(2)">-->
+<!--                            <span class="sign_up_type" style="color:orange;">New Users</span><br>-->
+<!--                            <span class="" style="color:red; font-size: 12px;">(*Please check your mail for OTP Verification)</span>-->
+<!--                        </div>-->
+<!--                    <div class="form-group" style="display:none;">-->
+<!--                        <input style="transform:scale(1.3);" type="radio" name="User_Register_Type" value="4" onclick="SendUserToItsPage(4)">-->
+<!--                        <span class="sign_up_type" style="color:#03132E">Design Mentors</span>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="modClose" data-dismiss="modal">Close</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!-- <div id="mySidenav" class="sidenav">-->
+<!--    <a href="#" id="register" data-toggle="modal" data-target="#Registeration_type_modal"><img src="https://sih.gov.in/img1/registerNow.jpg" class="img-responsive"></a>-->
+<!--    <a href="#" id="dateRegister"><img src="https://sih.gov.in/img1/registration-end.jpg" class="img-responsive"></a>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash; <div class="call-us-now">-->
+<!--    <ul>-->
+<!--        <li><a href="#"><img src="https://sih.gov.in/img1/registerNow.jpg" class="img-responsive"></a></li>-->
+<!--        <li><a href="#"><img src="https://sih.gov.in/img1/registration-end.jpg" class="img-responsive"></a></li>-->
+<!--    </ul>-->
+<!--    </div> &ndash;&gt;-->
+
+
+<!-- &lt;!&ndash; <div class="call-us-now">-->
+<!--    <ul>-->
+<!--        <li><a href="#"><img src="https://sih.gov.in/img1/registerNow.jpg" class="img-responsive"></a></li>-->
+<!--        <li><a href="#"><img src="https://sih.gov.in/img1/registration-end.jpg" class="img-responsive"></a></li>-->
+<!--    </ul>-->
+<!--    </div> &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Back to top button &ndash;&gt;-->
+<!--<a id="button"></a>-->
+
+<!--    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+<!--    <script type="text/javascript" src="https://sih.gov.in/js/bootstrap.js"></script>-->
+<!--    <script type="text/javascript" src="https://sih.gov.in/js/slick.min.js"></script>-->
+<!--    <script type="text/javascript" src="https://sih.gov.in/js/bs_leftnavi.js"></script>-->
+<!--    <script type="text/javascript" src="https://sih.gov.in/js/script-mobile-menu.js"></script>-->
+
+
+
+<!--<script type="text/javascript">-->
+
+<!--function show2()-->
+<!--{-->
+<!--    $('#div1').css('display', 'block');-->
+<!--}-->
+
+<!--function SendUserToItsPage(input)-->
+<!--{-->
+<!--  switch (input) {-->
+<!--    case 1:-->
+<!--    window.open("https://sih.gov.in/signup","_self");-->
+<!--    break;-->
+
+<!--    case 2:-->
+<!--    window.open("https://sih.gov.in/collegeRegistration","_self");-->
+<!--    break;-->
+
+
+<!--    case 3:-->
+<!--    window.open("https://sih.gov.in/studentRegistration","_self");-->
+<!--     break;-->
+
+<!--    case 4:-->
+<!--    window.open("https://sih.gov.in/designmregistration","_self");-->
+<!--     break;-->
+
+<!--    case 5:-->
+<!--    window.open("https://sih.gov.in/juryregistration","_self");-->
+<!--     break;-->
+
+<!--	case 6:-->
+<!--    window.open("https://sih.gov.in/schoolRegistration","_self");-->
+<!--    break;-->
+<!--  }-->
+<!--}-->
+
+<!--jQuery(document).ready(function($) {-->
+<!--      $('.slider').slick({-->
+<!--        dots: true,-->
+<!--        infinite: true,-->
+<!--        speed: 500,-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 1,-->
+<!--        autoplay: true,-->
+<!--        autoplaySpeed: 2000,-->
+<!--        arrows: false,-->
+<!--        responsive: [{-->
+<!--          breakpoint: 600,-->
+<!--          settings: {-->
+<!--            slidesToShow: 2,-->
+<!--            slidesToScroll: 1-->
+<!--          }-->
+<!--        },-->
+<!--        {-->
+<!--           breakpoint: 400,-->
+<!--           settings: {-->
+<!--              arrows: false,-->
+<!--              slidesToShow: 1,-->
+<!--              slidesToScroll: 1-->
+<!--           }-->
+<!--        }]-->
+<!--    });-->
+<!--});-->
+
+<!--jQuery(document).ready(function($) {-->
+<!--      $('.sliderIndex').slick({-->
+<!--        dots: false,-->
+<!--        infinite: true,-->
+<!--        speed: 500,-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 1,-->
+<!--        autoplay: true,-->
+<!--        autoplaySpeed: 2000,-->
+<!--        arrows: true,-->
+<!--		prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-long-arrow-left' aria-hidden='true'></i></button>",-->
+<!--        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-long-arrow-right' aria-hidden='true'></i></button>",-->
+<!--        responsive: [{-->
+<!--          breakpoint: 600,-->
+<!--          settings: {-->
+<!--            slidesToShow: 2,-->
+<!--            slidesToScroll: 1-->
+<!--          }-->
+<!--        },-->
+<!--        {-->
+<!--           breakpoint: 400,-->
+<!--           settings: {-->
+<!--              arrows: false,-->
+<!--              slidesToShow: 1,-->
+<!--              slidesToScroll: 1-->
+<!--           }-->
+<!--        }]-->
+<!--    });-->
+<!--});-->
+
+<!--jQuery(document).ready(function($) {-->
+<!--      $('.ministryDetails').slick({-->
+<!--        dots: false,-->
+<!--        infinite: true,-->
+<!--        speed: 200,-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 1,-->
+<!--        autoplay: true,-->
+<!--        autoplaySpeed: 2000,-->
+<!--        arrows: true,-->
+<!--		prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-long-arrow-left' aria-hidden='true'></i></button>",-->
+<!--        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-long-arrow-right' aria-hidden='true'></i></button>",-->
+<!--        responsive: [{-->
+<!--          breakpoint: 600,-->
+<!--          settings: {-->
+<!--            slidesToShow: 2,-->
+<!--            slidesToScroll: 1-->
+<!--          }-->
+<!--        },-->
+<!--        {-->
+<!--           breakpoint: 400,-->
+<!--           settings: {-->
+<!--              arrows: false,-->
+<!--              slidesToShow: 1,-->
+<!--              slidesToScroll: 1-->
+<!--           }-->
+<!--        }]-->
+<!--    });-->
+<!--});-->
+
+<!--jQuery(document).ready(function($) {-->
+<!--      $('.slider1').slick({-->
+<!--        dots: false,-->
+<!--        infinite: true,-->
+<!--        speed: 500,-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 1,-->
+<!--        autoplay: true,-->
+<!--        autoplaySpeed: 2000,-->
+<!--        arrows: true,-->
+<!--		prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-long-arrow-left' aria-hidden='true'></i></button>",-->
+<!--        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-long-arrow-right' aria-hidden='true'></i></button>",-->
+<!--        responsive: [{-->
+<!--          breakpoint: 600,-->
+<!--          settings: {-->
+<!--            slidesToShow: 2,-->
+<!--            slidesToScroll: 1-->
+<!--          }-->
+<!--        },-->
+<!--        {-->
+<!--           breakpoint: 400,-->
+<!--           settings: {-->
+<!--              arrows: false,-->
+<!--              slidesToShow: 1,-->
+<!--              slidesToScroll: 1-->
+<!--           }-->
+<!--        }]-->
+<!--    });-->
+<!--});-->
+
+<!--jQuery(document).ready(function($) {-->
+<!--      $('.slider2').slick({-->
+<!--        dots: false,-->
+<!--        infinite: true,-->
+<!--        speed: 500,-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 1,-->
+<!--        autoplay: true,-->
+<!--        autoplaySpeed: 2000,-->
+<!--        arrows: false,-->
+<!--		prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-long-arrow-left' aria-hidden='true'></i></button>",-->
+<!--        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-long-arrow-right' aria-hidden='true'></i></button>",-->
+<!--        responsive: [{-->
+<!--          breakpoint: 600,-->
+<!--          settings: {-->
+<!--            slidesToShow: 2,-->
+<!--            slidesToScroll: 1-->
+<!--          }-->
+<!--        },-->
+<!--        {-->
+<!--           breakpoint: 400,-->
+<!--           settings: {-->
+<!--              arrows: false,-->
+<!--              slidesToShow: 1,-->
+<!--              slidesToScroll: 1-->
+<!--           }-->
+<!--        }]-->
+<!--    });-->
+<!--});-->
+
+<!--jQuery(document).ready(function($) {-->
+<!--      $('.videoPrototypesSlide').slick({-->
+<!--        dots: true,-->
+<!--        infinite: true,-->
+<!--        speed: 500,-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 1,-->
+<!--        autoplay: true,-->
+<!--        autoplaySpeed: 2000,-->
+<!--        arrows: false,-->
+<!--		prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-long-arrow-left' aria-hidden='true'></i></button>",-->
+<!--        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-long-arrow-right' aria-hidden='true'></i></button>",-->
+<!--        responsive: [{-->
+<!--          breakpoint: 600,-->
+<!--          settings: {-->
+<!--            slidesToShow: 2,-->
+<!--            slidesToScroll: 1-->
+<!--          }-->
+<!--        },-->
+<!--        {-->
+<!--           breakpoint: 400,-->
+<!--           settings: {-->
+<!--              arrows: false,-->
+<!--              slidesToShow: 1,-->
+<!--              slidesToScroll: 1-->
+<!--           }-->
+<!--        }]-->
+<!--    });-->
+<!--});-->
+
+<!--        $(document).on("scroll", function(){-->
+<!--                if-->
+<!--              ($(document).scrollTop() > 86){-->
+<!--                  $("#banner").addClass("shrink");-->
+<!--                }-->
+<!--                else-->
+<!--                {-->
+<!--                    $("#banner").removeClass("shrink");-->
+<!--                }-->
+<!--            });-->
+
+<!--        var btn = $('#button');-->
+
+<!--$(window).scroll(function() {-->
+<!--  if ($(window).scrollTop() > 300) {-->
+<!--    btn.addClass('show');-->
+<!--  } else {-->
+<!--    btn.removeClass('show');-->
+<!--  }-->
+<!--});-->
+
+<!--btn.on('click', function(e) {-->
+<!--  e.preventDefault();-->
+<!--  $('html, body').animate({scrollTop:0}, '300');-->
+<!--});-->
+
+<!--jQuery(document).ready(function($) {-->
+<!--      $('.twitterSlider').slick({-->
+<!--        dots: false,-->
+<!--        infinite: true,-->
+<!--        speed: 500,-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 1,-->
+<!--        autoplay: true,-->
+<!--        autoplaySpeed: 2000,-->
+<!--        arrows: true,-->
+<!--        prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-long-arrow-left' aria-hidden='true'></i></button>",-->
+<!--        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-long-arrow-right' aria-hidden='true'></i></button>",-->
+<!--        responsive: [{-->
+<!--          breakpoint: 600,-->
+<!--          settings: {-->
+<!--            slidesToShow: 2,-->
+<!--            slidesToScroll: 1-->
+<!--          }-->
+<!--        },-->
+<!--        {-->
+<!--           breakpoint: 400,-->
+<!--           settings: {-->
+<!--              arrows: false,-->
+<!--              slidesToShow: 1,-->
+<!--              slidesToScroll: 1-->
+<!--           }-->
+<!--        }]-->
+<!--    });-->
+<!--});-->
+
+<!--$(function () {-->
+<!--         $(".like").click(function () {-->
+<!--             var input = $(this).find('.qty1');-->
+<!--             input.val(parseInt(input.val())+ 1);-->
+
+<!--         });-->
+<!--     $(".dislike").click(function () {-->
+<!--         var input = $(this).find('.qty2');-->
+<!--         input.val(input.val() - 1);-->
+<!--     });-->
+<!--  });-->
+
+<!--  $('.autoplay').slick({-->
+<!--          slidesToShow: 3,-->
+<!--          infinite: true,-->
+<!--          slidesToScroll: 1,-->
+<!--          autoplay: true,-->
+<!--          autoplaySpeed: 2000,-->
+<!--           responsive: [-->
+<!--    {-->
+<!--      breakpoint: 1024,-->
+<!--      settings: {-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 3,-->
+<!--        infinite: true,-->
+<!--        dots: false-->
+<!--      }-->
+<!--    },-->
+<!--    {-->
+<!--      breakpoint: 600,-->
+<!--      settings: {-->
+<!--        slidesToShow: 2,-->
+<!--        slidesToScroll: 2-->
+<!--      }-->
+<!--    },-->
+<!--    {-->
+<!--      breakpoint: 480,-->
+<!--      settings: {-->
+<!--        slidesToShow: 1,-->
+<!--        slidesToScroll: 1-->
+<!--      }-->
+<!--    }-->
+<!--    // You can unslick at a given breakpoint now by adding:-->
+<!--    // settings: "unslick"-->
+<!--    // instead of a settings object-->
+<!--  ]-->
+<!--        });-->
+
+<!--  $(document).ready(function() {-->
+<!--  $(".testimonial-carousel").slick({-->
+<!--    infinite: true,-->
+<!--    slidesToShow: 1,-->
+<!--    slidesToScroll: 1,-->
+<!--    autoplay: true,-->
+<!--    arrows: true,-->
+<!--    prevArrow: $(".testimonial-carousel-controls .prev"),-->
+<!--    nextArrow: $(".testimonial-carousel-controls .next")-->
+<!--  });-->
+<!--});-->
+
+<!--    </script>-->
+
+
+
+<!--<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>-->
+<!--<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>-->
+
+
+<!--</body>-->
+
+<!--</html>-->
+
+

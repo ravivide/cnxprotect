@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/d469ca63-dd7b-4a06-a74c-9558e890c3fe/resourceGroups/Analytic_Team/providers/Microsoft.Web/sites/CNXDeployment",
+    "appService.deploySubpath": "."
+}

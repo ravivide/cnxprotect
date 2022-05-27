@@ -1,0 +1,1702 @@
+{% load static %}
+<!--<html lang="en">-->
+<html lang="en-gb" class="no-js" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> Concentrix Protect</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+<!--  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">-->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+        }
+        .darkRed {
+            color: darkred;
+        }
+
+        .darkBlue {
+            color: darkblue;
+        }
+
+        .navbar {
+            position: relative;
+            border: 1px solid #080808;
+            background-color: #222;
+            background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+            background-repeat: repeat-x;
+            border-radius: 4px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-brand {
+            float: left;
+            padding: 14px 15px;
+            font-size: 18px;
+            line-height: 20px;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        .navbar-links {
+            font-size: 14px;
+            line-height: 20px;
+            position: relative;
+            margin: 0;
+        }
+
+            .navbar-links li {
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .navbar-links li {
+                display: inline-block;
+                min-width: 120px;
+                text-align: center;
+                margin-top: 15px;
+            }
+
+                .navbar-links li.active {
+                    background-image: #080808;
+                    background: #080808;
+                    color: #fff;
+                    height: 100%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    margin: 0;
+                }
+
+        a {
+            color: #9d9d9d;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            .navbar-brand {
+                width: 100%;
+            }
+
+            .navbar-links {
+                padding-left: 0;
+            }
+
+            button.demo {
+                margin-right: 100% !important;
+            }
+        }
+
+        #container {
+            padding-top: 30px;
+            padding-left: 30px;
+            width: 90%;
+            font-size: 14px;
+        }
+
+        .demo-zone {
+            display: block;
+            width: 30%;
+            min-height: 200px;
+        }
+
+        .mini-demo-zone {
+            display: inline;
+            width: 30%;
+            min-height: 10px;
+        }
+        .mini-demo-zone1 {
+            display: inline;
+            width: 30%;
+            min-height: 10px;
+        }
+
+        .btns-active, .btns-inactive {
+            margin-top: 20px;
+        }
+
+        label {
+            display: inline-block;
+            min-width: 120px;
+            width: 620px;
+        }
+
+        button.demo,a.demo {
+            margin-right: 0;
+            margin-left: 4px;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border-radius: 4px;
+            z-index: 1;
+            color: #333;
+            background: white;
+            background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+            border: 1px solid #ccc !important;
+            color: #333;
+            line-height: 20px;
+            font-size: 14px;
+            padding: 4px 12px;
+            margin-bottom: 2px;
+        }
+
+            button.demo:hover {
+                background-image: linear-gradient(to top,#fff 0,#e0e0e0 100%);
+            }
+
+        .presentation {
+            background: #eee;
+            color: #2e44b9;
+            border: 1px solid grey;
+            border-radius: 8px;
+            line-height: 20px;
+            padding: 8px;
+            margin-bottom: 40px;
+            width: 90%;
+            max-width: 800px;
+            font-size: 14px;
+        }
+    </style>
+    <style>
+    .blink {
+    animation: blinker 0.6s linear infinite;
+    color: orange;
+    font-size: 20px:
+    font-weight: bold;
+    font-family: sans-serif;
+    }
+    @keyframes blinker{
+    100% {
+    opacity:0;
+    }
+    }
+    .crop{
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+}
+$('#langOpt').multiselect({
+    columns: 1,
+    placeholder: 'Select Languages',
+    search: true,
+    selectAll: true
+});
+</style>
+    <style>
+table, th, td {
+  border:1px solid black;
+}
+.bg_page {
+  background-color: pink;
+  background-image:url("data:iCNXProtect_Utl\static\images\page-header.jpg;base64,%s");
+  CNXProtect_Utl\static\images\page-header.jpg
+<!--  C:\Users\RNALAB\OneDrive - Concentrix Corporation\CNX Protect Reports\CNX_Protect\-->
+  color: white;
+  border: 2px solid black;
+  margin: 25px;
+  padding: 25px;
+}
+h_1 {text-align: center;}
+p_1 {text-align: center;}
+div_1 {text-align: center;}
+
+</style>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="{% url 'indexing_data5' %}" class="logo d-flex align-items-center">
+        <img src="{% static 'images/CNX_log.jpg' %}" alt="">
+        <span class="d-none d-lg-block">CNX Protect</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+        <!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="{% static 'img/profile.jpg' %}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{user.username}}</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              {% if user.is_authenticated %}
+
+<!--                                    <li> <h4 style= "font-size:1vw;">-->
+<!--                                            <h4 style= "font-size:1.25vw; color:yellow;">-->
+                                         {{user.username}}
+<!--              <h6>Sumithra R</h6>-->
+              <span>, Data Scientist</span>
+                                              {% endif %}
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="account/logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+<!--<li class="nav-item">-->
+<!--        <a class="nav-link " href="{% url 'indexing_data5' %}">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--&lt;!&ndash;          <span>Home</span>&ndash;&gt;-->
+<!--        </a>-->
+<!--      </li>-->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Home</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'indexing1' %}">
+              <i class="bi bi-circle"></i><span>Contract Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'FMEA_Indexing' %}">
+              <i class="bi bi-circle"></i><span>FMEA</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text"></i><span>On-Demand</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a href="{% url 'Contract_Library1' %}">-->
+<!--              <i class="bi bi-circle"></i><span>Contract Library</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="{% url 'FMEA_Real' %}">-->
+<!--              <i class="bi bi-circle"></i><span>FMEA</span>-->
+<!--            </a>-->
+<!--          </li>-->
+
+<!--        </ul>-->
+<!--      </li>-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://app.powerbi.com/links/8OnEUJ60_5?ctid=599e51d6-2f8c-4347-8e59-1f795a51a98c&pbi_source=linkShare&bookmarkGuid=4d2dc58f-c1df-4981-997f-a54e1c8a8e31">
+          <i class="bi bi-grid"></i>
+          <span> BI Dashboard</span>
+        </a>
+      </li>
+        <!-- End Dashboard Nav -->
+<!--      <li class="nav-item" href="{% url 'indexing_data5' %}">-->
+<!--        <a class="nav-link " href="{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">-->
+<!--          <i class="ri-arrow-down-circle-line"></i>-->
+<!--          <span>Download</span>-->
+<!--        </a>-->
+<!--      </li>-->
+        <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="indexing5.html">
+          <i class="bi bi-journal-text"></i><span>Downloads</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a class="nav-link " href="{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">
+              <i class="bi bi-circle"></i><span>Contract Library</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link " href="{{df_filepath_Exe1_1}}" download rel="noopener noopener" target="_blank">
+              <i class="bi bi-circle"></i><span>FMEA</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+       <!-- End Error 404 Page Nav -->
+
+      <!-- End Blank Page Nav -->
+
+    </ul>
+  </aside><!-- End Sidebar-->
+<section style="background-color: #d1e3fd" >
+<!--    <div class="overlay" style="background-image: url(/CNXProtect_Utl/static/images/page-header.jpg)"></div>-->
+    <div class="overlay" style="background-color: #d1e3fd"></div>
+       <div class="container" style="background-color: #d1e3fd">
+  <main id="main" class="main">
+    <div class="pagetitle">
+<!--      <h1>Out-Of-Box</h1>-->
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'indexing_data5' %}">Home</a></li>
+          <li class="breadcrumb-item active">FMEA</li>
+        </ol>
+      </nav>
+    </div>
+<!--    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js"></script>-->
+
+<section class="section dashboard">
+    <div class="container">
+        <div class="card-body">
+            <div class="col-md-4">
+                <div class="labelBox">
+                    <label>Select options of your choice</label>
+                </div>
+                <div class="short-by-box">
+<!--                  <div id="mini-demo-zone"  class="dropdown-toggle" style="width:40%;display:inline-block;">-->
+<!--                  <select name="MSA_1" id="dino-select" multiple size="3" >-->
+<!--                                                              </select>-->
+                  </div>
+                                                                    <form action="{% url 'indexing_data2' %}">
+                                                                        <label  style ="color:red;" >
+                                                          <br>
+                                                                            <div id="mini-demo-zone"  class="dropdown-toggle" style="width:40%;display:inline-block;">
+                                                      MSA Name:
+                                                              <br>
+                                                              <select name="MSA_1" id="dino-select2" multiple size="3" >
+<!--                                                                  <option>~Not an Account</option>-->
+<!--                                                                  <option> ~Not an Account</option>-->
+<option>Aarp</option>
+<option>Abbott</option>
+<option>Accurate Background</option>
+<option>Activant</option>
+<option>Adityabirla</option>
+<option>Advanced Reimbursement Solutions</option>
+<option>Aioinissay</option>
+<option>AirAsia</option>
+<option>Airchina</option>
+<option>Airwallex</option>
+<option>Akzobr</option>
+<option>Alibaba</option>
+<option>Alipay</option>
+<option>Amazon</option>
+<option>Amexexpress</option>
+<option>Amherst</option>
+<option>Amway</option>
+<option>Anthem</option>
+<option>Aptosinc</option>
+<option>Arlo</option>
+<option>Ascensia</option>
+<option>Assurant</option>
+<option>Athenahealth</option>
+<option>ATT</option>
+<option>Avalon</option>
+<option>Avaya</option>
+<option>Axisbank</option>
+<option>Barclay</option>
+<option>Bayzat</option>
+<option>Bcbs Fl</option>
+<option>BCBS Nc</option>
+<option>Bed Bath And Beyond</option>
+<option>Belkin</option>
+<option>Benefitfocus</option>
+<option>Bio Reference</option>
+<option>Bookingcom</option>
+<option>Bosch</option>
+<option>Bosley</option>
+<option>Britishtelecom</option>
+<option>Broadcom</option>
+<option>Brocade</option>
+<option>Bytedance</option>
+<option>C6bank</option>
+<option>Canoninc</option>
+<option>Canva</option>
+<option>Capitalone</option>
+<option>Careerbuilder</option>
+<option>Cartrawler</option>
+<option>Catalina</option>
+<option>Caterpillar</option>
+<option>Cdw</option>
+<option>Centene</option>
+<option>Centerfield</option>
+<option>Cescltd</option>
+<option>Channel 4</option>
+<option>Chargepoint</option>
+<option>Charter</option>
+<option>Chime Financial Inc.</option>
+<option>Cigna</option>
+<option>Cisbpo</option>
+<option>Cisco</option>
+<option>Citibank</option>
+<option>Citizenbank</option>
+<option>Cnt</option>
+<option>Colonialpenn</option>
+<option>Comcast Corp</option>
+<option>Coupa</option>
+<option>Crosscom Technical Support Services</option>
+<option>Cvs Health Aetna</option>
+<option>Daiichilife</option>
+<option>Dell</option>
+<option>Deutsche Bank</option>
+<option>Dish</option>
+<option>Doc National Relay Services</option>
+<option>Drconsulta</option>
+<option>Dunbradstreet</option>
+<option>Dyson</option>
+<option>Ebay</option>
+<option>Eloservicos</option>
+<option>Endurance</option>
+<option>Energyaus</option>
+<option>Enterprise</option>
+<option>Exide</option>
+<option>Expedia</option>
+<option>Express Scripts</option>
+<option>F5</option>
+<option>Facebook</option>
+<option>Federal Express</option>
+<option>Federalbank</option>
+<option>Fifththird</option>
+<option>Flipkart</option>
+<option>Foxsymes</option>
+<option>Gannett</option>
+<option>Gap</option>
+<option>General Motors</option>
+<option>Genex Services</option>
+<option>Getaroom</option>
+<option>Globe And Mail Inc</option>
+<option>Globetelecom</option>
+<option>Glovo</option>
+<option>Godaddy</option>
+<option>Gojek</option>
+<option>GoldenArrow</option>
+<option>Google</option>
+<option>Gopro</option>
+<option>Grabtaxi</option>
+<option>Greendot</option>
+<option>H&R Block</option>
+<option>Handy</option>
+<option>Hash</option>
+<option>Hdfcltd</option>
+<option>Hdfcstandard</option>
+<option>Healthfirst</option>
+<option>Hennes & Mauritz Gbc Ab</option>
+<option>Highmark</option>
+<option>Hii</option>
+<option>Honda</option>
+<option>Hpinc</option>
+<option>Htc</option>
+<option>Humana</option>
+<option>Humax</option>
+<option>Hurom</option>
+<option>Hwawei</option>
+<option>Hyatt</option>
+<option>IBIBO</option>
+<option>Ibmcommer</option>
+<option>Icicibank</option>
+<option>Icontrol</option>
+<option>Ikea</option>
+<option>Imvu</option>
+<option>Indeed</option>
+<option>Indusind</option>
+<option>Inspirato</option>
+<option>Intuit</option>
+<option>Ironmountain</option>
+<option>J2</option>
+<option>Jarc</option>
+<option>Jetairways</option>
+<option>Jpmorganchase</option>
+<option>Jumpcloud</option>
+<option>Juniper</option>
+<option>Juntos Somos Mais</option>
+<option>Karur</option>
+<option>Kaspersky</option>
+<option>Keybank</option>
+<option>Kimberlyclark</option>
+<option>Kiwicom</option>
+<option>Klook</option>
+<option>Kneip</option>
+<option>Koreanair</option>
+<option>Kotak</option>
+<option>Kyocera</option>
+<option>Lazada</option>
+<option>Lebara</option>
+<option>Leisurepass</option>
+<option>Lesliespoolmart</option>
+<option>Lexmark</option>
+<option>Lgcorp</option>
+<option>Liberty Global</option>
+<option>Linde</option>
+<option>Lineplus</option>
+<option>Lorex</option>
+<option>Loyalty</option>
+<option>Ltm</option>
+<option>Luxottica</option>
+<option>Macys</option>
+<option>Makemytrip</option>
+<option>Marriot</option>
+<option>Marutiins</option>
+<option>Marutisuz</option>
+<option>McAfee</option>
+<option>Mediacom</option>
+<option>Medimpact</option>
+<option>Meijiyasuda</option>
+<option>Mgmotors</option>
+<option>Microsoft</option>
+<option>Mitac</option>
+<option>Mlivre</option>
+<option>Mondelez</option>
+<option>Nationwide</option>
+<option>Navinet</option>
+<option>Neato</option>
+<option>Nestle</option>
+<option>Netapp</option>
+<option>NetGear</option>
+<option>Next Jump Inc</option>
+<option>Nike</option>
+<option>Norton</option>
+<option>Oceanx</option>
+<option>Omahasteak</option>
+<option>Ondeck</option>
+<option>Oneplus</option>
+<option>Onfido</option>
+<option>Oppo</option>
+<option>Optus</option>
+<option>Originenergy</option>
+<option>Party City</option>
+<option>PayPal</option>
+<option>Pcamotors</option>
+<option>Pearson</option>
+<option>Philipmorris</option>
+<option>Phonepe Private Limited</option>
+<option>Picpay</option>
+<option>Pomeroy</option>
+<option>Premier Connect</option>
+<option>Primark</option>
+<option>Project Management Institute</option>
+<option>Providence Technology Solutions Llc</option>
+<option>Quinto Andar</option>
+<option>Quod</option>
+<option>Rac</option>
+<option>Rakuten</option>
+<option>Rappi</option>
+<option>Razer</option>
+<option>Razor</option>
+<option>Realdefense</option>
+<option>Receiptbank</option>
+<option>Reckittbenck</option>
+<option>Reckon</option>
+<option>Redbox</option>
+<option>Redhat</option>
+<option>Renault</option>
+<option>Rest</option>
+<option>Revolut</option>
+<option>Roblox</option>
+<option>Rogers</option>
+<option>RSLeague</option>
+<option>Ryder</option>
+<option>Samsung</option>
+<option>Santander</option>
+<option>Sbi</option>
+<option>Scotia</option>
+<option>Servify</option>
+<option>Shopeebr</option>
+<option>Singtel</option>
+<option>Siriusxm</option>
+<option>Skyhawke</option>
+<option>Solutran</option>
+<option>Spotify</option>
+<option>Sputnik</option>
+<option>Stellantis</option>
+<option>Stockx</option>
+<option>Sul</option>
+<option>Sumitomo</option>
+<option>Suncor</option>
+<option>Suntrust</option>
+<option>Supportrix</option>
+<option>Synnex</option>
+<option>T_Mobile</option>
+<option>Taboola</option>
+<option>Target</option>
+<option>Taskrabbit</option>
+<option>TATAAIA</option>
+<option>Texasinst</option>
+<option>Thewarehouseltd</option>
+<option>Ticketmaster</option>
+<option>Toronto Star</option>
+<option>Tpbank</option>
+<option>Transurban</option>
+<option>Tripadvisor</option>
+<option>Tufts Health</option>
+<option>Tvs</option>
+<option>Twitter</option>
+<option>Uber</option>
+<option>Ubisoft</option>
+<option>Unilever</option>
+<option>United Airlines</option>
+<option>Unitedhealth Group</option>
+<option>Unitedurology</option>
+<option>Unwfp</option>
+<option>Uplltd</option>
+<option>Urumacity</option>
+<option>US Cellular</option>
+<option>Utkarsh</option>
+<option>Veritas</option>
+<option>Vestiaire Collective</option>
+<option>Visa</option>
+<option>VKB</option>
+<option>Vmware</option>
+<option>Vodafone</option>
+<option>Vonage</option>
+<option>Vpbank</option>
+<option>Wallstreet</option>
+<option>Walmart</option>
+<option>Watsons</option>
+<option>Westpac</option>
+<option>White Hat</option>
+<option>Windstream</option>
+<option>Wirecard</option>
+<option>Wyndham</option>
+<option>Xerox</option>
+<option>Xiaomi</option>
+<option>Yilijk</option><option>Zomato</option>
+<option>Zscaler Inc</option>
+<!--                                                                     <option>~MSA not available</option>-->
+                                                              </select>
+                                                            </div>
+                                                                            <div id="mini-demo-zone"  class="dropdown-toggle" style="width:40%;display:inline-block;">
+<!--                                                            <div style="color:Black" placeholder="Select MSA";>-->
+<!--                                                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example</button>-->
+<!--            <textarea name="problem" id="problem" rows="3" class="form-control" cols="45" placeholder="Describe your ticket reason in as few words as possible."></textarea>-->
+                                                            Theme/Topic:
+                                                              <br>
+                                                              <select name="Theme" id="dino-select" multiple size="3" >
+                                                                   <optgroup label = "CC Info Visible">
+                                                                      <option>CVV</option>
+                                                                      <option>Card information</option>
+                                                                      <option>Debit Card</option>
+                                                                      <option>Credit Card</option>
+                                                                      <option>Card info</option>
+                                                                      <option>Misuse Customer’s Credit Card</option>
+                                                                      <option>Card Pin</option>
+                                                                      <option>CVC</option>
+                                                                      <option>Credit card information visible</option>
+                                                                     </optgroup>
+                                                                  <optgroup label = "Customer Info Misuse">
+                                                                     <option> Sell</option>
+                                                                    <option>Customer information misuse</option>
+                                                                    <option>Customer info misuse</option>
+                                                                    <option>Misuse of Customer’s iCloud information</option>
+                                                                     </optgroup>
+
+                                                                  <optgroup label = "Financials ">
+                                                                      <option> Waivers</option>
+                                                                        <option> Refund</option>
+                                                                        <option> customer information</option>
+                                                                        <option> Adjustment</option>
+                                                                        <option> SLA Manipulation</option>
+                                                                        <option> Discount</option>
+                                                                        <option> reward</option>
+                                                                        <option> Concession</option>
+                                                                        <option> Price adjustment</option>
+                                                                        <option> Illegitimate discounts</option>
+                                                                        <option> Incorrect payment amount</option>
+                                                                        <option> Coupon</option>
+                                                                        <option> Payment reversal</option>
+                                                                        <option> appeasement</option>
+                                                                        <option> Promotional Code</option>
+                                                                        <option> Promo Code</option>
+                                                                        <option> Promotional</option>
+                                                                        <option> Insurance</option>
+                                                                        <option> customer personal information</option>
+                                                                        <option> customer info</option>
+                                                                        <option> Misuse of promo code</option>
+                                                                        <option> unauthorized Gift Voucher</option>
+                                                                        <option> Discount Codes</option>
+                                                                        <option> Incorrect Refund</option>
+                                                                        <option> Multiple concession</option>
+                                                                        <option> waive off</option>
+                                                                        <option> Gift Card</option>
+                                                                        <option> sale offer</option>
+                                                                        <option> multiple refunds</option>
+                                                                        <option> Discount Code</option>
+                                                                        <option> Price Override</option>
+                                                                        <option> customer personal info</option>
+
+                                                                     </optgroup>
+                                                                  <optgroup label = "InfoSec/ Data Privacy ">
+                                                                     <option> Information Security</option>
+                                                                    <option>Mobile</option>
+                                                                    <option>Infosec</option>
+                                                                    <option>Data Privacy</option>
+                                                                    <option>Unlocked</option>
+                                                                    <option>Paper</option>
+                                                                    <option>DPA</option>
+                                                                    <option>Password sharing</option>
+                                                                    <option>social media</option>
+                                                                    <option>Open Internet</option>
+                                                                    <option>Data Exfiltration</option>
+                                                                    <option>Unattended</option>
+                                                                    <option>Food</option>
+                                                                    <option>Cabinet</option>
+                                                                    <option>Password reset</option>
+                                                                    <option>Cell phone</option>
+                                                                    <option>Confidential info</option>
+                                                                    <option>MFA</option>
+                                                                    <option>DLP</option>
+                                                                    <option>Locker</option>
+                                                                    <option>Pen</option>
+                                                                    <option>2FA</option>
+                                                                    <option>Infosec/Data Privacy</option>
+                                                                    <option>Tailgating</option>
+                                                                    <option>Public Posts</option>
+                                                                    <option>company asset</option>
+                                                                    <option>Common password</option>
+                                                                    <option>Beverage </option>
+                                                                     </optgroup>
+                                                                  <optgroup label = "Loyalty Programs">
+                                                                      <option> Miles</option>
+                                                                      <option>Mileage</option>
+                                                                      <option>Air miles</option>
+                                                                     </optgroup>
+                                                                 <optgroup label="Metric Manipulation - CSAT ">
+                                                                        <option> Survey</option>
+                                                                        <option> Incorrect email address</option>
+                                                                        <option> Work Avoidance</option>
+                                                                        <option> Toggling</option>
+                                                                        <option> Surveys</option>
+                                                                        <option> Waivers</option>
+                                                                        <option> Refund</option>
+                                                                        <option> Chat Avoidance</option>
+                                                                        <option> Customer Satisfaction</option>
+                                                                        <option> Information Security</option>
+                                                                      <option> Sell</option>
+                                                                      <option>CSAT</option>
+                                                                      <option>CSAT Manipulation</option>
+                                                                      <option>NPS</option>
+                                                                      <option>Survey avoidance</option>
+                                                                      <option>Survey Manipulation</option>
+                                                                      <option>CSAT solicitation</option>
+                                                                      <option>Removing email address</option>
+                                                                      <option>Change in case Owner</option>
+                                                                      <option>Not transferring to IVR</option>
+                                                                      <option>Survey Solicitation</option>
+                                                                      <option>Net Promoter Score</option>
+                                                                      <option>Incorrect Disposition</option>
+                                                                      <option>CSAT Avoidance</option>
+                                                                      <option>Closing account in an incorrect mode</option>
+                                                                      <option>Change email address</option>
+                                                                      <option>IP address report</option>
+                                                                      <option>Wrong Disposition</option>
+                                                                      <option>Dummy Account</option>
+                                                                      <option>Fake account</option>
+                                                                      <option>Self Survey</option>
+                                                                      <option>HMD Manipulation</option>
+                                                                    </optgroup>
+                                                                  <optgroup label = "Metric Manipulation Others">
+                                                                     <option> Metric Manipulation</option>
+                                                                    <option>Incorrect transfer</option>
+                                                                    <option>Not Tagging</option>
+                                                                    <option>KPI Manipulation</option>
+                                                                    <option>Splitting the sale</option>
+                                                                    <option>Fake order placed</option>
+                                                                    <option>System Timeclock Manipulation</option>
+                                                                    <option>Incorrect Sale</option>
+                                                                    <option>Fake order</option>
+                                                                    <option>System Reboot</option>
+                                                                    <option>Reboot</option>
+                                                                    <option>Incorrect Routing</option>
+                                                                    <option>Incentive Manipulation</option>
+                                                                    <option>Inflate productivity</option>
+                                                                    <option>Change customer information</option>
+                                                                    <option>Time Manipulation</option>
+                                                                    <option>Incomplete Documentation</option>
+                                                                    <option>Case not logged</option>
+                                                                    <option>Avaya Reboot</option>
+                                                                    <option>Incorrect Documentation</option>
+                                                                     </optgroup>
+
+                                                                                                                                    <optgroup label = "Work Avoidance ">
+                                                                     <option> Work Avoidance</option>
+                                                                    <option>Toggling</option>
+                                                                    <option>Chat Avoidance</option>
+                                                                    <option>Call Avoidance</option>
+                                                                    <option>Email Avoidance</option>
+                                                                    <option>Delayed response</option>
+                                                                    <option>Call release</option>
+                                                                    <option>Cherry Picking</option>
+                                                                    <option>Aux misuse</option>
+                                                                    <option>No Call Opening</option>
+                                                                    <option>Personal Calls</option>
+                                                                    <option>Remain on call after customer disconnects</option>
+                                                                    <option>Aux Abuse</option>
+                                                                    <option>Call Drop</option>
+                                                                    <option>Delayed call opening</option>
+                                                                    <option>Queue Toggling</option>
+                                                                    <option>SOP not followed</option>
+                                                                    <option>Process not followed</option>
+                                                                    <option>Force shutdown</option>
+                                                                    <option>Unauthorized Outbound Calls</option>
+                                                                     </optgroup>
+                                                              </select>
+                                                            </div>
+                                                                            <div id="mini-demo-zone"  class="dropdown-toggle" style="width:80%;display:inline-block;">
+<!--                                                            <div style="color:Black" placeholder="Select MSA";>-->
+<!--                                                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example</button>-->
+<!--            <textarea name="problem" id="problem" rows="3" class="form-control" cols="45" placeholder="Describe your ticket reason in as few words as possible."></textarea>-->
+                                                            GEO Name:
+                                                              <br>
+                                                              <select name="Geo" id="dino-select1" multiple size="3" >
+<!--                                                                  <option>~Not an Account</option>-->
+<!--                                                                  <option> ~Not an Account</option>-->
+
+                                                                  <option>India/ANZ/ASEAN/UAE</option>
+                                                                  <option>Philippines</option>
+                                                                  <option>EMEA / S Africa</option>
+                                                                  <option>North America</option>
+                                                                  <option>China/Japan/Korea</option>
+                                                                  <option>LATAM</option>
+                                                            </select>
+                                                            </div>
+                                                                            </label>
+
+                                                        <br>
+                                                        {{DF1_1}}
+                    <br>
+                                                      <input style ="color:Black;" type="submit" value="Submit">
+<br>
+                                                    <br>
+<!--                                                          </label>-->
+                                                    </form>
+            </div>
+
+                <tr>
+                    <td>{{DF1_1}}</td>
+<!--                    <td>{{DF1_1}} </td>-->
+                </tr>
+     </table>
+            </div>
+        </div>
+<span style ="color:black;" class="font-italic" href = "">Didn't find the keyword?<br></span>
+<!--<h9 style ="color:yellow;" href = "">  <small>Add New Keyword.  </small>  </h9>-->
+                                                    <button><a href="{% url 'keyword_list1' %}" style ="color:black;">Click here</a> </button>
+<!--   <a href="{% url 'FMEA_Real' %}">-->
+<!--              <i class="bi bi-circle"></i><span>FMEA</span>-->
+<!--            </a>-->
+<!--                                                          </label>-->
+ <script>
+Swal.fire({
+  title: 'Add Keyword',
+  input: 'text',
+  showCloseButton: true,
+  showCancelButton: true,
+  inputPlaceholder: 'Enter your Keyword',
+  inputAttributes: {
+  inputPlaceholder: 'Enter your Keyword',
+  autocapitalize: 'off'
+  },
+  showCancelButton: true,
+  confirmButtonText: 'Add',
+  showLoaderOnConfirm: true,
+  preConfirm: (login) => {
+    return fetch(`//api.github.com/users/${login}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+        return response.json()
+      })
+      .catch(error => {
+        Swal.showValidationMessage(
+          `Request failed: ${error}`
+        )
+      })
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: `The keyword '${result.value.login}' will add to the list`,
+<!--      print(${result.value.login})-->
+<!--      imageUrl: result.value.avatar_url-->
+    })
+  }
+})
+</script>
+      </section>
+  </main>
+</div>
+</section>
+
+<!--  <center>The searching Keywords are not in the above list?</center>-->
+
+<body>
+
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+<!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<html lang="en-gb" class="no-js">
+<!--$(document).ready(function() {-->
+<!--        $('#MSA_1').multiselect();-->
+<!--    });-->
+  <head>
+<!--    <meta charset="utf-8">-->
+<!--	<title>Contract Library</title>-->
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/vanillaSelectBox.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+    <link rel="{% static 'stylesheet" type="text/css' %}" href="css/animate.css" />
+    <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
+    <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
+<!--        <script src="js/html5shiv.js"></script>-->
+<!--        <script src="js/respond.min.js"></script>-->
+        <![endif]-->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<!--    <link rel="stylesheet" href="{% static 'todos/styles.css' %}">-->
+<!--  $( function() {-->
+<!--    $( "#datepicker" ).datepicker();-->
+<!--  } );-->
+  </head>
+
+<body  data-spy="scroll" data-target="#main-menu"><!--Start Page loader --><!--End Page loader --><!--Start Navigation-->
+		<header id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="fa fa-bars"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                            <!--Start Logo -->
+							<div class="logo-nav">
+								<a href="index.html">
+<!--									<img src="{% static 'images/CNX_log.jpg' %}" alt="Company logo" />-->
+								</a>
+							</div>
+                            <!--End Logo -->
+							<div class="clear-toggle"></div>
+
+							<div id="main-menu" class="collapse scroll navbar-right">
+								<ul class="nav">
+                                  {% if request.user.is_staff %}
+									<li> <a href="#objective">Action </a> </li>
+                                 {% endif %}
+									<li> <a href="#contact">Contact</a> </li>
+                                    {% if user.is_authenticated %}
+                                    <li> <h4 style= "font-size:1vw;">
+                                            <h4 style= "font-size:1.25vw; color:yellow;">
+                                        Hello, {{user.username}}
+                                            </h4></h4></li>
+                                    <li> <a href="account/logout">Logout</a> </li>
+                                    {% else %}
+                                    <li> <a href="webpage/register">Register</a> </li>
+
+                                    <li> <a href="webpage/login">Login</a> </li>
+                                    {% endif %}
+								</ul>
+							</div><!-- end main-menu -->
+						</div>
+					</div>
+				</div>
+			</header>
+    <!--End Navigation-->
+        <!-- Start Slider  -->
+<footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Concentrix2022</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+<!--      Designed by <a href="https://scholar.google.com/citations?user=fDvDh2MAAAAJ&hl=en">SUMITHRA R</a>-->
+    </div>
+  </footer>
+
+	<div class="demo-zone" id="demo-single">
+<!--		<label>Choose a brand in list : </label>-->
+        <select id="brandsOne"></select>
+		<div class="btns-active">
+<!--			<button class="demo" style="width:140px;" onClick="document.getElementById('brandsOneChoice').innerHTML=document.getElementById('brandsOne').value;"></button>-->
+<!--			<span id="brandsOneChoice"></span>-->
+		</div>
+		<div class="btns-inactive"  style="display:none">;
+<!--			<button class="demo" onClick="init('brandsOne')">vanillaSelectBox()</button>-->
+		</div>
+    </div>
+
+	<div class="demo-zone" id="demo-multiple">
+<!--		<label>Choose several brands : </label>-->
+        <select id="brandsMulti" multiple size="3"></select>
+		<div class="btns-active">
+
+<!--			<button  class="demo" style="width:140px;" onClick="document.getElementById('brandsMultiChoice').innerHTML=(getValues('brandsMulti')).join(',');">-->
+<!--                get select values-->
+<!--            </button>&nbsp;-->
+<span id="brandsMultiChoice"></span>
+		</div>
+		<div class="btns-inactive" style="display:none";>
+			<button class="demo" onClick="init('brandsMulti')">vanillaSelectBox()</button>
+		</div>
+    </div>
+
+    <div class="demo-zone">
+<!--        <label><b>All selected test : </b></label>-->
+        <select id="demoShort" multiple="" size="3" style="display: inline-block;">
+
+        </select>
+
+    </div>
+    <div style="width:100%;">
+        <div class="demo-zone" id="demo-stay" style="width:40%;display:inline-block;">
+<!--            <label>Stay open : </label>-->
+            <br/><select id="brandsMultiStay" multiple size="3"></select>
+        </div>
+
+        <div class="demo-zone" id="demo-stay-right" style="width:50%;text-align:right;display:inline-block;">
+<!--            <label>All countries : </label>-->
+            <br/><select id="allCountries" multiple size="4"></select>
+        </div>
+    </div>
+</div>
+<!--        <script src="js/html5shiv.js"></script>-->
+<!--    <link href="js/vanillaSelectBox.js" />-->
+<!--        <img src="{% static 'images/homepage1.png' %}" alt="">-->
+<script src="{% static 'js/vanillaSelectBox.js' %}"></script>
+
+<script>
+
+    let brands = [""];
+    let select1 = document.getElementById("brandsOne");
+    var option = document.createElement("option");
+    option.value = "";
+    option.text = "";
+    select1.appendChild(option);
+    for (var i = 0;
+     i < brands.length;
+     i++) {
+        var option = document.createElement("option");
+        option.value = brands[i];
+        option.text = brands[i];
+		if (i == 5) option.setAttribute("disabled", "");
+
+        if (i == 23) option.setAttribute("selected", true);
+        let colorClass = "";
+        if (i > 2)
+            option.classList.add(i % 2 == 0 ? "darkRed" : "darkBlue")
+        select1.appendChild(option);
+    }
+    let select2 = document.getElementById("brandsMulti");
+    for (var i = 0;
+     i < brands.length;
+     i++) {
+        var option = document.createElement("option");
+        option.value = brands[i];
+        option.text = brands[i];
+        if (i == 5) option.setAttribute("disabled", "");
+
+        if (i == 23) option.setAttribute("selected", true);
+        if (i >= 3 && i <= 7) option.setAttribute("selected", true);
+        select2.appendChild(option);
+    }
+	    let select3 = document.getElementById("brandsMultiStay");
+    for (var i = 0;
+     i < brands.length;
+     i++) {
+        var option = document.createElement("option");
+        option.value = brands[i];
+        option.text = brands[i];
+        if (i == 15) option.setAttribute("selected", true);
+        if (i >= 3 && i <= 7) option.setAttribute("selected", true);
+        select3.appendChild(option);
+    }
+    let selectBox = null;
+    let selectBox2 = null;
+	let selectBox3 = null;
+    function setEnable(id, isEnabled) {
+        if (id == "brandsOne" && selectBox != null) {
+            if (isEnabled) {
+                selectBox.enable();
+            } else {
+                selectBox.disable();
+            }
+
+        } else if (id == "brandsMulti" && selectBox2 != null) {
+            if (isEnabled) {
+                selectBox2.enable();
+            } else {
+                selectBox2.disable();
+            }
+        }
+    }
+    function empty(id) {
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.empty();
+        } else if (id == "brandsMulti" && selectBox2 != null) {
+            selectBox2.empty();
+        }
+    }
+    function doDestroy(id) {
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.destroy();
+            let zone = document.getElementById("demo-single");
+            buttons = zone.querySelector(".btns-active");
+            buttons.style.display = "none";
+            buttons = zone.querySelector(".btns-inactive");
+            buttons.style.display = "block";
+
+
+        } else if (id == "brandsMulti" && selectBox2 != null) {
+            selectBox2.destroy();
+            let zone = document.getElementById("demo-multiple");
+            buttons = zone.querySelector(".btns-active");
+            buttons.style.display = "none";
+            buttons = zone.querySelector(".btns-inactive");
+            buttons.style.display = "block";
+
+        }
+    }
+    function init(id) {
+        if (id == "brandsOne") {
+<!--            selectBox = new vanillaSelectBox("#brandsOne", { "keepInlineStyles":true,"maxHeight": 200,"maxWidth":178,"minWidth":178, "search": true, "placeHolder": "Choose a brand..." });-->
+            let zone = document.getElementById("demo-single");
+            buttons = zone.querySelector(".btns-active");
+            buttons.style.display = "block";
+            buttons = zone.querySelector(".btns-inactive");
+            buttons.style.display = "none";
+        } else if (id == "brandsMulti") {
+
+            selectBox2 = new vanillaSelectBox("#brandsMulti", {"disableSelectAll": true, "maxHeight": 200, "search": true ,"translations": { "all": "All", "items": "items","selectAll":"Check All","clearAll":"Clear All"}});
+            let zone = document.getElementById("demo-multiple");
+            buttons = zone.querySelector(".btns-active");
+            buttons.style.display = "block";
+            buttons = zone.querySelector(".btns-inactive");
+            buttons.style.display = "none";
+
+        }else if (id == "brandsMultiStay") {
+            selectBox3 = new vanillaSelectBox("#brandsMultiStay", { "maxHeight": 200, "search": true,"stayOpen":true });
+        }
+    }
+    function setValues(id, value) {
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.setValue(value);
+        } else if (id == "brandsMulti" && selectBox2 != null) {
+            selectBox2.setValue(value);
+        }
+    }
+    function getValues(id) {
+        let result = [];
+        let collection = document.querySelectorAll("#" + id + " option");
+        collection.forEach(function (x) {
+            if (x.selected) {
+                result.push(x.value);
+            }
+        });
+        return result;
+    }
+
+    function disableItems(id,value){
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.disableItems(value);
+        }
+    }
+
+    function enableItems(id,value){
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.enableItems(value);
+        }
+    }
+
+    init("brandsOne");
+    init("brandsMulti");
+	init("brandsMultiStay");
+    selectBoxTest = new vanillaSelectBox("#demoShort", {
+        "maxHeight": 200,
+        "search": true ,
+        "translations": { "all": "All", "items": "items","selectAll":"Check All","clearAll":"Clear All","placeHolder": "Choose a brand..."}
+    });
+
+let allCountries = [
+{"name": "Afghanistan", "code": "AF"},
+{"name": "Åland Islands", "code": "AX"},
+{"name": "Albania", "code": "AL"},
+{"name": "Algeria", "code": "DZ"},
+{"name": "American Samoa", "code": "AS"},
+{"name": "AndorrA", "code": "AD"},
+{"name": "Angola", "code": "AO"},
+{"name": "Anguilla", "code": "AI"},
+{"name": "Antarctica", "code": "AQ"},
+{"name": "Antigua and Barbuda", "code": "AG"},
+{"name": "Argentina", "code": "AR"},
+{"name": "Armenia", "code": "AM"},
+{"name": "Aruba", "code": "AW"},
+{"name": "Australia", "code": "AU"},
+{"name": "Austria", "code": "AT"},
+{"name": "Azerbaijan", "code": "AZ"},
+{"name": "Bahamas", "code": "BS"},
+{"name": "Bahrain", "code": "BH"},
+{"name": "Bangladesh", "code": "BD"},
+{"name": "Barbados", "code": "BB"},
+{"name": "Belarus", "code": "BY"},
+{"name": "Belgium", "code": "BE"},
+{"name": "Belize", "code": "BZ"},
+{"name": "Benin", "code": "BJ"},
+{"name": "Bermuda", "code": "BM"},
+{"name": "Bhutan", "code": "BT"},
+{"name": "Bolivia", "code": "BO"},
+{"name": "Bosnia and Herzegovina", "code": "BA"},
+{"name": "Botswana", "code": "BW"},
+{"name": "Bouvet Island", "code": "BV"},
+{"name": "Brazil", "code": "BR"},
+{"name": "British Indian Ocean Territory", "code": "IO"},
+{"name": "Brunei Darussalam", "code": "BN"},
+{"name": "Bulgaria", "code": "BG"},
+{"name": "Burkina Faso", "code": "BF"},
+{"name": "Burundi", "code": "BI"},
+{"name": "Cambodia", "code": "KH"},
+{"name": "Cameroon", "code": "CM"},
+{"name": "Canada", "code": "CA"},
+{"name": "Cape Verde", "code": "CV"},
+{"name": "Cayman Islands", "code": "KY"},
+{"name": "Central African Republic", "code": "CF"},
+{"name": "Chad", "code": "TD"},
+{"name": "Chile", "code": "CL"},
+{"name": "China", "code": "CN"},
+{"name": "Christmas Island", "code": "CX"},
+{"name": "Cocos (Keeling) Islands", "code": "CC"},
+{"name": "Colombia", "code": "CO"},
+{"name": "Comoros", "code": "KM"},
+{"name": "Congo", "code": "CG"},
+{"name": "Congo, The Democratic Republic of the", "code": "CD"},
+{"name": "Cook Islands", "code": "CK"},
+{"name": "Costa Rica", "code": "CR"},
+{"name": "Cote D\'Ivoire", "code": "CI"},
+{"name": "Croatia", "code": "HR"},
+{"name": "Cuba", "code": "CU"},
+{"name": "Cyprus", "code": "CY"},
+{"name": "Czech Republic", "code": "CZ"},
+{"name": "Denmark", "code": "DK"},
+{"name": "Djibouti", "code": "DJ"},
+{"name": "Dominica", "code": "DM"},
+{"name": "Dominican Republic", "code": "DO"},
+{"name": "Ecuador", "code": "EC"},
+{"name": "Egypt", "code": "EG"},
+{"name": "El Salvador", "code": "SV"},
+{"name": "Equatorial Guinea", "code": "GQ"},
+{"name": "Eritrea", "code": "ER"},
+{"name": "Estonia", "code": "EE"},
+{"name": "Ethiopia", "code": "ET"},
+{"name": "Falkland Islands (Malvinas)", "code": "FK"},
+{"name": "Faroe Islands", "code": "FO"},
+{"name": "Fiji", "code": "FJ"},
+{"name": "Finland", "code": "FI"},
+{"name": "France", "code": "FR"},
+{"name": "French Guiana", "code": "GF"},
+{"name": "French Polynesia", "code": "PF"},
+{"name": "French Southern Territories", "code": "TF"},
+{"name": "Gabon", "code": "GA"},
+{"name": "Gambia", "code": "GM"},
+{"name": "Georgia", "code": "GE"},
+{"name": "Germany", "code": "DE"},
+{"name": "Ghana", "code": "GH"},
+{"name": "Gibraltar", "code": "GI"},
+{"name": "Greece", "code": "GR"},
+{"name": "Greenland", "code": "GL"},
+{"name": "Grenada", "code": "GD"},
+{"name": "Guadeloupe", "code": "GP"},
+{"name": "Guam", "code": "GU"},
+{"name": "Guatemala", "code": "GT"},
+{"name": "Guernsey", "code": "GG"},
+{"name": "Guinea", "code": "GN"},
+{"name": "Guinea-Bissau", "code": "GW"},
+{"name": "Guyana", "code": "GY"},
+{"name": "Haiti", "code": "HT"},
+{"name": "Heard Island and Mcdonald Islands", "code": "HM"},
+{"name": "Holy See (Vatican City State)", "code": "VA"},
+{"name": "Honduras", "code": "HN"},
+{"name": "Hong Kong", "code": "HK"},
+{"name": "Hungary", "code": "HU"},
+{"name": "Iceland", "code": "IS"},
+{"name": "India", "code": "IN"},
+{"name": "Indonesia", "code": "ID"},
+{"name": "Iran, Islamic Republic Of", "code": "IR"},
+{"name": "Iraq", "code": "IQ"},
+{"name": "Ireland", "code": "IE"},
+{"name": "Isle of Man", "code": "IM"},
+{"name": "Israel", "code": "IL"},
+{"name": "Italy", "code": "IT"},
+{"name": "Jamaica", "code": "JM"},
+{"name": "Japan", "code": "JP"},
+{"name": "Jersey", "code": "JE"},
+{"name": "Jordan", "code": "JO"},
+{"name": "Kazakhstan", "code": "KZ"},
+{"name": "Kenya", "code": "KE"},
+{"name": "Kiribati", "code": "KI"},
+{"name": "Korea, Democratic People\'S Republic of", "code": "KP"},
+{"name": "Korea, Republic of", "code": "KR"},
+{"name": "Kuwait", "code": "KW"},
+{"name": "Kyrgyzstan", "code": "KG"},
+{"name": "Lao People\'S Democratic Republic", "code": "LA"},
+{"name": "Latvia", "code": "LV"},
+{"name": "Lebanon", "code": "LB"},
+{"name": "Lesotho", "code": "LS"},
+{"name": "Liberia", "code": "LR"},
+{"name": "Libyan Arab Jamahiriya", "code": "LY"},
+{"name": "Liechtenstein", "code": "LI"},
+{"name": "Lithuania", "code": "LT"},
+{"name": "Luxembourg", "code": "LU"},
+{"name": "Macao", "code": "MO"},
+{"name": "Macedonia, The Former Yugoslav Republic of", "code": "MK"},
+{"name": "Madagascar", "code": "MG"},
+{"name": "Malawi", "code": "MW"},
+{"name": "Malaysia", "code": "MY"},
+{"name": "Maldives", "code": "MV"},
+{"name": "Mali", "code": "ML"},
+{"name": "Malta", "code": "MT"},
+{"name": "Marshall Islands", "code": "MH"},
+{"name": "Martinique", "code": "MQ"},
+{"name": "Mauritania", "code": "MR"},
+{"name": "Mauritius", "code": "MU"},
+{"name": "Mayotte", "code": "YT"},
+{"name": "Mexico", "code": "MX"},
+{"name": "Micronesia, Federated States of", "code": "FM"},
+{"name": "Moldova, Republic of", "code": "MD"},
+{"name": "Monaco", "code": "MC"},
+{"name": "Mongolia", "code": "MN"},
+{"name": "Montserrat", "code": "MS"},
+{"name": "Morocco", "code": "MA"},
+{"name": "Mozambique", "code": "MZ"},
+{"name": "Myanmar", "code": "MM"},
+{"name": "Namibia", "code": "NA"},
+{"name": "Nauru", "code": "NR"},
+{"name": "Nepal", "code": "NP"},
+{"name": "Netherlands", "code": "NL"},
+{"name": "Netherlands Antilles", "code": "AN"},
+{"name": "New Caledonia", "code": "NC"},
+{"name": "New Zealand", "code": "NZ"},
+{"name": "Nicaragua", "code": "NI"},
+{"name": "Niger", "code": "NE"},
+{"name": "Nigeria", "code": "NG"},
+{"name": "Niue", "code": "NU"},
+{"name": "Norfolk Island", "code": "NF"},
+{"name": "Northern Mariana Islands", "code": "MP"},
+{"name": "Norway", "code": "NO"},
+{"name": "Oman", "code": "OM"},
+{"name": "Pakistan", "code": "PK"},
+{"name": "Palau", "code": "PW"},
+{"name": "Palestinian Territory, Occupied", "code": "PS"},
+{"name": "Panama", "code": "PA"},
+{"name": "Papua New Guinea", "code": "PG"},
+{"name": "Paraguay", "code": "PY"},
+{"name": "Peru", "code": "PE"},
+{"name": "Philippines", "code": "PH"},
+{"name": "Pitcairn", "code": "PN"},
+{"name": "Poland", "code": "PL"},
+{"name": "Portugal", "code": "PT"},
+{"name": "Puerto Rico", "code": "PR"},
+{"name": "Qatar", "code": "QA"},
+{"name": "Reunion", "code": "RE"},
+{"name": "Romania", "code": "RO"},
+{"name": "Russian Federation", "code": "RU"},
+{"name": "RWANDA", "code": "RW"},
+{"name": "Saint Helena", "code": "SH"},
+{"name": "Saint Kitts and Nevis", "code": "KN"},
+{"name": "Saint Lucia", "code": "LC"},
+{"name": "Saint Pierre and Miquelon", "code": "PM"},
+{"name": "Saint Vincent and the Grenadines", "code": "VC"},
+{"name": "Samoa", "code": "WS"},
+{"name": "San Marino", "code": "SM"},
+{"name": "Sao Tome and Principe", "code": "ST"},
+{"name": "Saudi Arabia", "code": "SA"},
+{"name": "Senegal", "code": "SN"},
+{"name": "Serbia and Montenegro", "code": "CS"},
+{"name": "Seychelles", "code": "SC"},
+{"name": "Sierra Leone", "code": "SL"},
+{"name": "Singapore", "code": "SG"},
+{"name": "Slovakia", "code": "SK"},
+{"name": "Slovenia", "code": "SI"},
+{"name": "Solomon Islands", "code": "SB"},
+{"name": "Somalia", "code": "SO"},
+{"name": "South Africa", "code": "ZA"},
+{"name": "South Georgia and the South Sandwich Islands", "code": "GS"},
+{"name": "Spain", "code": "ES"},
+{"name": "Sri Lanka", "code": "LK"},
+{"name": "Sudan", "code": "SD"},
+{"name": "Suriname", "code": "SR"},
+{"name": "Svalbard and Jan Mayen", "code": "SJ"},
+{"name": "Swaziland", "code": "SZ"},
+{"name": "Sweden", "code": "SE"},
+{"name": "Switzerland", "code": "CH"},
+{"name": "Syrian Arab Republic", "code": "SY"},
+{"name": "Taiwan, Province of China", "code": "TW"},
+{"name": "Tajikistan", "code": "TJ"},
+{"name": "Tanzania, United Republic of", "code": "TZ"},
+{"name": "Thailand", "code": "TH"},
+{"name": "Timor-Leste", "code": "TL"},
+{"name": "Togo", "code": "TG"},
+{"name": "Tokelau", "code": "TK"},
+{"name": "Tonga", "code": "TO"},
+{"name": "Trinidad and Tobago", "code": "TT"},
+{"name": "Tunisia", "code": "TN"},
+{"name": "Turkey", "code": "TR"},
+{"name": "Turkmenistan", "code": "TM"},
+{"name": "Turks and Caicos Islands", "code": "TC"},
+{"name": "Tuvalu", "code": "TV"},
+{"name": "Uganda", "code": "UG"},
+{"name": "Ukraine", "code": "UA"},
+{"name": "United Arab Emirates", "code": "AE"},
+{"name": "United Kingdom", "code": "GB"},
+{"name": "United States", "code": "US"},
+{"name": "United States Minor Outlying Islands", "code": "UM"},
+{"name": "Uruguay", "code": "UY"},
+{"name": "Uzbekistan", "code": "UZ"},
+{"name": "Vanuatu", "code": "VU"},
+{"name": "Venezuela", "code": "VE"},
+{"name": "Viet Nam", "code": "VN"},
+{"name": "Virgin Islands, British", "code": "VG"},
+{"name": "Virgin Islands, U.S.", "code": "VI"},
+{"name": "Wallis and Futuna", "code": "WF"},
+{"name": "Western Sahara", "code": "EH"},
+{"name": "Yemen", "code": "YE"},
+{"name": "Zambia", "code": "ZM"},
+{"name": "Zimbabwe", "code": "ZW"}
+];
+
+let selectCountries = document.getElementById("allCountries");
+for (var i = 0;i < allCountries.length;i++) {
+    var option = document.createElement("option");
+    option.value = allCountries[i].code;
+    option.text = allCountries[i].name;
+    selectCountries.appendChild(option);
+}
+let selectBox4 = new vanillaSelectBox("#allCountries", { "maxHeight": 100, "search": true,"stayOpen":true,translations: { "all": "All", "items": "Countries" } });
+
+<!--$('#langOpt').multiselect({  columns: 1,placeholder: 'Select Languages',search: true, selectAll: true});-->
+
+let selecDino = new vanillaSelectBox("#dino-select",{ "maxHeight": 350, placeholder: 'Select Languages', "search": true,translations: { "all": "All", "items": "Account" } });
+let selecDino1 = new vanillaSelectBox("#dino-select1",{ "maxHeight": 350,"search": true,translations: { "all": "All", "items": "GPE" } });
+let selecDino2 = new vanillaSelectBox("#dino-select2",{ "maxHeight": 350, placeholder: 'Select Languages', "search": true,translations: { "all": "All", "items": "Keywords" } });
+let selecDino3 = new vanillaSelectBox("#dino-select3",{ "maxHeight": 350, placeholder: 'Select Languages', "search": true,translations: { "all": "All", "items": "Geo" } });
+
+       </script>
+
+</body>
+</html>
+
+
+<!--                                                                    <option>Metric Manipulation - CSAT (Y/N)</option>-->
+<!--                                                                  CSAT-->
+<!--Survey-->
+<!--Incorrect email address-->
+<!--Work Avoidance-->
+<!--Toggling-->
+<!--Surveys-->
+<!--Waivers-->
+<!--Refund-->
+<!--Chat Avoidance-->
+<!--Customer Satisfaction-->
+<!--Information Security-->
+<!--CSAT Manipulation-->
+<!--Sell-->
+<!--Mobile-->
+<!--Metric Manipulation-->
+<!--CVV-->
+<!--Infosec-->
+<!--Data Privacy-->
+<!--customer information-->
+<!--Card information-->
+<!--Unlocked-->
+<!--NPS-->
+<!--Survey avoidance-->
+<!--Paper-->
+<!--DPA-->
+<!--Call Avoidance-->
+<!--Survey Manipulation-->
+<!--Incorrect transfer-->
+<!--Adjustment-->
+<!--Debit Card-->
+<!--Password sharing-->
+<!--social media-->
+<!--Email Avoidance-->
+<!--Delayed response-->
+<!--Open Internet-->
+<!--Call release-->
+<!--Cherry Picking-->
+<!--SLA Manipulation-->
+<!--Discount-->
+<!--CSAT solicitation-->
+<!--Aux misuse-->
+<!--No Call Opening-->
+<!--Personal Calls-->
+<!--Removing email address-->
+<!--Change in case Owner-->
+<!--Not Tagging-->
+<!--Data Exfiltration-->
+<!--Not transferring to IVR-->
+
+
+
+
+<!--                                                            </label>-->
+
+<!--                                                    </form>-->
+<!--                                                </div>-->
+<!--                                                          <div id="mini-stay-right" class=" dropdown-toggle" style="width:50%;text-align:right;display:inline-block;">-->
+<!--&lt;!&ndash;                                                            <label  style ="color:red;" > Theme/Keywords:&ndash;&gt;-->
+<!--                                                                <br>-->
+                                                                <!--        <div>optgroup support : </div>-->
+<!--        <div>-->
+<!--            <label for="dino-select">Choose Theme/Topic :</label>-->
+<!--                                                      <select name="MSA_1" id = "MSA_1" style ="color:red;" multiple="multiple">-->
+
+
+<!--                                                              Keywords Name:-->
+<!--                                                              <br>-->
+<!--                                                              <select name="Theme" id="dino-select3" multiple size="4" >-->
+<!--                                                                    <option> customer personal info </option>-->
+<!--                        <option>Air miles</option>-->
+<!--                        <option>Incorrect Documentation </option>-->
+<!--                        <option> Price Override</option>-->
+<!--                         <option>Beverage </option>-->
+<!--                        <option>Common password </option>-->
+<!--                        <option> Discount Code</option>-->
+<!--                        <option> Credit card information visible</option>-->
+<!--                        <option> company asset </option>-->
+<!--                        <option> Unauthorized Outbound Calls </option>-->
+<!--                        <option>Avaya Reboot </option>-->
+<!--                        <option>Case not logged</option>-->
+<!--                                                    &lt;!&ndash;                    <option> </option>&ndash;&gt;-->
+<!--                        <option> Force shutdown </option>-->
+<!--                        <option> Public Posts</option>-->
+<!--                        <option> Incomplete Documentation</option>-->
+<!--                        <option> Tailgating</option>-->
+<!--                        <option> Change customer information</option>-->
+<!--                        <option> Infosec/Data Privacy </option>-->
+<!--                        <option> HMD Manipulation</option>-->
+<!--                        <option> Work Avoidance</option>-->
+<!--                                                                  <option> customer personal info </option>-->
+<!--                        <option>Air miles</option>-->
+<!--                        <option>Incorrect Documentation </option>-->
+<!--                        <option> Price Override</option>-->
+<!--                         <option>Beverage </option>-->
+<!--                        <option>Common password </option>-->
+<!--                        <option> Discount Code</option>-->
+<!--                        <option> Credit card information visible</option>-->
+<!--                        <option> company asset </option>-->
+<!--                        <option> Unauthorized Outbound Calls </option>-->
+<!--                        <option>Avaya Reboot </option>-->
+<!--                        <option>Case not logged</option>-->
+<!--                                                                </select>-->
+<!--                                                           </div>-->
+

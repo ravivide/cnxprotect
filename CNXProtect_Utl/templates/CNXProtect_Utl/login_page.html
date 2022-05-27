@@ -1,0 +1,1056 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<!--
+	Lamoda by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en-gb" class="no-js">
+  <head>
+    <meta charset="utf-8">
+	<title>CNX Protect from Concentrix</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--      <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+      <!--styles -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+    <link rel="{% static 'stylesheet" type="text/css' %}" href="css/animate.css" />
+    <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
+    <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
+
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+<!--        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">-->
+<!--<link rel="stylesheet" href="{% static 'css/styles.css' %}">-->
+
+   <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--    <link rel="stylesheet" href="{% static 'todos/styles.css' %}">-->
+<style>
+table, th, td {
+  border:1px solid black;
+}
+
+.bg_page {
+  background-color: pink;
+  background-image:url("data:iCNXProtect_Utl\static\images\page-header.jpg;base64,%s");
+  CNXProtect_Utl\static\images\page-header.jpg
+<!--  C:\Users\RNALAB\OneDrive - Concentrix Corporation\CNX Protect Reports\CNX_Protect\-->
+  color: white;
+  border: 2px solid black;
+  margin: 25px;
+  padding: 25px;
+}
+h_1 {text-align: center;}
+p_1 {text-align: center;}
+div_1 {text-align: center;}
+
+.img {
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-size: cover;
+}
+
+.example {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.example img {
+  width: 30vw;
+  height: 30vw;
+}
+
+.example-cover img {
+  object-fit: cover;
+}
+
+.example-contain img {
+  object-fit: contain;
+}
+</style>
+  <body  data-spy="scroll" data-target="#main-menu"><!--Start Page loader --><!--End Page loader --><!--Start Navigation-->
+		<header id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="fa fa-bars"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                            <!--Start Logo -->
+							<div class="logo-nav">
+								<a href="index.html">
+									<img src="{% static 'images/CNX_log.jpg' %}" alt="Company logo" />
+								</a>
+							</div>
+                            <!--End Logo -->
+							<div class="clear-toggle"></div>
+
+							<div id="main-menu" class="collapse scroll navbar-right">
+								<ul class="nav">
+
+									<li class="active"> <a href="#home">Home</a> </li>
+{% if request.user.is_staff %}
+									<li> <a href="#objective">Action </a> </li>
+
+<!--                                    <li> <a href="#Works">Task</a> </li>-->
+{% endif %}
+<!--                                    <li> <a href="#Team">Team</a> </li>-->
+
+									<li> <a href="#contact">Contact</a> </li>
+                                    {% if user.is_authenticated %}
+
+                                    <li> <h4 style= "font-size:1vw;">
+                                            <h4 style= "font-size:1.25vw; color:yellow;">
+                                        Hello, {{user.username}}
+                                            </h4></h4></li>
+                                    <li> <a href="account/logout">Logout</a> </li>
+                                    {% else %}
+                                    <li> <a href="webpage/register">Register</a> </li>
+
+                                    <li> <a href="webpage/login">Login</a> </li>
+                                    {% endif %}
+<!--                            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"-->
+<!--                   aria-describedby="basic-addon2"/>-->
+								</ul>
+							</div><!-- end main-menu -->
+						</div>
+					</div>
+				</div>
+			</header>
+    <!--End Navigation-->
+        <!-- Start Slider  -->
+        <section id="home" class="home">
+             <div class="slider-overlay"></div>
+            <div class="flexslider">
+                <ul class="slides scroll">
+                    <li class="first">
+                        <div class="slider-text-wrapper">
+                            <div class="container">
+                                <div class="big"style="text-align:left">CNX Protect </div>
+                                <div class="medium"style="text-align:left">Identify & Extracts Critical Provisions Within Documents</div>
+                            </div>
+                        </div>
+                        <img src="{% static 'images/slider/background_img.jpg' %}" alt="">
+                    </li>
+                    <li class="secondary">
+                        <div class="slider-text-wrapper">
+                            <div class="container">
+                                <div class="big">Text Analysis </div>
+                                <div class="medium">Identify & Extracts Critical Provisions Within Documents</div>
+                            </div>
+                         </div>
+                        <img src="{% static 'images/slider/background_img2.jpg' %}" alt="">
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+  {% if request.user.is_staff %}
+
+<!--  ########### Actual Selection of contract library, FMEA and Keywords are starts from here. ###### -->
+<!--  <div class="bg_page">-->
+    <section style="background-color: #06357A" >
+    <div class="overlay" style="background-color: #06357A"></div>
+       <div class="container"style="background-color: #06357A">
+ <section id="objective" class="section">
+     <div class="title-box text-center">
+         <h2 class="title" style="color:white">Action</h2>
+     </div>
+                          <h4 style ="color:yellow; text-transform: capitalize">Select the below Action of your Choice:</h4>
+<!--						<ul class="nav">-->
+<!--   								<a href="#tab-content-1" data-toggle="tab">-->
+<!--                                    <ul>-->
+<!--                                        <br><li style ="color:white;">-->
+<!--                                        <a href="{% url 'Contract_Library' %}" data-toggle="tooltip" title="select files for execution!">-->
+<!--                                            <h4 style ="color:white;"><b>Contract Library</b></h4> </a>-->
+<!--                                        </li></br>-->
+<!--                                        <br><li style ="color:white;"><a href="{% url 'FMEA' %}" data-toggle="tooltip" title="Failure Mode and Effect - a tool used in the planning of product or process design"><h4 style ="color:white;"><b>FMEA</b> </h4> </a></li></br>-->
+<!--								    </ul>-->
+<!--                                </a>-->
+<!--                        </ul>-->
+            <div class="work-main">
+					<!-- Work Grid -->
+					<ul class="work-grid">
+<!--                        <li class="work-item thumnail-img mix corporate " data-toggle="tooltip" title="Click-on below plus icon to generate Contract Library reports ">-->
+<!--                            <div class="work-image">-->
+<!--                                <img src="{% static 'images/works/contractLib.jfif' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'Contract_Library' %}" >-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                <div class="work-caption">-->
+<!--                                     <h4>Contract Library</h4>-->
+<!--                                    <h7 style="color: white">Contract Files for Execution!</h7>-->
+<!--                                 </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--            </div>-->
+
+<!--                <div class="work-main">-->
+<!--					&lt;!&ndash; Work Grid &ndash;&gt;-->
+<!--					<ul class="work-grid">-->
+<!--                        <li class="work-item thumnail-img mix corporate" data-toggle="tooltip" title="Click-on below plus icon to generate FMEA reports  ">-->
+<!--                            <div class="work-image">-->
+<!--                                <img src="{% static 'images/works/FMEA.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'FMEA' %}">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                <div class="work-caption">-->
+<!--                                     <h4>FMEA</h4>-->
+<!--                                    <h7 style="color: white">Failure Mode and Effect</h7>-->
+<!--                                 </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<br>
+                        <li class="work-item thumnail-img mix corporate" data-toggle="tooltip" title="Click-on below plus icon to generate Indexing based report  ">
+                            <h5 style="color: orange">contract Library</h5>
+                            <div class="work-image">
+                                <img src="{% static 'images/works/contractLib.jfif' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'indexing_data5' %}">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                <div class="work-caption">
+                                     <h4>Contract Library</h4>
+<!--                                    <h7 style="color: white">Contract Library</h7>-->
+                                 </div>
+                            </div>
+                        </li>
+
+                        <li class="work-item thumnail-img mix corporate" data-toggle="tooltip" title="Click-on below plus icon to generate Indexing based report  ">
+                            <h5 style="color: orange">FMEA</h5>
+                            <div class="work-image">
+<!--                                <h7 style="color: white">FMEA</h7>-->
+                                <img src="{% static 'images/works/FMEA.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'indexing_data3' %}">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                <div class="work-caption">
+                                     <h4>FMEA</h4>
+<!--                                    <h7 style="color: white">FMEA</h7>-->
+                                 </div>
+                            </div>
+                        </li>
+
+<!--                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Click-on below plus icon to connect with Google Vision API ">-->
+<!--                            <div class="work-image">-->
+<!--                                <img src="{% static 'images/works/googlevision.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="https://console.cloud.google.com/storage/browser?project=sonic-provider-314305&_ga=2.259332110.563961295.1635480911-478963611.1621572459&prefix=">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                <div class="work-caption">-->
+<!--                                     <h4>Google Vision API</h4>-->
+<!--                                    <h7 style="color: white">Google cloud platform</h7>-->
+<!--                                 </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--<p><a href="https://console.cloud.google.com/storage/browser?project=sonic-provider-314305&_ga=2.259332110.563961295.1635480911-478963611.1621572459&prefix=">Google Vision API!</a></p>-->
+                        <script>
+                        $(document).ready(function(){
+                        $('[data-toggle="tooltip"]').tooltip();
+                           });
+                        </script>
+                        </ul>
+            </div>
+
+    </section>
+  </div>
+    </section>
+    {% endif %}
+   <section id="contact" class="section parallax">
+      <div class="overlay"></div>
+       <div class="container">
+           <div class="row">
+                 <div class="title-box text-center white">
+                    <h2 class="title">Contact</h2>
+                 </div>
+             </div><!--Start contact form-->
+               <div class="col-md-8 col-md-offset-2 contact-form">
+                    <div class="contact-info text-center">
+                       <p>+91-9900112233</p>
+                       <p> Research & Innovation Center (DEC)
+                           D-1 & D-4,  </p>
+                        <p>Manyata Tech Park, Bangalore</p>
+                       <p>sumithra.r@concentrix.com </p>
+                    </div>
+               </div>            <!--End contact form-->
+       </div> <!-- /.container-->
+   </section><!--End Contact--><!--Start Footer-->
+   <footer>
+       <div class="container">
+           <div class="row">
+               <!--Start copyright-->
+               <div class="col-md-6 col-sm-6 col-xs-6">
+                   <div class="copyright"><p>© 2021 Concentrix Corporation. All Rights Reserved: <a href="https://www.concentrix.com/">Concentrix</a>
+                 </p></div>
+               </div><!--End copyright--><!--start social icons-->
+               <div class="col-md-6 col-sm-6 col-xs-6">
+                   <div class="social-icons">
+                       <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+               </div>
+               <!--End social icons-->
+           </div> <!-- /.row-->
+       </div> <!-- /.container-->
+   </footer>
+   <!--End Footer-->
+   <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+    <!--Plugins-->
+	<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.easypiechart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+ </body>
+</html>
+<!--<div class="title-box text-center">-->
+<!--      <div class="container" >-->
+<!--          <div class="row"  >-->
+<!--                <div class="col-md-25">-->
+<!--					<div class="content-tab-1">-->
+
+<!--							<li class="active"style="background-color:#C1D82F ">-->
+
+<!--            </div> &lt;!&ndash;/.row&ndash;&gt;-->
+<!--      </div> &
+<!--								<div class="tab-arrow"></div>-->
+<!--							</li>-->
+<!--							<li class="active"style="background-color:#C1D82F ">-->
+<!--								<a aria-expanded="true" href="#tab-content-2" data-toggle="tab">-->
+<!--								<i class="fa fa-briefcase"></i>-->
+<!--								<h4>  <a href="{% url 'FMEA' %}" data-toggle="tooltip" title="Failure Mode and Effect- a tool used in the planning of product or process design  "><b>FMEA</b> </a></h4>-->
+<!--&lt;!&ndash;                                    <h6 style="color: white" style="line-height:0.2">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        Failure Mode and Effect&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <br>- a tool used in the planning</br>&ndash;&gt;-->
+<!--&lt;!&ndash;                                         of product or process design </h6>&ndash;&gt;-->
+<!--								</a>-->
+<!--								<div class="tab-arrow"></div>-->
+<!--                            </li>-->
+
+
+<!--						<div class="tab-content-main">-->
+<!--								<div class="container">-->
+<!--									<div class="tab-content">-->
+<!--                                        <div class="tab-pane" id="tab-content-1">-->
+<!--                                            <div class="col-md-6">-->
+<!--                                                 <div class="tab2-services-box">-->
+<!--                                                     <div class="services-info" >-->
+<!--                                                         <h4 style="color:white"> Choose files from Contract Library </h4>-->
+<!--                                                         <form method = "post" action="read_file" enctype="multipart/form-data">-->
+<!--                                                         {% csrf_token %}-->
+<!--&lt;!&ndash;                                                             <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be search"><br>&ndash;&gt;-->
+<!--                                                            <div class ="form-group">-->
+<!--&lt;!&ndash;                                                                <label> Note File </label>&ndash;&gt;-->
+<!--                                                                <input type= "file" name = "notesfile" placeholder="Report Attachment" class = "form-control">-->
+<!--&lt;!&ndash;                                                                <input type= file required name = "notesfile" class = "form-control">&ndash;&gt;-->
+<!--                                                            </div>-->
+<!--                                                             <a href="{% url 'read_file' %}" class="btn btn-info">-->
+<!--                                                                <i class="fa fa-link"></i>-->
+<!--                                                                 <b>Add File to the list: </b>-->
+<!--                                                                </a>-->
+<!--&lt;!&ndash;                                                             {% if file.notesfile % }&ndash;&gt;-->
+<!--                                                             <a href="{{file.notesfile.url}}"> </a>-->
+
+<!--&lt;!&ndash;&lt;!&ndash;                                                             <li> <h4 style ="color:yellow;">Hello, {{user.username}}</h4></li>&ndash;&gt;&ndash;&gt;-->
+<!--                                                             {% for message in messages %}-->
+<!--                                                             <h5 style ="color:red;">-->
+<!--                                                                 {{message}}-->
+<!--                                                             </h5>-->
+<!--                                                             {% endfor %}-->
+<!--                                                            <form action="cl_files" method="post">-->
+<!--                                                        </form>&lt;!&ndash;                                                        <a href="keyword_list.html"></a>&ndash;&gt;-->
+<!--                                                     </div>-->
+<!--                                                 </div>-->
+<!--                                            </div>-->
+<!--										</div>-->
+<!--                                        <div class="tab-pane" id="tab-content-2">-->
+<!--                                            <div class="col-md-6">-->
+<!--                                                 <div class="tab2-services-box">-->
+<!--                                                     <div class="services-info">-->
+<!--                                                         <h4> Choose files from FMEA </h4>-->
+<!--                                                           <form method = "post">-->
+<!--                                                            {% csrf_token %}&lt;!&ndash;                                                        <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be search"><br>&ndash;&gt;-->
+<!--                                                            <div class="form-group">-->
+<!--                                                            <label class="small mb-1" for="inputFile2"></label>-->
+<!--                                                            <input class="form-control" id="inputFile2" type="file" name="file"-->
+<!--                                                                       aria-describedby="emailHelp"-->
+<!--                                                                       style="height: auto;width: 100%;margin-left: 10%;margin-right: 10%;"/>-->
+<!--                                                            </div>&lt;!&ndash;                                                               <input type="submit">&ndash;&gt;-->
+<!--                                                           </form>&lt;!&ndash;                                                        <a href="keyword_list.html"></a>&ndash;&gt;-->
+<!--                                                     </div>-->
+<!--                                                 </div>-->
+<!--                                            </div>-->
+<!--										</div>-->
+
+<!--									</div>-->
+<!--								</div>-->
+<!--						  </div>&lt;!&ndash;/.tab-content-main&ndash;&gt;&lt;!&ndash;/.tab-content-main&ndash;&gt;-->
+<!--					</div>-->
+
+<!--       </div>-->
+<!--     <div class="container">-->
+<!--          <div class="row">-->
+<!--                <div class="col-md-18">-->
+<!--					<div class="content-tab-1">-->
+<!--						<ul class="nav">-->
+<!--                            <li class="active"style="background-color:#C1D82F ">-->
+<!--								<a aria-expanded="true" href="#tab-content-4" data-toggle="tab">-->
+<!--								<i class="icon-global"></i>-->
+<!--								<h4><b>Keyword Search</b></h4>-->
+<!--								</a>-->
+<!--								<div class="tab-arrow"></div>-->
+<!--							</li>-->
+<!--                            <li class="active"style="background-color:#C1D82F ">-->
+<!--								<a aria-expanded="true" href="#tab-content-3" data-toggle="tab">-->
+<!--								<i class="icon-global"></i>-->
+<!--								<h4><b>Upload Keyword file</b></h4>-->
+<!--								</a>-->
+<!--								<div class="tab-arrow"></div>-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--&lt;!&ndash;                                                                                                                <form action="{% url 'keyword_list' %}" method="post" autocomplete="off">&lt;!&ndash;                                    autocomplete="off"&ndash;&gt;&ndash;&gt;-->
+<!--						<div class="tab-content-main">-->
+<!--								<div class="container">-->
+<!--									<div class="tab-content">-->
+<!--                                        <div class="tab-pane" id="tab-content-4">-->
+<!--                                            <div class="col-md-10">-->
+<!--                                                 <div class="tab2-services-box">-->
+<!--                                                     <div class="services-info">-->
+<!--                                                        <div class="container">-->
+<!--                                                            <div class="row mt-5">-->
+<!--                                                                <div class="col-md-8 offset-md-2">-->
+<!--                                                                    <div class="card">-->
+<!--                                                                        <div class="card-header shadow-lg bg-white">-->
+<!--                                                                            <h5 class="display-5 text-info"> <i class="fas fa-check-single"></i> Enter the few or single Keyword to search</h5>-->
+<!--                                                                        </div>-->
+<!--                                                                        <div class="card-body">-->
+<!--                                                                            <ul class="list-group">-->
+<!--                                                                                    <li class="list-group-item">-->
+<!--                                                                                        <div class ="tab-content-4 {% if active_tab == 'tab-content-4' %} active{% endif %}">-->
+<!--                                                                                        <form action="{% url 'insert_keyword_item' %}" method="post" autocomplete="off">&lt;!&ndash;                                    autocomplete="off"&ndash;&gt;-->
+<!--                                                                                            {% csrf_token %}-->
+<!--                                                                                            <div class="input-group">-->
+<!--                                                                                                <input type="text" class="form-control" name="keywords">-->
+<!--                                                                                                <div class="input-group-append text-info">-->
+<!--                                                                                                    <span class="input-group-text bg-white py-0">-->
+<!--                                                                                                        <button type="submit" class="btn btn-sm text-info">-->
+<!--                                                                                                            <i class="fa fa-plus-circle fa-lg"></i>-->
+<!--                                                                                                        </button>-->
+<!--                                                                                                    </span>-->
+<!--                                                                                                </div>-->
+<!--                                                                                            </div>-->
+<!--                                                                                        </form>-->
+<!--                                                                                        </div>-->
+<!--                                                                                    </li>-->
+<!--                                                                                {% for keyword in keyword_list %}-->
+<!--                                                                                <li class="list-group-item">{{keyword.keywords}}-->
+<!--                                                                                    <form action="{% url 'delete_keyword_item' keyword.id %}" method="post" class="float-right d-inline">-->
+<!--                                                                                        {% csrf_token %}-->
+<!--                                                                                        <button type="submit" class="btn">-->
+<!--                                                                                    <i class="far fa-trash-alt fa-lg text-danger float-right"></i>-->
+<!--                                                                                        </button>-->
+<!--                                                                                    </form>-->
+<!--                                                                                </li>-->
+<!--                                                                                {% empty %}-->
+<!--                                                                                <li class="list-group-item">-->
+<!--                                                                                    <span class="font-italic">No keywords found.</span>-->
+<!--                                                                                </li>-->
+<!--                                                                                {% endfor %}-->
+<!--                                                                                </ul>-->
+<!--&lt;!&ndash;                                                                             <img src="{% static 'images/slider/6.jpg' %}" alt="">&ndash;&gt;-->
+<!--                                                                        </div>-->
+<!--&lt;!&ndash;                                                                        <form action = "" method = "post">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                                            {% csrf_token %}&ndash;&gt;-->
+<!--&lt;!&ndash;                                                                            <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be"><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                                            <input type="submit">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                                        </form>&ndash;&gt;-->
+<!--                                                                    </div>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                         {{keyword.keywords}}-->
+<!--                                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+<!--                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+<!--                                                            crossorigin="anonymous"></script>-->
+<!--                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"-->
+<!--                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"-->
+<!--                                                            crossorigin="anonymous"></script>-->
+<!--                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+<!--                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
+<!--                                                            crossorigin="anonymous"></script>-->
+<!--                                                     </div>-->
+<!--                                                 </div>-->
+<!--                                            </div>-->
+<!--										</div>-->
+<!--                                        <div class="tab-pane" id="tab-content-3">-->
+<!--                                            <div class="col-md-6">-->
+<!--                                                 <div class="tab2-services-box">-->
+<!--                                                     <div class="services-info">-->
+<!--                                                         <h4> Choose Dictionary file </h4>-->
+<!--                                                           <form method = "post">-->
+<!--                                                            {% csrf_token %}-->
+<!--&lt;!&ndash;                                                        <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be search"><br>&ndash;&gt;-->
+<!--                                                            <div class="form-group">-->
+<!--                                                            <label class="small mb-1" for="inputFile3"></label>-->
+<!--                                                            <input class="form-control" id="inputFile3" type="file" name="file"-->
+<!--                                                                       aria-describedby="emailHelp"-->
+<!--                                                                       style="height: auto;width: 100%;margin-left: 10%;margin-right: 10%;"/>-->
+<!--                                                            </div>&lt;!&ndash;                                                               <input type="submit">&ndash;&gt;-->
+<!--                                                           </form>-->
+<!--&lt;!&ndash;                                                        <a href="keyword_list.html"></a>&ndash;&gt;-->
+<!--                                                     </div>-->
+<!--                                                 </div>-->
+<!--                                            </div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--						  </div>-->
+<!--                        &lt;!&ndash;/.tab-content-main&ndash;&gt;-->
+<!--                        &lt;!&ndash;/.tab-content-main&ndash;&gt;-->
+
+<!--&lt;!&ndash;                           <li class="list-group-item">&ndash;&gt;-->
+<!--                            <span class="font-italic"> </span>-->
+<!--                           <b style="color:white">The selected Keywords are:</b>-->
+<!--                           <ul style="list-style-type:square">-->
+<!--                               &lt;!&ndash;                           </li>&ndash;&gt;-->
+<!--                        {% csrf_token %}-->
+<!--                        {% for keyword in keyword_list %}-->
+<!--                        <li><h5 style="color:white"> {{ keyword.keywords }}</h5></li>-->
+<!--                        {% endfor %}-->
+<!--                           </ul>-->
+<!--                           <p><a href="{% url 'cl_files' %}" class="btn btn-info">-->
+<!--                          Generate result for single file-->
+<!--                        </a>-->
+<!--                        <form action="cl_files" method="post"></form>-->
+<!--                            <a href= "{{df_filepath_trk}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h7 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h7>-->
+<!--                           </a>-->
+<!--                           <a href= "{{df_filepath_out}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: Output file</i></h9></br>-->
+<!--                           </a></p>-->
+<!--                        <p><a href="{% url 'Contract_library' %}" class="btn btn-info">-->
+<!--                          Generate report for CL-->
+<!--                           </a>-->
+<!--                        <form action="Contract_library" method="post"></form>-->
+<!--                            <a href= "{{df_filepath_trk1}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h7 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h7>-->
+<!--                           </a>-->
+<!--                           <a href= "{{df_filepath_out1}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: Output file</i></h9></br>-->
+<!--                           </a>-->
+<!--                           <a href= "{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: Execution file</i></h9>-->
+<!--                           </a></p>-->
+<!--					</div>-->
+<!--  <section id="facts" class="section parallax">-->
+<!--    <div class="overlay"></div>-->
+<!--       <div class="container">-->
+<!--           <div class="row">-->
+<!--                &lt;!&ndash; Start Item&ndash;&gt;-->
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <span><i class="icon-happy"></i></span>-->
+<!--                    <h6 style ="color:yellow;" >{{p1}}</h6>-->
+<!--                    <span>File Name</span>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Item&ndash;&gt;-->
+<!--                 &lt;!&ndash; Start Item&ndash;&gt;-->
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                 <span><i class="icon-presentation"></i></span>-->
+<!--                    <h6 style ="color:yellow;" >{{q}}</h6>-->
+<!--                    <span>keyword</span>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Item&ndash;&gt;-->
+<!--                 &lt;!&ndash; Start Item&ndash;&gt;-->
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                 <span><i class="icon-target"></i></span>-->
+<!--                    <h6 style ="color:yellow;" >{{plen}}</h6>-->
+<!--                    <span>Number of character</span>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Item&ndash;&gt;-->
+<!--                 &lt;!&ndash; Start Item&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">&ndash;&gt;-->
+<!--&lt;!&ndash;                 <span><i class="icon-trophy"></i></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h3>3000</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span>Statistics</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                &lt;!&ndash; End Item&ndash;&gt;-->
+<!--             </div> &lt;!&ndash; /.row &ndash;&gt;-->
+<!--       </div> &lt;!&ndash; /.container &ndash;&gt;-->
+<!--  </section>-->
+  <!--End Section-->
+   <!--End History-->
+   <!--Start portfolio-->
+<!--   <section id="Works" class="section">-->
+<!--				&lt;!&ndash; Filtering &ndash;&gt;-->
+<!--                  <div class="title-box text-center">-->
+<!--                    <h2 class="title">Task: Searching Type</h2>-->
+<!--                 </div>-->
+<!--					<div class=" col-md-12 text-center">-->
+<!--						&lt;!&ndash; Filtering &ndash;&gt;-->
+<!--						<ul class="filtering">-->
+<!--							<li class="filter" data-filter="Real Time Search">Real Time search</li>-->
+<!--							<li class="filter" data-filter="Job Scheduler">Job Scheduler</li>-->
+<!--                            <li class="filter" data-filter="corporate">Google Vision</li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				<div class="work-main">-->
+<!--					&lt;!&ndash; Work Grid &ndash;&gt;-->
+<!--					<ul class="work-grid">-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--						<li class="work-item thumnail-img mix corporate">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img1.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img1.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--						<li class="work-item thumnail-img mix fashion wedding">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img2.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img2.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--						<li class="work-item thumnail-img mix corporate">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img3.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                   <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img3.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--						<li class="work-item thumnail-img mix corporate">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img4.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img4.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--						<li class="work-item thumnail-img mix fashion wedding">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img5.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img5.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--						<li class="work-item thumnail-img mix event wedding">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img6.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img6.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--						<li class="work-item thumnail-img mix event">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img7.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img7.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--						<li class="work-item thumnail-img mix corporate">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img8.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img8.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--&lt;!&ndash;						<li class="work-item thumnail-img mix event">&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="work-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <img src="{% static 'images/works/img9.jpg' %}" alt="thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;Hover link&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="hover-link">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a href="{% url 'single_work' %}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <i class="fa fa-link"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a href="images/works/img9.jpg" class="popup-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <i class="fa fa-plus"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;End link&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;Hover Caption&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="work-caption">&ndash;&gt;-->
+<!--&lt;!&ndash;                                     <h4>Project Title</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                     <p>Photography</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                &lt;!&ndash;End Caption&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div> &lt;!&ndash; /.work-image&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;						</li>&ndash;&gt;-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--&lt;!&ndash;						<li class="work-item thumnail-img mix wedding">&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="work-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <img src="{% static 'images/works/img10.jpg' %}" alt="thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;Hover link&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="hover-link">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a href="{% url 'single_work' %}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <i class="fa fa-link"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a href="images/works/img10.jpg" class="popup-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <i class="fa fa-plus"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;End link&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;Hover Caption&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="work-caption">&ndash;&gt;-->
+<!--&lt;!&ndash;                                     <h4>Project Title</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                     <p>Photography</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;End Caption&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div> &lt;!&ndash; /.work-image&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;						</li>&ndash;&gt;-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--						&lt;!&ndash; Work Item &ndash;&gt;-->
+<!--&lt;!&ndash;						<li class="work-item thumnail-img mix fashion">&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="work-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <img src="{% static 'images/works/img11.jpg' %}" alt="thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;Hover link&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="hover-link">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a href="{% url 'single_work' %}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <i class="fa fa-link"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a href="images/works/img11.jpg" class="popup-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <i class="fa fa-plus"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;End link&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;Hover Caption&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="work-caption">&ndash;&gt;-->
+<!--&lt;!&ndash;                                     <h4>Project Title</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                     <p>Photography</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;End Caption&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div> &lt;!&ndash; /.work-image&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;						</li>&ndash;&gt;-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--                        &lt;!&ndash; Work Item &ndash;&gt;-->
+<!--&lt;!&ndash;						<li class="work-item thumnail-img mix corporate">&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="work-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <img src="{% static 'images/works/img12.jpg' %}" alt="thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;Hover link&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="hover-link">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a href="{% url 'single_work' %}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <i class="fa fa-link"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <a href="images/works/img12.jpg" class="popup-image">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <i class="fa fa-plus"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;End link&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;Hover Caption&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="work-caption">&ndash;&gt;-->
+<!--&lt;!&ndash;                                     <h4>Project Title</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                     <p>Photography</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 &lt;!&ndash;End Caption&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div> &lt;!&ndash; /.work-image&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;						</li>&ndash;&gt;-->
+<!--						&lt;!&ndash;End Work Item &ndash;&gt;-->
+<!--					</ul>-->
+<!--				</div>-->
+<!--			</section>-->
+  <!--End portfolio-->
+  <!-- Start Facts TUHIN -->
+
+  <!--End Facts-->
+   <!--Start Call To Action-->
+   <!--End Call To Action-->
+  <!--Start Team-->
+<!--  <section id="Team" class="section">-->
+<!--		<div class="container">-->
+<!--            <div class="row">-->
+<!--             <div class="title-box text-center">-->
+<!--                <h2 class="title">Team</h2>-->
+<!--             </div>-->
+<!--             </div>-->
+<!--            &lt;!&ndash; Team &ndash;&gt;-->
+<!--				<div class="team-items team-carousel">-->
+<!--                      &lt;!&ndash; Team Member #1 &ndash;&gt;-->
+<!--                      <div class="item">-->
+<!--                          <img src="{% static 'images/team/team1.jpg' %}" alt=""  />-->
+<!--                          <h4>Bhawna Aganani</h4>-->
+<!--                          <h5>Director, GRC, Continuity, Crisis/DR 1210 - GLOBALSECURITY</h5>-->
+<!--                          <p> Few words on her achievement, work accomplish, experience and rewards </p>-->
+
+<!--                          <div class="socials">-->
+<!--                              <ul>-->
+<!--                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
+<!--                              </ul>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      &lt;!&ndash; End Member &ndash;&gt;-->
+<!--                      &lt;!&ndash; Team Member #2 &ndash;&gt;-->
+<!--                      <div class="item">-->
+<!--                          <img src="{% static 'images/team/team2.jpg' %}" alt=""  />-->
+<!--                          <h4>Ritu Jagtap</h4>-->
+<!--                          <h5>Sr. Manager, Enterprise Risk Governance 1210 - GLOBALSECURITY</h5>-->
+<!--                          <p>Few words on her achievement, work accomplish, experience and rewards </p>-->
+<!--                          <div class="socials">-->
+<!--                              <ul>-->
+<!--                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
+<!--                              </ul>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      &lt;!&ndash; End Member &ndash;&gt;-->
+<!--                      &lt;!&ndash; Team Member #3 &ndash;&gt;-->
+<!--                      <div class="item">-->
+<!--                          <img src="{% static 'images/team/team3.jpg' %}" alt=""  />-->
+<!--                          <h4>Thapak Dinesh</h4>-->
+<!--                          <h5>Manager, Analytics</h5>-->
+<!--                          <p> Few words on his achievement, work accomplish, experience and rewards</p>-->
+<!--                          <div class="socials">-->
+<!--                              <ul>-->
+<!--                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
+<!--                              </ul>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--				</div>&lt;!&ndash; End Team &ndash;&gt;-->
+<!--			</div>&lt;!&ndash; End Content &ndash;&gt;-->
+<!--  </section>&lt;!&ndash;Start Contact&ndash;&gt;-->
+
+
+<!--<body class="bg-light">-->
+<!--    <div class="container">-->
+<!--        <div class="row mt-5">-->
+<!--            <div class="col-md-5 offset-md-2">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-header shadow-sm bg-white">-->
+<!--                        <h1 class="display-5 text-info">-->
+<!--                            <i class="fas fa-check-double"></i> enter the Keywords</h1>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <ul class="list-group">-->
+<!--                            <li class="list-group-item">-->
+<!--                                <form action="{% url 'insert_keyword_item' %}" method="post" autocomplete="off">-->
+<!--                                    {% csrf_token %}-->
+<!--                                    <div class="input-group">-->
+<!--                                        <input type="text" class="form-control" name="keywords">-->
+<!--                                        <div class="input-group-append text-info">-->
+<!--                                            <span class="input-group-text bg-white py-0">-->
+<!--                                                <button type="submit" class="btn btn-sm text-info">-->
+<!--                                                    <i class="fa fa-plus-circle fa-lg"></i>-->
+<!--                                                </button>-->
+<!--                                            </span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </form>-->
+<!--                            </li>-->
+<!--                            {% for keyword in keyword_list %}-->
+<!--                            <li class="list-group-item">{{keyword.keywords}}-->
+<!--                                <form action="{% url 'delete_keyword_item' keyword.id %}" method="post" class="float-right d-inline">-->
+<!--                                    {% csrf_token %}-->
+<!--                                    <button type="submit" class="btn">-->
+<!--                                        <i class="far fa-trash-alt fa-lg text-danger float-right"></i>-->
+<!--                                    </button>-->
+<!--                                </form>-->
+<!--                            </li>-->
+<!--                            {% empty %}-->
+<!--                            <li class="list-group-item">-->
+<!--                                <span class="font-italic">No keyword found.</span>-->
+<!--                            </li>-->
+<!--                            {% endfor %}-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+<!--        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"-->
+<!--        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+<!--        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--</body>-->

@@ -1,0 +1,727 @@
+{% load static %}
+<!--<html lang="en">-->
+<html lang="en-gb" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Concentrix Protect</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+<!--  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">-->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+  </head>
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="{% url 'indexing_data5' %}" class="logo d-flex align-items-center">
+        <img src="{% static 'images/CNX_log.jpg' %}" alt="">
+        <span class="d-none d-lg-block">CNX Protect</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+        <!-- End Messages Nav -->
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="{% static 'img/profile.jpg' %}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{user.username}}</span>
+          </a><!-- End Profile Iamge Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              {% if user.is_authenticated %}
+<!--                                    <li> <h4 style= "font-size:1vw;">-->
+<!--                                            <h4 style= "font-size:1.25vw; color:yellow;">-->
+                                         {{user.username}}
+<!--              <h6>Sumithra R</h6>-->
+              <span>, Data Scientist</span>
+                                              {% endif %}
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="account/logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+<li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Home</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'indexing1' %}">
+              <i class="bi bi-circle"></i><span>Contract Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'FMEA_Indexing' %}">
+              <i class="bi bi-circle"></i><span>FMEA</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="indexing5.html">
+          <i class="bi bi-journal-text"></i><span>Downloads</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a class="nav-link " href="{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">
+              <i class="bi bi-circle"></i><span>Contract Library</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link " href="{{df_filepath_Exe1_1}}" download rel="noopener noopener" target="_blank">
+              <i class="bi bi-circle"></i><span>FMEA</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://app.powerbi.com/links/8OnEUJ60_5?ctid=599e51d6-2f8c-4347-8e59-1f795a51a98c&pbi_source=linkShare&bookmarkGuid=4d2dc58f-c1df-4981-997f-a54e1c8a8e31">
+          <i class="bi bi-grid"></i>
+          <span> BI Dashboard</span>
+        </a>
+    </ul>
+  </aside>
+
+    <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Report Card</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'indexing_data5' %}">Home</a></li>
+<li class="breadcrumb-item active">Results</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+{% csrf_token %}
+    <section class="section dashboard">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <li class="breadcrumb-item active">Contract Library</li>
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card customers-card">
+                <div class="card-body">
+                  <h5 class="card-title">Lines of record</h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="ri-profile-line"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{DF17_2}}</h6>
+                      <span class="text-muted small pt-2 ps-1">Extracts</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card customers-card">
+                <div class="card-body">
+                  <h5 class="card-title">File</h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="ri-ball-pen-line"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{File_No}}</h6>
+                      <span class="text-muted small pt-2 ps-1">Contracts</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card customers-card">
+                <div class="card-body">
+                  <h5 class="card-title">Keywords</h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="ri-folder-keyhole-fill"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{keywords}}</h6>
+                      <span class="text-muted small pt-2 ps-1">Keywords</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">Recent reports </h5>
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Account</th>
+                        <th scope="col">Theme</th>
+                        <th scope="col">File</th>
+                        <th scope="col">Sentence</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#">#1</a></th>
+                        <td>{{MSA1}}</td>
+                        <td><a href="#" class="text-primary">{{Themes1}}</a></td>
+                        <td>{{File1}}</td>
+                        <td>{{Sent1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2</a></th>
+                        <td>{{MSA2}}</td>
+                        <td><a href="#" class="text-primary">{{Themes2}}</a></td>
+                        <td>{{File2}}</td>
+                        <td>{{Sent2}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#3</a></th>
+                        <td> {{MSA3}}</td>
+                        <td><a href="#" class="text-primary">{{Themes3}}</a></td>
+                        <td>{{File3}}</td>
+                        <td>{{Sent3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#4</a></th>
+                        <td>{{MSA4}} </td>
+                        <td><a href="#" class="text-primary">{{Themes4}}</a></td>
+                        <td>{{File4}}</td>
+                        <td>{{Sent4}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#5</a></th>
+                        <td>{{MSA5}} </td>
+                        <td><a href="#" class="text-primary">{{Themes5}}</a></td>
+                        <td>{{File5}}</td>
+                        <td>{{Sent5}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#6</a></th>
+                        <td>{{MSA6}} </td>
+                        <td><a href="#" class="text-primary">{{Themes6}}</a></td>
+                        <td>{{File6}}</td>
+                        <td>{{Sent6}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#7</a></th>
+                        <td>{{MSA7}} </td>
+                        <td><a href="#" class="text-primary">{{Themes7}}</a></td>
+                        <td>{{File7}}</td>
+                        <td>{{Sent7}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#8</a></th>
+                        <td>{{MSA8}} </td>
+                        <td><a href="#" class="text-primary">{{Themes8}}</a></td>
+                        <td>{{File8}}</td>
+                        <td>{{Sent8}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#9</a></th>
+                        <td>{{MSA9}} </td>
+                        <td><a href="#" class="text-primary">{{Themes9}}</a></td>
+                        <td>{{File9}}</td>
+                        <td>{{Sent9}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#10</a></th>
+                        <td>{{MSA10}} </td>
+                        <td><a href="#" class="text-primary">{{Themes10}}</a></td>
+                        <td>{{File10}}</td>
+                        <td>{{Sent10}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#11</a></th>
+                        <td>{{MSA11}} </td>
+                        <td><a href="#" class="text-primary">{{Themes11}}</a></td>
+                        <td>{{File11}}</td>
+                        <td>{{Sent11}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#12</a></th>
+                        <td>{{MSA12}} </td>
+                        <td><a href="#" class="text-primary">{{Themes12}}</a></td>
+                        <td>{{File12}}</td>
+                        <td>{{Sent12}}</td>
+                      </tr>
+                      <tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!--        <div class="col-lg-4">-->
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <li class="breadcrumb-item active">FMEA</li>
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card customers-card">
+                <div class="card-body">
+                  <h5 class="card-title">Lines of record</h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="ri-profile-line"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{DF17_2_1}}</h6>
+                      <span class="text-muted small pt-2 ps-1">Extracts</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card customers-card">
+                <div class="card-body">
+                  <h5 class="card-title">File</h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="ri-ball-pen-line"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{File_No_1}}</h6>
+                      <span class="text-muted small pt-2 ps-1">Files</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card customers-card">
+                <div class="card-body">
+                  <h5 class="card-title">Keywords</h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="ri-folder-keyhole-fill"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{keywords_1}}</h6>
+                      <span class="text-muted small pt-2 ps-1">Keywords</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">Recent reports </h5>
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Account</th>
+                        <th scope="col">Theme</th>
+                        <th scope="col">File</th>
+                        <th scope="col">Sentence</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#">#1</a></th>
+                        <td>{{MSA1_1}}</td>
+                        <td><a href="#" class="text-primary">{{Themes1_1}}</a></td>
+                        <td>{{File1_1}}</td>
+                        <td>{{Sent1_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2</a></th>
+                        <td>{{MSA2_1}}</td>
+                        <td><a href="#" class="text-primary">{{Themes2_1}}</a></td>
+                        <td>{{File2_1}}</td>
+                        <td>{{Sent2_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#3</a></th>
+                        <td> {{MSA3_1}}</td>
+                        <td><a href="#" class="text-primary">{{Themes3_1}}</a></td>
+                        <td>{{File3_1}}</td>
+                        <td>{{Sent3_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#4</a></th>
+                        <td>{{MSA4_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes4_1}}</a></td>
+                        <td>{{File4_1}}</td>
+                        <td>{{Sent4_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#5</a></th>
+                        <td>{{MSA5_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes5_1}}</a></td>
+                        <td>{{File5_1}}</td>
+                        <td>{{Sent5_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#6</a></th>
+                        <td>{{MSA6_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes6_1}}</a></td>
+                        <td>{{File6_1}}</td>
+                        <td>{{Sent6_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#7</a></th>
+                        <td>{{MSA7_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes7_1}}</a></td>
+                        <td>{{File7_1}}</td>
+                        <td>{{Sent7_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#8</a></th>
+                        <td>{{MSA8_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes8_1}}</a></td>
+                        <td>{{File8_1}}</td>
+                        <td>{{Sent8_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#9</a></th>
+                        <td>{{MSA9_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes9_1}}</a></td>
+                        <td>{{File9_1}}</td>
+                        <td>{{Sent9_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#10</a></th>
+                        <td>{{MSA10_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes10_1}}</a></td>
+                        <td>{{File10_1}}</td>
+                        <td>{{Sent10_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#11</a></th>
+                        <td>{{MSA11_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes11_1}}</a></td>
+                        <td>{{File11_1}}</td>
+                        <td>{{Sent11_1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#12</a></th>
+                        <td>{{MSA12_1}} </td>
+                        <td><a href="#" class="text-primary">{{Themes12_1}}</a></td>
+                        <td>{{File12_1}}</td>
+                        <td>{{Sent12_1}}</td>
+                      </tr>
+                      <tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!--        <div class="col-lg-4">-->
+      </div>
+    </section>
+     </main>
+<!--<li class="nav-item">-->
+<!--        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="indexing5.html">-->
+<!--          <i class="bi bi-journal-text"></i><span>Home1</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--             <a href="{% url 'indexing1' %}">-->
+<!--              <i class="bi bi-circle"></i><span>Contract Library</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--           <a href="{% url 'FMEA_Indexing' %}">-->
+<!--              <i class="bi bi-circle"></i><span>FMEA</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>-->
+<!--<li class="nav-item">-->
+<!--        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text"></i><span>Home</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a href="{% url 'indexing1' %}">-->
+<!--              <i class="bi bi-circle"></i><span>Contract Library</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="{% url 'FMEA_Indexing' %}">-->
+<!--              <i class="bi bi-circle"></i><span>FMEA</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--&lt;!&ndash;&ndash;&gt;-->
+<!--        </ul>-->
+<!--    </li>-->
+<!--&lt;!&ndash; End Components Nav &ndash;&gt;&ndash;&gt;-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text"></i><span>On-Demand</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a href="{% url 'Contract_Library1' %}">-->
+<!--              <i class="bi bi-circle"></i><span>Contract Library</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="{% url 'FMEA_Real' %}">-->
+<!--              <i class="bi bi-circle"></i><span>FMEA</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="{% url 'score_card' %} ">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>Score card reader</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="{% url 'pdfword' %} ">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>PDF2WORD</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--       End Dashboard Nav-->
+<!--      <li class="nav-item" href="{% url 'indexing_data5' %}">-->
+<!--        <a class="nav-link " href="{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">-->
+<!--          <i class="ri-arrow-down-circle-line"></i>-->
+<!--          <span>Download</span>-->
+<!--        </a>-->
+<!--      </li>-->
+      <!-- End Forms Nav -->
+      <!-- End Tables Nav -->
+      <!-- End Charts Nav -->
+      <!-- End Icons Nav -->
+<!--      <li class="nav-heading">Pages</li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="users-profile.html">-->
+<!--          <i class="bi bi-person"></i>-->
+<!--          <span>Profile</span>-->
+<!--        </a>-->
+<!--      </li>
+&lt;!&ndash; End Profile Page Nav &ndash;&gt;-->
+      <!-- End F.A.Q Page Nav -->
+<!--      <a href= "{{df_filepath_out}}" download rel="noopener noopener" target="_blank">-->
+<!--                                <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download Output for single file</i></h9></br>-->
+<!--                            </a>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="pages-contact.html">-->
+<!--          <i class="bi bi-envelope"></i>-->
+<!--          <span>Contact</span>-->
+<!--        </a>-->
+<!--      </li>
+&lt;!&ndash; End Contact Page Nav &ndash;&gt;-->
+      <!-- End Register Page Nav -->
+      <!-- End Login Page Nav -->
+      <!-- End Error 404 Page Nav -->
+      <!-- End Blank Page Nav -->
+  <!-- End Sidebar-->
+  <!-- Recent Activity -->
+          <!-- End Recent Activity -->
+          <!-- Budget Report -->
+<!-- End Budget Report -->
+          <!-- Website Traffic -->
+  <!-- End Website Traffic -->
+          <!-- News & Updates Traffic -->
+          <!-- End News & Updates -->
+        <!-- End Right side columns -->
+ <!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Concentrix2022</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+<!--      Designed by <a href="https://scholar.google.com/citations?user=fDvDh2MAAAAJ&hl=en">SUMITHRA R</a>-->
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/chart.js/chart.min.js' %}"></script>
+  <script src="{% static 'vendor/echarts/echarts.min.js' %}"></script>
+  <script src="{% static 'vendor/quill/quill.min.js' %}"></script>
+  <script src="{% static 'vendor/simple-datatables/simple-datatables.js' %}"></script>
+  <script src="{% static 'vendor/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+<!--            <div class="col-xxl-4 col-md-6">-->
+<!--              <div class="card info-card revenue-card">-->
+<!--                <div class="card-body">-->
+<!--                  <h5 class="card-title">Theme count</h5>-->
+<!--                  <div class="d-flex align-items-center">-->
+<!--                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">-->
+<!--                      <i class="bi bi-currency-dollar"></i>-->
+<!--                    </div>-->
+<!--                    <div class="ps-3">-->
+<!--                      <h6>{{Theme}}</h6>-->
+<!--&lt;!&ndash;                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-12">-->
+<!--              <div class="card">-->
+<!--                <div class="filter">-->
+<!--                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+<!--                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+<!--                    <li class="dropdown-header text-start">-->
+<!--                      <h6>Filter</h6>-->
+<!--                    </li>-->
+
+<!--                    <li><a class="dropdown-item" href="#">Today</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">This Month</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">This Year</a></li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                  <h5 class="card-title">Reports <span>/Today</span></h5>-->
+<!--                  &lt;!&ndash; Line Chart &ndash;&gt;-->
+<!--                  <div id="reportsChart"></div>-->
+<!--                  <script>-->
+<!--                    document.addEventListener("DOMContentLoaded", () => {-->
+<!--                      new ApexCharts(document.querySelector("#reportsChart"), {-->
+<!--                        series: [{-->
+<!--                          name: 'Sales',-->
+<!--                          data: [31, 40, 28, 51, 42, 82, 56],-->
+<!--                        }, {-->
+<!--                          name: 'Revenue',-->
+<!--                          data: [11, 32, 45, 32, 34, 52, 41]-->
+<!--                        }, {-->
+<!--                          name: 'Customers',-->
+<!--                          data: [15, 11, 32, 18, 9, 24, 11]-->
+<!--                        }],-->
+<!--                        chart: {-->
+<!--                          height: 350,-->
+<!--                          type: 'area',-->
+<!--                          toolbar: {-->
+<!--                            show: false-->
+<!--                          },-->
+<!--                        },-->
+<!--                        markers: {-->
+<!--                          size: 4-->
+<!--                        },-->
+<!--                        colors: ['#4154f1', '#2eca6a', '#ff771d'],-->
+<!--                        fill: {-->
+<!--                          type: "gradient",-->
+<!--                          gradient: {-->
+<!--                            shadeIntensity: 1,-->
+<!--                            opacityFrom: 0.3,-->
+<!--                            opacityTo: 0.4,-->
+<!--                            stops: [0, 90, 100]-->
+<!--                          }-->
+<!--                        },-->
+<!--                        dataLabels: {-->
+<!--                          enabled: false-->
+<!--                        },-->
+<!--                        stroke: {-->
+<!--                          curve: 'smooth',-->
+<!--                          width: 2-->
+<!--                        },-->
+<!--                        xaxis: {-->
+<!--                          type: 'datetime',-->
+<!--                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]-->
+<!--                        },-->
+<!--                        tooltip: {-->
+<!--                          x: {-->
+<!--                            format: 'dd/MM/yy HH:mm'-->
+<!--                          },-->
+<!--                        }-->
+<!--                      }).render();-->
+<!--                    });-->
+<!--                  </script>-->
+<!--                  &lt;!&ndash; End Line Chart &ndash;&gt;-->
+
+<!--                </div>-->
+
+<!--              </div>-->
+<!--            </div>-->

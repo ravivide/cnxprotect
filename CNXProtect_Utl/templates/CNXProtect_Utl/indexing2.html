@@ -1,0 +1,355 @@
+{% load static %}
+<!--<html lang="en">-->
+<html lang="en-gb" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Concentrix Protect</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+<!--  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">-->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="{% url 'indexing_data5' %}" class="logo d-flex align-items-center">
+        <img src="{% static 'images/CNX_log.jpg' %}" alt="">
+        <span class="d-none d-lg-block">CNX Protect</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+        <!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="{% static 'img/profile.jpg' %}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{user.username}}</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              {% if user.is_authenticated %}
+<!--                                    <li> <h4 style= "font-size:1vw;">-->
+<!--                                            <h4 style= "font-size:1.25vw; color:yellow;">-->
+                                         {{user.username}}
+<!--              <h6>Sumithra R</h6>-->
+              <span>, Data Scientist</span>
+                                              {% endif %}
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="account/logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+<!--<li class="nav-item">-->
+<!--        <a class="nav-link " href="{% url 'indexing_data5' %}">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>Home</span>-->
+<!--        </a>-->
+<!--      </li>-->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Home</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'indexing1' %}">
+              <i class="bi bi-circle"></i><span>Contract Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'FMEA_Indexing' %}">
+              <i class="bi bi-circle"></i><span>FMEA</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text"></i><span>Home</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a href="{% url 'Contract_Library1' %}">-->
+<!--              <i class="bi bi-circle"></i><span>Contract Library</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="{% url 'FMEA_Real' %}">-->
+<!--              <i class="bi bi-circle"></i><span>FMEA</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>-->
+
+
+        <!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="{% url 'score_card' %} ">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>Score card reader</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="{% url 'pdfword' %} ">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>PDF2WORD</span>-->
+<!--        </a>-->
+<!--      </li>-->
+      <!-- End Dashboard Nav -->
+
+<!--      <li class="nav-item" href="{% url 'indexing_data5' %}">-->
+<!--        <a class="nav-link " href="{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">-->
+<!--          <i class="ri-arrow-down-circle-line"></i>-->
+<!--          <span>Download</span>-->
+<!--        </a>-->
+<!--      </li>-->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="indexing5.html">
+          <i class="bi bi-journal-text"></i><span>Downloads</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a class="nav-link " href="{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">
+              <i class="bi bi-circle"></i><span>Contract Library</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link " href="{{df_filepath_Exe1_1}}" download rel="noopener noopener" target="_blank">
+              <i class="bi bi-circle"></i><span>FMEA</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://app.powerbi.com/links/8OnEUJ60_5?ctid=599e51d6-2f8c-4347-8e59-1f795a51a98c&pbi_source=linkShare&bookmarkGuid=4d2dc58f-c1df-4981-997f-a54e1c8a8e31">
+          <i class="bi bi-grid"></i>
+          <span> BI Dashboard</span>
+        </a>
+
+      <!-- End Forms Nav -->
+      <!-- End Tables Nav -->
+      <!-- End Charts Nav -->
+      <!-- End Icons Nav -->
+<!--      <li class="nav-heading">Pages</li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="users-profile.html">-->
+<!--          <i class="bi bi-person"></i>-->
+<!--          <span>Profile</span>-->
+<!--        </a>-->
+<!--      </li>
+&lt;!&ndash; End Profile Page Nav &ndash;&gt;-->
+      <!-- End F.A.Q Page Nav -->
+<!--      <a href= "{{df_filepath_out}}" download rel="noopener noopener" target="_blank">-->
+<!--                                <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download Output for single file</i></h9></br>-->
+<!--                            </a>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="pages-contact.html">-->
+<!--          <i class="bi bi-envelope"></i>-->
+<!--          <span>Contact</span>-->
+<!--        </a>-->
+<!--      </li>
+&lt;!&ndash; End Contact Page Nav &ndash;&gt;-->
+      <!-- End Register Page Nav -->
+      <!-- End Login Page Nav -->
+      <!-- End Error 404 Page Nav -->
+      <!-- End Blank Page Nav -->
+    </ul>
+  </aside><!-- End Sidebar-->
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>FMEA</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'indexing_data5' %}">Home</a></li>
+<li class="breadcrumb-item active">Results</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+{% csrf_token %}
+
+<section style="background-color: #d1e3fd" >
+<!--    <div class="overlay" style="background-image: url(/CNXProtect_Utl/static/images/page-header.jpg)"></div>-->
+    <div class="overlay" style="background-color: #d1e3fd"></div>
+       <div class="container" style="background-color: #d1e3fd">
+ <section id="objective" class="section">
+<!--     <div class="title-box text-center"><h2 class="title" style="color:#073d8d">Out-of-box</h2></div>-->
+<!--      < class="content-tab-3">-->
+<!--                                                            <img src="{% static 'images/keyword.png' %}" alt="thumbnail">-->
+<!--                                                         <span><i class="icon-target"></i></span>-->
+<!--        <h5 style ="color:Tomato; text-align: center;"><b> Sentence </b> </h5>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_3}}</pre>-->
+<!--                                                           <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">&ndash;&gt;-->
+<!--  </div>-->
+<!--                        <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Indexing Based Search:</h3>-->
+          <a href= "{{DF17_1_}}" download rel="noopener noopener" target="_blank">
+                                   <br><h9 class ="small" style ="color:#073d8d;"> <i class="fa fa-link">click here to download the Output file</i></h9></br>
+                           </a>
+     <br>
+<!--     <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to previous page ">-->
+<!--<a href="{% url 'experiment' %}">-->
+<!--     <img src="{% static 'images/previous.jfif' %}" alt="">-->
+<!--    <h6 style ="color:Red; ">Back to previous page</h6>-->
+<!--</a>-->
+     </li>
+<!--          <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Real time search ">-->
+<!--      <a href="{% url 'Contract_Library' %}">-->
+<!--              &lt;!&ndash;          <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Indexing Based Search:</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h7 style ="color:white; ">&ndash;&gt;-->
+<!--         <img src="{% static 'images/realtimesearch.png' %}" alt="">-->
+<!--      </a>-->
+<!--          </li>-->
+     <span style ="color:black;" class="font-italic" href = "">Didn't find the keyword?<br></span>
+<!--<h9 style ="color:yellow;" href = "">  <small>Add New Keyword.  </small>  </h9>-->
+                                                    <button><a href="{% url 'keyword_list1' %}" style ="color:black;">Click here</a> </button>
+
+                                                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                                                            crossorigin="anonymous"></script>
+                        <script>
+                        $(document).ready(function(){
+                        $('[data-toggle="tooltip"]').tooltip();
+                           });
+                        </script>
+  </section>
+       </div>
+  </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span> Concentrix2022. </span></strong> All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+<!--      Designed by <a href="https://scholar.google.com/citations?user=fDvDh2MAAAAJ&hl=en">SUMITHRA R</a>-->
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/chart.js/chart.min.js' %}"></script>
+  <script src="{% static 'vendor/echarts/echarts.min.js' %}"></script>
+  <script src="{% static 'vendor/quill/quill.min.js' %}"></script>
+  <script src="{% static 'vendor/simple-datatables/simple-datatables.js' %}"></script>
+  <script src="{% static 'vendor/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+<script>
+let selecDino = new vanillaSelectBox("#dino-select",{ "maxHeight": 350, placeholder: 'Select Languages', "search": true,translations: { "all": "All", "items": "Account" } });
+let selecDino1 = new vanillaSelectBox("#dino-select1",{ "maxHeight": 400,"search": true,translations: { "all": "All", "items": "Keywords" } });
+       </script>
+
+  <br>
+</body>
+</html>

@@ -1,0 +1,1415 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+
+<html lang="en-gb" class="no-js">
+<style>
+    .blink {
+    animation: blinker 0.6s linear infinite;
+    color: orange;
+    font-size: 20px:
+    font-weight: bold;
+    font-family: sans-serif;
+    }
+    @keyframes blinker{
+    100% {
+    opacity:0;
+    }
+    }
+    .crop{
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+	<title>Contract Library</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+    <link rel="{% static 'stylesheet" type="text/css' %}" href="css/animate.css" />
+    <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
+    <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<!--    <link rel="stylesheet" href="{% static 'todos/styles.css' %}">-->
+<style>
+table, th, td {
+  border:1px solid black;
+}
+
+.bg_page {
+  background-color: pink;
+  background-image:url("data:iCNXProtect_Utl\static\images\page-header.jpg;base64,%s");
+  CNXProtect_Utl\static\images\page-header.jpg
+<!--  C:\Users\RNALAB\OneDrive - Concentrix Corporation\CNX Protect Reports\CNX_Protect\-->
+  color: white;
+  border: 2px solid black;
+  margin: 25px;
+  padding: 25px;
+}
+h_1 {text-align: center;}
+p_1 {text-align: center;}
+div_1 {text-align: center;}
+
+</style>
+  <body  data-spy="scroll" data-target="#main-menu"><!--Start Page loader --><!--End Page loader --><!--Start Navigation-->
+		<header id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="fa fa-bars"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                            <!--Start Logo -->
+							<div class="logo-nav">
+								<a href="index.html">
+									<img src="{% static 'images/CNX_log.jpg' %}" alt="Company logo" />
+								</a>
+							</div>
+                            <!--End Logo -->
+							<div class="clear-toggle"></div>
+
+							<div id="main-menu" class="collapse scroll navbar-right">
+								<ul class="nav">
+                                  {% if request.user.is_staff %}
+									<li> <a href="#objective">Action </a> </li>
+                                 {% endif %}
+									<li> <a href="#contact">Contact</a> </li>
+                                    {% if user.is_authenticated %}
+                                    <li> <h4 style= "font-size:1vw;">
+                                            <h4 style= "font-size:1.25vw; color:yellow;">
+                                        Hello, {{user.username}}
+                                            </h4></h4></li>
+                                    <li> <a href="account/logout">Logout</a> </li>
+                                    {% else %}
+                                    <li> <a href="webpage/register">Register</a> </li>
+
+                                    <li> <a href="webpage/login">Login</a> </li>
+                                    {% endif %}
+								</ul>
+							</div><!-- end main-menu -->
+						</div>
+					</div>
+				</div>
+			</header>
+    <!--End Navigation-->
+        <!-- Start Slider  -->
+  {% if request.user.is_staff %}
+<!--  ########### Actual Selection of contract library, FMEA and Keywords are starts from here. ###### -->
+<!--  <div class="bg_page">-->
+    <section style="background-color: #06357A" >
+<!--    <div class="overlay" style="background-image: url(/CNXProtect_Utl/static/images/page-header.jpg)"></div>-->
+    <div class="overlay" style="background-color: #06357A"></div>
+
+       <div class="container"style="background-color: #06357A">
+ <section id="objective" class="section">
+     <div class="title-box text-center"><h2 class="title" style="color:white">Action</h2></div>
+<!--                            <div class="container">-->
+     <div class="container">
+          <div class="row">
+                <div class="col-md-25">
+                    <div class="content-tab-1">
+                        <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Generate Contract report for Single or few files:</h3>
+                        <div class="tab2-services-box" >
+                            <div class="container">
+                            <div class="row" >
+                            <div class="col-md-25">
+					        <div class="content-tab-1">
+						    <ul class="nav">
+							<li class="active" style="background-color:#C1D82F ">
+                                <a aria-expanded="true" href="#tab-content-1" data-toggle="tab">
+								<i class="fa fa-briefcase" ></i>
+								<h4><b>select few files for execution</b></h4>
+<!--                                    <h6 style="color: white"> select files for execution </h6>-->
+								</a>
+								<div class="tab-arrow"></div>
+							</li>
+<!--                            <li class="active"style="background-color:#C1D82F ">-->
+<!--								<a aria-expanded="true" href="#tab-content-4" data-toggle="tab">-->
+<!--								<i class="icon-global"></i>-->
+<!--								<h4><b>Keyword Search</b></h4>-->
+<!--								</a>-->
+<!--								<div class="tab-arrow"></div>-->
+<!--							</li>-->
+                            </ul>
+						<div class="tab-content-main">
+                            <div class="container">
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="tab-content-1">
+                                        <div class="col-md-25">
+                                            <div class="tab2-services-box">
+                                                <div class="services-info" >
+                                                    <h4 style="color:white"> Choose files from Contract Library </h4>
+                                                    <form method = "post" action="read_file" enctype="multipart/form-data">
+                                                         {% csrf_token %}
+<!--                                                             <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be search"><br>-->
+                                                        <div class ="form-group">
+<!--                                                                <label> Note File </label>-->
+                                                            <p> <input type= "file" name = "notesfile" placeholder="Report Attachment" class = "form-control"></p>
+<!--                                                                <input type= file required name = "notesfile" class = "form-control">-->
+                                                            <p><input type = "submit" value = "Upload" /></p>
+                                                        </div>
+                                                        <form method = "post" action="read_file" enctype="multipart/form-data">
+<!--                                                             <a href="{% url 'read_file' %}" class="btn btn-info">-->
+<!--                                                                <i class="fa fa-link"></i>-->
+<!--                                                                 <b>Add File to the list: </b>-->
+<!--                                                                </a>-->
+<!--                                                             {% if file.notesfile % }-->
+                                                            <a href="{{file.notesfile.url}}"></a>
+                                                             <!--&lt;!&ndash;                                                             <li> <h4 style ="color:yellow;">Hello, {{user.username}}</h4></li>&ndash;&gt;-->
+<!--                                                             {% for message in messages %}-->
+<!--                                                             <h5 style ="color:red;">-->
+<!--                                                                 {{message}}-->
+<!--                                                             </h5>-->
+<!--                                                             {% endfor %}-->
+                                                        </form>
+                                                        <form action="cl_files" method="post"></form><!--                                                        <a href="keyword_list.html"></a>-->
+                                                    </form>
+<!--                                                         <form enctype = "multipart/form-data" action = "save_file" method = "post">-->
+<!--                                                         <p>File: <input type = "file" name = "filename" /></p>-->
+<!--                                                             <p><input type = "submit" value = "Upload" /></p>-->
+<!--                                                         </form>-->
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+						    </div><!--/.tab-content-main--><!--/.tab-content-main-->
+					    </div>
+
+				</div>
+                </div> <!--/.row-->
+                </div> <!--/.container-->
+                </div>
+                    <a href="{{file.notesfile.url}}"></a>
+                     <!--&lt;!&ndash;                                                             <li> <h4 style ="color:yellow;">Hello, {{user.username}}</h4></li>&ndash;&gt;-->
+                        <h5 style ="color:yellow;">
+                            {% for F_count in read_files %}
+                         Number of file selected: {{F_Count}}
+                            {% endfor %}
+                        </h5>
+                        {% for message in messages %}
+                        <h5 class="blink" style ="color:powdergreen;">
+                         {{message}}
+                        </h5>
+                        {% endfor %}
+     <div class="container">
+          <div class="row">
+                <div class="col-md-18">
+					<div class="content-tab-1">
+						<ul class="nav">
+                            <li class="active"style="background-color:#C1D82F ">
+								<a aria-expanded="true" href="#tab-content-4" data-toggle="tab">
+								<i class="icon-global"></i>
+								<h4><b>Select Keyword to be Search</b></h4>
+								</a>
+								<div class="tab-arrow"></div>
+							</li>
+						</ul>
+						<div class="tab-content-main">
+								<div class="container">
+									<div class="tab-content">
+                                        <div class="tab-pane" id="tab-content-4">
+                                            <div class="col-md-10">
+                                                 <div class="tab2-services-box">
+                                                     <div class="services-info">
+                                                        <div class="container">
+                                                            <div class="row mt-5">
+                                                                <div class="col-md-8 offset-md-2">
+                                                                    <div class="card">
+                                                                        <div class="card-header shadow-lg bg-white">
+                                                                            <h5 class="display-5 text-info"> <i class="fas fa-check-single"></i> Enter a few or single Keyword to search</h5>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <ul class="list-group">
+                                                                                    <li class="list-group-item">
+                                                                                        <div class ="tab-content-4 {% if active_tab == 'tab-content-4' %} active{% endif %}">
+                                                                                        <form action="{% url 'insert_keyword_item' %}" method="post" autocomplete="off"><!--                                    autocomplete="off"-->
+                                                                                            {% csrf_token %}
+                                                                                            <div class="input-group">
+                                                                                                <input type="text" class="form-control" name="keywords">
+                                                                                                <div class="input-group-append text-info">
+                                                                                                    <span class="input-group-text bg-white py-0">
+                                                                                                        <button type="submit" class="btn btn-sm text-info">
+                                                                                                            <i class="fa fa-plus-circle fa-lg"></i>
+                                                                                                        </button>
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </form>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                {% for keyword in keyword_list %}
+                                                                                <li class="list-group-item">{{keyword.keywords}}
+                                                                                    <form action="{% url 'delete_keyword_item' keyword.id %}" method="post" class="float-right d-inline">
+                                                                                        {% csrf_token %}
+                                                                                        <button type="submit" class="btn">
+                                                                                    <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                                                                                        </button>
+                                                                                    </form>
+                                                                                </li>
+                                                                                {% empty %}
+                                                                                <li class="list-group-item">
+                                                                                    <span class="font-italic">No keywords found.</span>
+                                                                                </li>
+                                                                                {% endfor %}
+                                                                                </ul>
+<!--                                                                             <img src="{% static 'images/slider/6.jpg' %}" alt="">-->
+
+<!--                                                                        <form action = "" method = "post">-->
+<!--                                                                            {% csrf_token %}-->
+<!--                                                                            <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be"><br>-->
+<!--                                                                            <input type="submit">-->
+<!--                                                                        </form>-->
+                                                                    </div>
+                                                                </div>
+                                                                    {% if messages %}
+                                                                            <script>
+                                                                                {% for msg in meessages %}
+                                                                                alert('{{msg.message }}');
+                                                                                {% endfor%}
+                                                                            </script>
+                                                                            {% endif %}
+                                                                            <span style ="color:yellow;" class="font-italic" href = "">Add Keyword to Database.</span>
+                                                            </div>
+                                                        </div>
+                                                         {{keyword.keywords}}
+                                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                                                            crossorigin="anonymous"></script>
+                                                     </div>
+                                                 </div>
+                                            </div>
+										</div>
+<!--                                        <div class="tab-pane" id="tab-content-3">-->
+<!--                                            <div class="col-md-6">-->
+<!--                                                 <div class="tab2-services-box">-->
+<!--                                                     <div class="services-info">-->
+<!--                                                         <h4> Choose Dictionary file </h4>-->
+<!--                                                           <form method = "post">-->
+<!--                                                            {% csrf_token %}-->
+<!--&lt;!&ndash;                                                        <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be search"><br>&ndash;&gt;-->
+<!--                                                            <div class="form-group">-->
+<!--                                                            <label class="small mb-1" for="inputFile3"></label>-->
+<!--                                                            <input class="form-control" id="inputFile3" type="file" name="file"-->
+<!--                                                                       aria-describedby="emailHelp"-->
+<!--                                                                       style="height: auto;width: 100%;margin-left: 10%;margin-right: 10%;"/>-->
+<!--                                                            </div>&lt;!&ndash;                                                               <input type="submit">&ndash;&gt;-->
+<!--                                                           </form>-->
+<!--&lt;!&ndash;                                                        <a href="keyword_list.html"></a>&ndash;&gt;-->
+<!--                                                     </div>-->
+<!--                                                 </div>-->
+<!--                                            </div>-->
+<!--										</div>-->
+
+									</div>
+								</div>
+						  </div>
+                            <span class="font-italic"> </span>
+                           <b style="color:white">The selected Keywords are:</b>
+                           <ul style="list-style-type:square">
+                               <!--                           </li>-->
+                        {% csrf_token %}
+                        {% for keyword in keyword_list %}
+                        <li><h5 style="color:white"> {{ keyword.keywords }}</h5></li>
+                        {% endfor %}
+                           </ul>
+                           <p><a href="{% url 'cl_files' %}" class="btn btn-info">
+                             Generate result for single file
+                           </a><form action="cl_files" method="post"></form>
+                           </p>
+                        <h5 style ="color:white;">Number of file selected:{{F_Count}} </h5>
+<!--                            <a href= "{{df_filepath_trk}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h7 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h7>-->
+<!--                           </a>-->
+<!--                           <a href= "{{df_filepath_out}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: Output file</i></h9></br>-->
+<!--                           </a>-->
+<!--                        <br> <h6 style="color:white" > Here the result for the page number: {{PP5}}</h6></br>-->
+<!--                       <br style ="color:yellow;"> </br>-->
+<!--<div class="crop">-->
+                        <div class="container">
+                        <div class="row">
+                <!-- Start Item-->
+                            <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">
+                                <img src="{% static 'images/images (2).jif' %}" alt="thumbnail">
+            <!--                    <span><i class="icon-target"></i></span>-->
+                                <span><br>File Name</span>
+                                <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1}}</pre>
+                            </div>
+                            <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">
+                                <img src="{% static 'images/keyword.png' %}" alt="thumbnail">
+            <!--                 <span><i class="icon-target"></i></span>-->
+                                <span><br>keyword</span>
+                                <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF2}}</pre>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">
+                                <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">
+            <!--                 <span><i class="icon-target"></i></span>-->
+                                <span><br>Sentence</span>
+                                <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF3}}</pre>
+
+                            </div>
+                            <a href= "{{df_filepath_out}}" download rel="noopener noopener" target="_blank">
+                                <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download Output for single file</i></h9></br>
+                            </a>
+                            </div>
+                            <br>
+
+                            <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to home page ">
+    <h7 style ="color:white;" >
+        <img src="{% static 'images/homepage1.png' %}" alt="">
+    </h7>
+ </a>
+                                                    </li>
+
+                                                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to previous page ">
+<a href="{% url 'indexing_data1' %}">
+     <img src="{% static 'images/previous.jfif' %}" alt="">
+<!--    <h6 style ="color:Red; ">Back to previous page</h6>-->
+</a>
+     </li>
+
+                            </div>
+                    </div>
+                    <br>
+                </div>
+          </div>
+     </div>
+
+            </div> <!--/.row-->
+      </div> <!--/.container-->
+</div>
+          </div> <!--/.row-->
+
+      </div>
+
+<!--   BATCH PROCESSING-->
+<!-- <div class="tab2-services-box">-->
+                        <div class="content-tab-1">
+<!--                            <div class="tab2-services-box" >-->
+                        <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Generate Contract report for Batch processing:</h3>
+                        <a aria-expanded="true" href="#tab-content-2" data-toggle="tab">
+                          <h6 style ="color:yellow;"><u>Click here </u> </h6>
+                            <div class="container">
+									<div class="tab-content">
+                                        <div class="tab-pane" id="tab-content-2">
+                                            <div class="col-md-10">
+                                                <div class="tab2-services-box">
+                                                <a href="{% url 'Contract_library' %}" class="btn btn-info">
+                                                 Generate Contract Reports
+                                                </a>
+                                                <h6 style="color:yellow;text-transform: capitalize"> <p class="blink">Reports will display soon...</p></h6>
+<!--                                                <h6 style="color:yellow;">  {{path}} </h6>-->
+
+<!--                                                <h8 style="color:white;">  <span>Selected File path is:</span></h8>-->
+                                                <span> <h6 style="color:red;"> Selected File path is:</h6></span>
+                                                <h6 style="color:red;">{{path}} </h6>
+                                                <form action="Contract_library#tab-content-2" method="post"></form>
+<!--                            <a href= "{{df_filepath_trk1}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h7 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h7>-->
+<!--                           </a>-->
+                           <a href= "{{df_filepath_out1}}" download rel="noopener noopener" target="_blank">
+                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: Output file</i></h9></br>
+                           </a>
+                                                <a href= "{{df_filepath_trk1}}" download rel="noopener noopener" target="_blank">
+                                                    <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h9></br>
+                                                </a>
+<!--                                                df_filepath_trk1-->
+<!--                           <a href= "{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <h9 class ="small" style ="color:white;"> <i class="fa fa-link"> click here to download: Execution file</i></h9>-->
+<!--                           </a>-->
+                                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                                                            crossorigin="anonymous"></script>
+<!--						  </div>-->
+                                                                              <br>
+ <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to home page ">
+    <h7 style ="color:white;" >
+        <img src="{% static 'images/homepage1.png' %}" alt="">
+    </h7>
+ </a>
+                                                    </li>
+
+                                                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to previous page ">
+<a href="{% url 'indexing_data1' %}">
+     <img src="{% static 'images/previous.jfif' %}" alt="">
+<!--    <h6 style ="color:Red; ">Back to previous page</h6>-->
+</a>
+     </li>
+                    </div>
+                </div>
+          </div>
+      </div>
+                            </div>
+                        </a>
+                    </div>
+<!--                        </div>-->
+                                <!--       INDEXING PROBLEM -->
+                        <div class="content-tab-3">
+<!--                            <div class="tab2-services-box" >-->
+                        <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Indexing Based Search:</h3>
+                        <a aria-expanded="true" href="#tab-content-5" data-toggle="tab">
+                          <h6 style ="color:yellow;"><u>Click here </u> </h6>
+                            <div class="container">
+									<div class="tab-content">
+                                        <div class="tab-pane" id="tab-content-5">
+                                            <div class="col-md-8">
+                                                <label for="cars"  style ="color:yellow;" > Select the following actions from the below drop-down button:</label>
+                                                <div class="tab2-services-box">
+<!--                                    <form action="/action_page.php">-->
+<!--                                                    <label style ="color:yellow;" for="cars"> Choose MSA in the below drop-down button: </label>-->
+<!--                                                    <form action="{% url 'insert_MSA_item' %}" method="post" autocomplete="off">-->
+<!--                                            {% csrf_token %}-->
+<!--                                            <div class="input-group">-->
+<!--                                                <input type="text" class="form-control" name="account">-->
+<!--                                                <div class="input-group-append text-info">-->
+<!--                                                    {% for keyss in MSA_list %}-->
+<!--                                                    <option value="opel"><h5 style="color:white"> {{ keyss.account }}</h5></option>-->
+<!--                                                    {% endfor %}-->
+<!--                                                    <button type="submit" class="btn btn-sm text-info">-->
+<!--                                                        <i class="fa fa-plus-circle fa-lg"></i>-->
+<!--                                                    </button>-->
+                                                    <form action="/action_page.php">
+                                                      <label for="cars"  style ="color:yellow;" > MSA/Process:</label>
+                                                      <select name="cars" id="cars" style ="color:red;">
+                                                        <option value="opel">Abbottdiabetes</option>
+                                                        <option value="opel">Acer</option>
+                                                        <option value="opel">Acoustic(</option>
+                                                        <option value="opel">Adobe</option>
+                                                        <option value="opel">Advancedreimbursement</option>
+                                                        <option value="opel">Aerotek,</option>
+                                                        <option value="opel">Aetnalife</option>
+                                                        <option value="opel">Allianz</option>
+                                                        <option value="opel">Altaruminstitute</option>
+                                                        <option value="opel">Amazon
+                                                        <option value="opel">Americanexpress</option>
+                                                        <option value="opel">Amherst</option>
+                                                        <option value="opel">Anthem</option>
+                                                        <option value="opel">Aptos</option>
+                                                        <option value="opel">Ascensiadiabetes</option>
+                                                        <option value="opel">Atheneusa
+                                                        <option value="opel">Autodesk</option>
+                                                        <option value="opel">Avista</option>
+                                                        <option value="opel">Barclaysus</option>
+                                                        <option value="opel">Belkin</option>
+                                                        <option value="opel">Bosch</option>
+                                                        <option value="opel">CarTrawler</option>
+                                                        <option value="opel">Catalina</option>
+                                                        <option value="opel">Centrinex</option>
+                                                        <option value="opel">Cigna</option>
+                                                        <option value="opel">Cignacorporate</option>
+                                                        <option value="opel">Ciscosystems</option>
+                                                        <option value="opel">Dell-cnxc</option>
+                                                        <option value="opel">GoDaddy</option>
+                                                        <option value="opel">Google</option>
+                                                        <option value="audi">Audi</option>
+                                                      </select>
+                                                      <br><br>
+<!--                                                      <input type="submit" value="Submit">-->
+                                                    </form>
+
+                                                    <form action="/action_page.php">
+                                                      <label for="Theme"  style ="color:yellow;" >Theme/Topic:</label>
+                                                      <select name="cars" id="Theme" style ="color:red;">
+                                                        <option value="opel">Penalties (client)</option>
+                                                        <option value="opel">Point of Contact</option>
+                                                        <option value="opel">Health Insurance</option>
+                                                        <option value="opel">Cyber Liability Insurance</option>
+                                                        <option value="opel">PCI</option>
+                                                        <option value="opel">Other Security Requirement</option>
+                                                        <option value="opel">Liability</option>
+                                                        <option value="opel">Fraud Prevention</option>
+                                                        <option value="opel">Penetration testing</option>
+                                                        <option value="opel">BCP/ DR</option>
+                                                        <option value="opel">GDPR</option>
+                                                        <option value="opel">ISO 27001 / ISO 22301</option>
+                                                        <option value="opel">Call Recording</option>
+                                                        <option value="opel">Background Checks required as per client requirement</option>
+                                                        <option value="opel">SSAE 18</option>
+                                                        <option value="opel">Recording Devices</option>
+                                                        <option value="opel">Client ID Management</option>
+                                                        <option value="opel">Record Management</option>
+                                                        <option value="opel">WAH allowed as per client contract</option>
+                                                        <option value="opel">Location Requirements</option>
+                                                        <option value="opel">Physical Security</option>
+                                                        <option value="opel">Social Engineering</option>
+                                                        <option value="opel">Admin Permission for Endpoint</option>
+                                                        <option value="opel">Personnel</option>
+                                                      </select>
+                                                      <br><br>
+                                                      <input type="submit" value="Submit">
+                                                    </form>
+
+                                                    <form action="{% url 'MSA_list' %}" method="post" autocomplete="off">
+                                                    </form>
+                                                    <a href="{% url 'master_data' %}" >
+                                                    Generate Report:
+                                                    <div class="container">
+                                                    <div class="row">
+<!--                                                    <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--&lt;!&ndash;                    <img src="{% static 'images/images (2).jif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                    <span><br>MSA</span>-->
+<!--                                                    <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_1}}</pre>-->
+<!--                                                    </div>-->
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                &lt;!&ndash;                    <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                        <span><br>Keywords</span>-->
+<!--                                                        <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_2}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                        &lt;!&ndash;                    <img src="{% static 'images/keyword.png' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                            <span><br>Sentence</span>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_3}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                        &lt;!&ndash;                    <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                            <span><br>Theme/Topic</span>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_4}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                        &lt;!&ndash;                    <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                            <span><br>File Name</span>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_5}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-md-4 col-sm-6 facts-box margin-bottom-30">-->
+<!--                                        &lt;!&ndash;                    <img src="{% static 'images/text_ext.jfif' %}" alt="thumbnail">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                 <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                                                            <span><br>File creation</span>-->
+<!--                                                            <pre style ="color:yellow;background-color: #06357A;text-align:center;" >{{DF1_6}}</pre>-->
+<!--                                                        </div>-->
+
+<!--                            </div>-->
+                                                        <a href= "{{DF17_1}}" download rel="noopener noopener" target="_blank">
+                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download the Output file</i></h9></br>
+                           </a>
+                                                    </div>
+                                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                                                            crossorigin="anonymous"></script>
+<!--&lt;!&ndash;						  </div>&ndash;&gt;-->
+                                                                              <br>
+
+                                                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to home page ">
+    <a href="{% url 'indexing_data5' %}">
+    <h7 style ="color:white;" >
+        <img src="{% static 'images/homepage1.png' %}" alt="">
+    </h7>
+ </a>
+                                                    </li>
+
+                                                        <li class="work-item thumnail-img mix corporate"data-toggle="tooltip" title="Back to previous page ">
+<a href="{% url 'indexing_data1' %}">
+     <img src="{% static 'images/previous.jfif' %}" alt="">
+<!--    <h6 style ="color:Red; ">Back to previous page</h6>-->
+</a>
+     </li>
+
+<!--                                                        -->
+<!--    <h5 style ="color:Red; ">Back to previous page</h5>-->
+<!-- </a>-->
+                    </div>
+                                        </div>
+                                        </div>
+                </div>
+          </div>
+                        </a>
+      </div>
+                        </a>
+<!--                        </div>-->
+
+<!--        </div>-->
+<!--                </div>-->
+<!--          </div>-->
+<!--      </div>-->
+                        <script>
+                        $(document).ready(function(){
+                        $('[data-toggle="tooltip"]').tooltip();
+                           });
+                        </script>
+  </section>
+       </div>
+  </div>
+    </section>
+<!--  <select name="cars" id="cars">-->
+<!--      {% csrf_token %}-->
+<!--<option value="opel">Abbottdiabetes</option>-->
+<!--<option value="opel">Acer</option>-->
+<!--<option value="opel">Acoustic(</option>-->
+<!--<option value="opel">Adobe</option>-->
+<!--<option value="opel">Advancedreimbursement</option>-->
+<!--<option value="opel">Aerotek,</option>-->
+<!--<option value="opel">Aetnalife</option>-->
+<!--<option value="opel">Allianz</option>-->
+<!--<option value="opel">Altaruminstitute</option>-->
+<!--<option value="opel">Amazon-->
+<!--<option value="opel">Americanexpress</option>-->
+<!--<option value="opel">Amherst</option>-->
+<!--<option value="opel">Anthem</option>-->
+<!--<option value="opel">Aptos</option>-->
+<!--<option value="opel">Ascensiadiabetes</option>-->
+<!--<option value="opel">Atheneusa-->
+<!--<option value="opel">Autodesk</option>-->
+<!--<option value="opel">Avista</option>-->
+<!--<option value="opel">Barclaysus</option>-->
+<!--<option value="opel">Belkin</option>-->
+<!--<option value="opel">Bosch</option>-->
+<!--<option value="opel">CarTrawler</option>-->
+<!--<option value="opel">Catalina</option>-->
+<!--<option value="opel">Centrinex</option>-->
+<!--<option value="opel">Cigna</option>-->
+<!--<option value="opel">Cignacorporate</option>-->
+<!--<option value="opel">Ciscosystems</option>-->
+<!--<option value="opel">Dell-cnxc</option>-->
+<!--<option value="opel">GoDaddy</option>-->
+<!--<option value="opel">Google</option>-->
+<!--  </select>-->
+  <br><br>
+<!--  <input type="submit" value="Submit">-->
+
+<!--    </form>-->
+
+<!--                                                             Account: {{U_account}}-->
+
+
+<!--&lt;!&ndash;                                    class="btn btn-info">&ndash;&gt;-->
+<!--&lt;!&ndash;                            Generate Contract Reports&ndash;&gt;-->
+<!--&lt;!&ndash;                            <h4 style="color:white"> Choose Master File  </h4>&ndash;&gt;-->
+<!--                                                         <form method = "post" action="master_data" enctype="multipart/form-data">-->
+<!--                                                         {% csrf_token %}-->
+<!--&lt;!&ndash;&lt;!&ndash;                                                             <input type ="text" name="Enter the keyword to be search" placeholder = "Enter the keyword to be search"><br>&ndash;&gt;&ndash;&gt;-->
+<!--                                                            <div class ="form-group">-->
+<!--&lt;!&ndash;&lt;!&ndash;                                                                <label> Note File </label>&ndash;&gt;&ndash;&gt;-->
+<!--                                                                <p> <input type= "file" name = "notesfile_1" placeholder="Report Attachment" class = "form-control"></p>-->
+<!--&lt;!&ndash;&lt;!&ndash;                                                                <input type= file required name = "notesfile" class = "form-control">&ndash;&gt;&ndash;&gt;-->
+<!--                                                                 <p><input type = "submit" value = "Upload" /></p>-->
+<!--                                                            </div>-->
+<!--                                                             <form method = "post" action="master_data" enctype="multipart/form-data">-->
+<!--                                                             <a href="{{file.notesfile_1.url}}"> </a>-->
+<!--                                                             </form>-->
+
+<!--                                                             {% for message1 in messages %}-->
+<!--                                                                  <h5 class="blink" style ="color:powdergreen;">-->
+<!--                                                                 {{message1}}-->
+<!--                                                                </h5>-->
+<!--                                                                {% endfor %} -->
+
+
+                <!-- Start Item-->
+
+
+
+
+
+
+
+   <section id="Works" class="section">
+				<!-- Filtering -->
+                  <div class="title-box text-center">
+                    <h2 class="title">Task: Searching Type</h2>
+                 </div>
+					<div class=" col-md-12 text-center">
+						<!-- Filtering -->
+						<ul class="filtering">
+							<li class="filter" data-filter="Real Time Search">Real Time search</li>
+							<li class="filter" data-filter="Job Scheduler">Job Scheduler</li>
+                            <li class="filter" data-filter="corporate">   <a href="https://console.cloud.google.com/storage/browser?project=sonic-provider-314305&_ga=2.259332110.563961295.1635480911-478963611.1621572459&prefix=">
+                                API's</a></li>
+<!--                            <a href="https://console.cloud.google.com/storage/browser?project=sonic-provider-314305&_ga=2.259332110.563961295.1635480911-478963611.1621572459&prefix=">-->
+
+
+						</ul>
+					</div>
+				<div class="work-main">
+					<!-- Work Grid -->
+					<ul class="work-grid">
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix corporate">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img1.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img1.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix fashion wedding">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img2.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img2.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix corporate">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img3.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                   <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img3.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix corporate">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img4.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img4.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix fashion wedding">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img5.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img5.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix event wedding">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img6.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img6.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix event">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img7.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img7.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<li class="work-item thumnail-img mix corporate">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img8.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img8.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+                        					</ul>
+				</div>
+			</section>
+    {% endif %}
+   <section id="contact" class="section parallax">
+      <div class="overlay"></div>
+       <div class="container">
+           <div class="row">
+                 <div class="title-box text-center white">
+                    <h2 class="title">Contact</h2>
+                 </div>
+             </div><!--Start contact form-->
+               <div class="col-md-8 col-md-offset-2 contact-form">
+                    <div class="contact-info text-center">
+                       <p>+91-9900112233</p>
+                       <p> Research & Innovation Center (DEC)
+                           D-1 & D-4,  </p>
+                        <p>Manyata Tech Park, Bangalore</p>
+                       <p>sumithra.r@concentrix.com </p>
+                    </div>
+               </div>            <!--End contact form-->
+       </div> <!-- /.container-->
+   </section><!--End Contact--><!--Start Footer-->
+   <footer>
+       <div class="container">
+           <div class="row">
+               <!--Start copyright-->
+               <div class="col-md-6 col-sm-6 col-xs-6">
+                   <div class="copyright"><p>© 2021 Concentrix Corporation. All Rights Reserved: <a href="https://www.concentrix.com/">Concentrix</a>
+                 </p></div>
+               </div><!--End copyright--><!--start social icons-->
+               <div class="col-md-6 col-sm-6 col-xs-6">
+                   <div class="social-icons">
+                       <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+               </div>
+               <!--End social icons-->
+           </div> <!-- /.row-->
+       </div> <!-- /.container-->
+   </footer>
+   <!--End Footer-->
+   <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+    <!--Plugins-->
+	<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.easypiechart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+ </body>
+</html>
+
+
+                <!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <img src="{% static 'images/file_name.png' %}" alt="thumbnail">-->
+<!--&lt;!&ndash;                    <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                    <span><br>File Name</span>-->
+<!--                    <h6 style ="color:yellow;" >{{DF1}}</h6>-->
+<!--                </div>-->
+
+                <!-- End Item-->
+                 <!-- Start Item-->
+
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <img src="{% static 'images/nlp.jif' %}" alt="thumbnail">-->
+<!--&lt;!&ndash;                    <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                    <span><br>NLP solution </br></span>-->
+<!--                    <pre style ="color:yellow;background-color: #06357A; text-align: center;" >{{DF4}}</pre>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <img src="{% static 'images/icon1.jpg' %}" alt="thumbnail">-->
+<!--&lt;!&ndash;                    <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                    <span><br>Email ID </br></span>-->
+<!--                    <h6 style ="color:yellow;" >{{emails}}</h6>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <img src="{% static 'images/icon1.jpg' %}" alt="thumbnail">-->
+<!--&lt;!&ndash;                    <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                    <span><br>Phone Number </br></span>-->
+<!--                    <h6 style ="color:yellow;" >{{Ph_number}}</h6>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <img src="{% static 'images/icon1.jpg' %}" alt="thumbnail">-->
+<!--&lt;!&ndash;                    <span><i class="icon-target"></i></span>&ndash;&gt;-->
+<!--                    <span><br>Timeline to contact </br></span>-->
+<!--                    <h6 style ="color:yellow;" >{{Tagged_words}}</h6>-->
+<!--                </div>-->
+<!--<table class="table table-striped table-hover table-bordered">-->
+<!--          <thead class="thead-dark">-->
+<!--            <tr>-->
+<!--                <th>First Name</th>-->
+<!--                <th>Last Name</th>-->
+<!--                <th>Birth Day</th>-->
+<!--            </tr>-->
+<!--          </thead>-->
+<!--          <tbody>-->
+<!--              {% for DF in cl_files %}-->
+<!--                <tr>-->
+<!--                    <td> {{ DF.FileName }} </td>-->
+<!--                    <td> {{ DF.Word }} </td>-->
+<!--                    <td> {{ DF.Few_words }} </td>-->
+<!--                </tr>-->
+<!--              {% endfor %}-->
+<!--          </tbody>-->
+<!--        </table>-->
+                        <!--/.tab-content-main-->
+                        <!--/.tab-content-main-->
+<!--                           <li class="list-group-item">-->
+                <!-- End Item-->
+                 <!-- Start Item-->
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                 <span><i class="icon-target"></i></span>-->
+<!--                    <span>Number of character</span>-->
+<!--                    <h6 style ="color:yellow;" >{{plen}}</h6>-->
+<!--&lt;!&ndash;                    <span>Number of character</span>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <span><i class="icon-target"></i></span>-->
+<!--                    <span><br>Frequency of word</br></span>-->
+<!--                    <h6 style ="color:yellow;" >{{Frq}}</h6>-->
+<!--                </div>-->
+
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <span><i class="icon-target"></i></span>-->
+<!--                    <span><br>No_of_word</br></span>-->
+<!--                    <h6 style ="color:yellow;" >{{No_of_word}}</h6>-->
+<!--                </div>-->
+						<!--End Work Item -->
+						<!-- Work Item -->
+<!--  <section id="facts" class="section parallax">-->
+<!--    <div class="overlay"></div>-->
+<!--       <div class="container">-->
+<!--           <div class="row">-->
+<!--                &lt;!&ndash; Start Item&ndash;&gt;-->
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                    <span><i class="icon-happy"></i></span>-->
+<!--                    <h6 style ="color:yellow;" >{{p1}}</h6>-->
+<!--                    <span>File Name</span>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Item&ndash;&gt;-->
+<!--                 &lt;!&ndash; Start Item&ndash;&gt;-->
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                 <span><i class="icon-presentation"></i></span>-->
+<!--                    <h6 style ="color:yellow;" >{{q}}</h6>-->
+<!--                    <span>keyword</span>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Item&ndash;&gt;-->
+<!--                 &lt;!&ndash; Start Item&ndash;&gt;-->
+<!--                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">-->
+<!--                 <span><i class="icon-target"></i></span>-->
+<!--                    <h6 style ="color:yellow;" >{{plen}}</h6>-->
+<!--                    <span>Number of character</span>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End Item&ndash;&gt;-->
+<!--                 &lt;!&ndash; Start Item&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">&ndash;&gt;-->
+<!--&lt;!&ndash;                 <span><i class="icon-trophy"></i></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h3>3000</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span>Statistics</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                &lt;!&ndash; End Item&ndash;&gt;-->
+<!--             </div> &lt;!&ndash; /.row &ndash;&gt;-->
+<!--       </div> &lt;!&ndash; /.container &ndash;&gt;-->
+<!--  </section>-->
+  <!--End Section-->
+   <!--End History-->
+   <!--Start portfolio-->
+
+
+						<!--End Work Item -->
+						<!-- Work Item -->
+<!--						<li class="work-item thumnail-img mix event">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img9.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img9.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+						<!--End Work Item -->
+						<!-- Work Item -->
+<!--						<li class="work-item thumnail-img mix wedding">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img10.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img10.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+						<!--End Work Item -->
+						<!-- Work Item -->
+<!--						<li class="work-item thumnail-img mix fashion">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img11.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img11.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+						<!--End Work Item -->
+                        <!-- Work Item -->
+<!--						<li class="work-item thumnail-img mix corporate">-->
+<!--							<div class="work-image">-->
+<!--                                <img src="{% static 'images/works/img12.jpg' %}" alt="thumbnail">-->
+<!--                                 &lt;!&ndash;Hover link&ndash;&gt;-->
+<!--                                 <div class="hover-link">-->
+<!--                                    <a href="{% url 'single_work' %}">-->
+<!--                                        <i class="fa fa-link"></i>-->
+<!--                                    </a>-->
+<!--                                    <a href="images/works/img12.jpg" class="popup-image">-->
+<!--                                        <i class="fa fa-plus"></i>-->
+<!--                                    </a>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End link&ndash;&gt;-->
+<!--                                 &lt;!&ndash;Hover Caption&ndash;&gt;-->
+<!--                                 <div class="work-caption">-->
+<!--                                     <h4>Project Title</h4>-->
+<!--                                     <p>Photography</p>-->
+<!--                                 </div>-->
+<!--                                 &lt;!&ndash;End Caption&ndash;&gt;-->
+<!--                            </div> &lt;!&ndash; /.work-image&ndash;&gt;-->
+<!--						</li>-->
+						<!--End Work Item -->
+
+<!--                        <div class="overlay"></div>-->
+<!--                        <p><a href="{% url 'Contract_library' %}" class="btn btn-info">-->
+<!--                          Generate report for CL</br>-->
+<!--                           </a>-->
+<!--                        <form action="Contract_library" method="post"></form>-->
+<!--&lt;!&ndash;                            <a href= "{{df_filepath_trk1}}" download rel="noopener noopener" target="_blank">&ndash;&gt;-->
+<!--&lt;!&ndash;                                   <h7 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: File tracker</i></h7>&ndash;&gt;-->
+<!--&lt;!&ndash;                           </a>&ndash;&gt;-->
+<!--                           <a href= "{{df_filepath_out1}}" download rel="noopener noopener" target="_blank">-->
+<!--                                   <br><h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download Output for batch files</i></h9></br>-->
+<!--                           </a>-->
+<!--&lt;!&ndash;                           <a href= "{{df_filepath_Exe1}}" download rel="noopener noopener" target="_blank">&ndash;&gt;-->
+<!--&lt;!&ndash;                                   <h9 class ="small" style ="color:white;"> <i class="fa fa-link">click here to download: Execution file</i></h9>&ndash;&gt;-->
+<!--&lt;!&ndash;                           </a>&ndash;&gt;-->
+<!--                        </p>-->
+  <!--End portfolio-->
+  <!-- Start Facts TUHIN -->
+  <!--End Facts-->
+   <!--Start Call To Action-->
+   <!--End Call To Action-->
+  <!--Start Team-->
+<!--  <section id="Team" class="section">-->
+<!--		<div class="container">-->
+<!--            <div class="row">-->
+<!--             <div class="title-box text-center">-->
+<!--                <h2 class="title">Team</h2>-->
+<!--             </div>-->
+<!--             </div>-->
+<!--            &lt;!&ndash; Team &ndash;&gt;-->
+<!--				<div class="team-items team-carousel">-->
+<!--                      &lt;!&ndash; Team Member #1 &ndash;&gt;-->
+<!--                      <div class="item">-->
+<!--                          <img src="{% static 'images/team/team1.jpg' %}" alt=""  />-->
+<!--                          <h4>Bhawna Aganani</h4>-->
+<!--                          <h5>Director, GRC, Continuity, Crisis/DR 1210 - GLOBALSECURITY</h5>-->
+<!--                          <p> Few words on her achievement, work accomplish, experience and rewards </p>-->
+
+<!--                          <div class="socials">-->
+<!--                              <ul>-->
+<!--                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
+<!--                              </ul>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      &lt;!&ndash; End Member &ndash;&gt;-->
+<!--                      &lt;!&ndash; Team Member #2 &ndash;&gt;-->
+<!--                      <div class="item">-->
+<!--                          <img src="{% static 'images/team/team2.jpg' %}" alt=""  />-->
+<!--                          <h4>Ritu Jagtap</h4>-->
+<!--                          <h5>Sr. Manager, Enterprise Risk Governance 1210 - GLOBALSECURITY</h5>-->
+<!--                          <p>Few words on her achievement, work accomplish, experience and rewards </p>-->
+<!--                          <div class="socials">-->
+<!--                              <ul>-->
+<!--                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
+<!--                              </ul>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      &lt;!&ndash; End Member &ndash;&gt;-->
+<!--                      &lt;!&ndash; Team Member #3 &ndash;&gt;-->
+<!--                      <div class="item">-->
+<!--                          <img src="{% static 'images/team/team3.jpg' %}" alt=""  />-->
+<!--                          <h4>Thapak Dinesh</h4>-->
+<!--                          <h5>Manager, Analytics</h5>-->
+<!--                          <p> Few words on his achievement, work accomplish, experience and rewards</p>-->
+<!--                          <div class="socials">-->
+<!--                              <ul>-->
+<!--                               <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--                               <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--                               <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--                               <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
+<!--                              </ul>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--				</div>&lt;!&ndash; End Team &ndash;&gt;-->
+<!--			</div>&lt;!&ndash; End Content &ndash;&gt;-->
+<!--  </section>&lt;!&ndash;Start Contact&ndash;&gt;-->
+<!--<body class="bg-light">-->
+<!--    <div class="container">-->
+<!--        <div class="row mt-5">-->
+<!--            <div class="col-md-5 offset-md-2">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-header shadow-sm bg-white">-->
+<!--                        <h1 class="display-5 text-info">-->
+<!--                            <i class="fas fa-check-double"></i> enter the Keywords</h1>-->
+<!--                    </div>-->
+<!--                    <div class="card-body">-->
+<!--                        <ul class="list-group">-->
+<!--                            <li class="list-group-item">-->
+<!--                                <form action="{% url 'insert_keyword_item' %}" method="post" autocomplete="off">-->
+<!--                                    {% csrf_token %}-->
+<!--                                    <div class="input-group">-->
+<!--                                        <input type="text" class="form-control" name="keywords">-->
+<!--                                        <div class="input-group-append text-info">-->
+<!--                                            <span class="input-group-text bg-white py-0">-->
+<!--                                                <button type="submit" class="btn btn-sm text-info">-->
+<!--                                                    <i class="fa fa-plus-circle fa-lg"></i>-->
+<!--                                                </button>-->
+<!--                                            </span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </form>-->
+<!--                            </li>-->
+<!--                            {% for keyword in keyword_list %}-->
+<!--                            <li class="list-group-item">{{keyword.keywords}}-->
+<!--                                <form action="{% url 'delete_keyword_item' keyword.id %}" method="post" class="float-right d-inline">-->
+<!--                                    {% csrf_token %}-->
+<!--                                    <button type="submit" class="btn">-->
+<!--                                        <i class="far fa-trash-alt fa-lg text-danger float-right"></i>-->
+<!--                                    </button>-->
+<!--                                </form>-->
+<!--                            </li>-->
+<!--                            {% empty %}-->
+<!--                            <li class="list-group-item">-->
+<!--                                <span class="font-italic">No keyword found.</span>-->
+<!--                            </li>-->
+<!--                            {% endfor %}-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+<!--        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"-->
+<!--        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+<!--        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--</body>-->
+<!--                                                          <h7 style="color:white"> Select the data Dictionary A </h7>-->
+<!--                                                         <div class ="form-group">-->
+<!--&lt;!&ndash;                                                                <label> Note File </label>&ndash;&gt;-->
+<!--                                                                <p> <input type= "file" name = "notesfile" placeholder="Report Attachment" class = "form-control"></p>-->
+<!--&lt;!&ndash;                                                                <input type= file required name = "notesfile" class = "form-control">&ndash;&gt;-->
+<!--                                                                 <p><input type = "submit" value = "Upload" /></p>-->
+<!--                                                            </div>-->
+<!--                                                                <form method = "post" action="read_file" enctype="multipart/form-data">-->
+<!--                                                             <a href="{{file.notesfile.url}}"> </a>-->
+<!--                                                               </form>-->
+<!--                                                             <a href="{% url 'read_file' %}" class="btn btn-info">-->
+<!--                                                                <i class="fa fa-link"></i>-->
+<!--                                                                 <b>Add File to the list: </b>-->
+<!--                                                                </a>-->
+<!--                                                             {% if file.notesfile % }-->
+
+                                                             <!--&lt;!&ndash;                                                             <li> <h4 style ="color:yellow;">Hello, {{user.username}}</h4></li>&ndash;&gt;-->
+<!--                                                             {% for message in messages %}-->
+<!--                                                             <h5 style ="color:red;">-->
+<!--                                                                 {{message}}-->
+<!--                                                             </h5>-->
+<!--                                                             {% endfor %}-->
+
+<!--                                                         <h7 style="color:white"> Select the data Dictionary B </h7>-->
+<!--                                                         <div class ="form-group">-->
+<!--&lt;!&ndash;                                                                <label> Note File </label>&ndash;&gt;-->
+<!--                                                                <p> <input type= "file" name = "notesfile" placeholder="Report Attachment" class = "form-control"></p>-->
+<!--&lt;!&ndash;                                                                <input type= file required name = "notesfile" class = "form-control">&ndash;&gt;-->
+<!--                                                                 <p><input type = "submit" value = "Upload" /></p>-->
+<!--                                                            </div>-->

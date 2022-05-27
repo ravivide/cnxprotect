@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Indexing report</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./vanillaSelectBox.css">
+    <!-- internal css -->
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+        }
+        .darkRed {
+            color: darkred;
+        }
+
+        .darkBlue {
+            color: darkblue;
+        }
+
+        .navbar {
+            position: relative;
+            border: 1px solid #080808;
+            background-color: #222;
+            background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+            background-repeat: repeat-x;
+            border-radius: 4px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-brand {
+            float: left;
+            padding: 14px 15px;
+            font-size: 18px;
+            line-height: 20px;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        .navbar-links {
+            font-size: 14px;
+            line-height: 20px;
+            position: relative;
+            margin: 0;
+        }
+
+            .navbar-links li {
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .navbar-links li {
+                display: inline-block;
+                min-width: 120px;
+                text-align: center;
+                margin-top: 15px;
+            }
+
+                .navbar-links li.active {
+                    background-image: #080808;
+                    background: #080808;
+                    color: #fff;
+                    height: 100%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    margin: 0;
+                }
+
+        a {
+            color: #9d9d9d;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            .navbar-brand {
+                width: 100%;
+            }
+
+            .navbar-links {
+                padding-left: 0;
+            }
+
+            button.demo {
+                margin-right: 100% !important;
+            }
+        }
+
+        #container {
+            padding-top: 30px;
+            padding-left: 50px;
+            width: 90%;
+            font-size: 14px;
+        }
+
+        .demo-zone {
+            display: block;
+            width: 100%;
+            min-height: 200px;
+        }
+
+        .mini-demo-zone {
+            display: block;
+            width: 100%;
+            min-height: 100px;
+        }
+
+        .btns-active, .btns-inactive {
+            margin-top: 20px;
+        }
+
+        label {
+            display: inline-block;
+            min-width: 220px;
+            width: 220px;
+        }
+
+        button.demo,a.demo {
+            margin-right: 0;
+            margin-left: 4px;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border-radius: 4px;
+            z-index: 1;
+            color: #333;
+            background: white;
+            background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+            border: 1px solid #ccc !important;
+            color: #333;
+            line-height: 20px;
+            font-size: 14px;
+            padding: 4px 12px;
+            margin-bottom: 2px;
+        }
+
+            button.demo:hover {
+                background-image: linear-gradient(to top,#fff 0,#e0e0e0 100%);
+            }
+
+        .presentation {
+            background: #eee;
+            color: #2e44b9;
+            border: 1px solid grey;
+            border-radius: 8px;
+            line-height: 20px;
+            padding: 8px;
+            margin-bottom: 40px;
+            width: 90%;
+            max-width: 800px;
+            font-size: 14px;
+        }
+    </style>
+    <style>
+    .blink {
+    animation: blinker 0.6s linear infinite;
+    color: orange;
+    font-size: 20px:
+    font-weight: bold;
+    font-family: sans-serif;
+    }
+    @keyframes blinker{
+    100% {
+    opacity:0;
+    }
+    }
+    .crop{
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+}
+$('#langOpt').multiselect({
+    columns: 1,
+    placeholder: 'Select Languages',
+    search: true,
+    selectAll: true
+});
+</style>
+    <style>
+table, th, td {
+  border:1px solid black;
+}
+.bg_page {
+  background-color: pink;
+  background-image:url("data:iCNXProtect_Utl\static\images\page-header.jpg;base64,%s");
+  CNXProtect_Utl\static\images\page-header.jpg
+<!--  C:\Users\RNALAB\OneDrive - Concentrix Corporation\CNX Protect Reports\CNX_Protect\-->
+  color: white;
+  border: 2px solid black;
+  margin: 25px;
+  padding: 25px;
+}
+h_1 {text-align: center;}
+p_1 {text-align: center;}
+div_1 {text-align: center;}
+
+</style>
+</head>
+<body>
+<!--    <nav class="navbar">-->
+<!--            <div class="navbar-header">-->
+<!--                <a class="navbar-brand" href="#">-->
+<!--                    Experiments with vanilla js-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <ul class="navbar-links">-->
+<!--                <li id="vanillaSelectBox" class="active"><a href="#vanillaSelectBox">vanillaSelectBox</a></li>-->
+<!--                <li id="blog"><a href="https://philippemarcmeyer.github.io#vanillajs">Github Blog</a></li>-->
+<!--                <li id="repos"><a href="https://github.com/PhilippeMarcMeyer/vanillaSelectBox">Github repos</a></li>-->
+<!--            </ul>-->
+<!--    </nav>-->
+<!--<div id="container">-->
+<!--	<p class="presentation">-->
+<!--	<b>vanillaSelectBox()</b> <br/>-->
+<!--    Here are some examples-->
+<!--	</p>-->
+
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+
+<html lang="en-gb" class="no-js">
+<!--$(document).ready(function() {-->
+<!--        $('#MSA_1').multiselect();-->
+<!--    });-->
+
+  <head>
+<!--    <meta charset="utf-8">-->
+<!--	<title>Contract Library</title>-->
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+    <link rel="{% static 'stylesheet" type="text/css' %}" href="css/animate.css" />
+    <link rel="stylesheet" href="{% static 'css/etlinefont.css' %}">
+    <link href="{% static 'css/style.css' %}" type="text/css"  rel="stylesheet"/>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<!--    <link rel="stylesheet" href="{% static 'todos/styles.css' %}">-->
+<!--  $( function() {-->
+<!--    $( "#datepicker" ).datepicker();-->
+<!--  } );-->
+  </head>
+
+
+<body  data-spy="scroll" data-target="#main-menu"><!--Start Page loader --><!--End Page loader --><!--Start Navigation-->
+		<header id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="fa fa-bars"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                            <!--Start Logo -->
+							<div class="logo-nav">
+								<a href="index.html">
+									<img src="{% static 'images/CNX_log.jpg' %}" alt="Company logo" />
+								</a>
+							</div>
+                            <!--End Logo -->
+							<div class="clear-toggle"></div>
+
+							<div id="main-menu" class="collapse scroll navbar-right">
+								<ul class="nav">
+                                  {% if request.user.is_staff %}
+									<li> <a href="#objective">Action </a> </li>
+                                 {% endif %}
+									<li> <a href="#contact">Contact</a> </li>
+                                    {% if user.is_authenticated %}
+                                    <li> <h4 style= "font-size:1vw;">
+                                            <h4 style= "font-size:1.25vw; color:yellow;">
+                                        Hello, {{user.username}}
+                                            </h4></h4></li>
+                                    <li> <a href="account/logout">Logout</a> </li>
+                                    {% else %}
+                                    <li> <a href="webpage/register">Register</a> </li>
+
+                                    <li> <a href="webpage/login">Login</a> </li>
+                                    {% endif %}
+								</ul>
+							</div><!-- end main-menu -->
+						</div>
+					</div>
+				</div>
+			</header>
+    <!--End Navigation-->
+        <!-- Start Slider  -->
+  {% if request.user.is_staff %}
+
+
+
+<section style="background-color: #06357A" >
+<!--    <div class="overlay" style="background-image: url(/CNXProtect_Utl/static/images/page-header.jpg)"></div>-->
+    <div class="overlay" style="background-color: #06357A"></div>
+       <div class="container"style="background-color: #06357A">
+ <section id="objective" class="section">
+     <div class="title-box text-center">
+         <h2 class="title" style="color:white">Indexing</h2></div>
+      <div class="content-tab-3">
+                        <h3 style ="color:white; text-transform: capitalize" data-toggle="tooltip" title="select for Batch file processing">Indexing Based Search</h3>
+<!--                        <a aria-expanded="true" href="#tab-content-5" data-toggle="tab">-->
+<!--                          <h6 style ="color:yellow;"><u>Click here </u> </h6>-->
+                            <div class="container">
+									<div class="tab-content">
+<!--                                        <div style ="color:white;">-->
+                                         <!--                                         </div>-->
+<!--                                        <div class="tab-pane" id="tab-content-5">-->
+                                            <div class="col-md-8">
+                                                <label style ="color:yellow;" > Select the following actions from the below drop-down button</label>
+                                                <div class="tab2-services-box">
+<!--                                                     <a href="{% url 'indexing_data2' %}" >-->
+                                                    <form action="{% url 'indexing_data2' %}">
+<!--                                                        <p style ="color:yellow;">Hold down the Ctrl (windows) or Command (Mac) button to select multiple options.</p>-->
+                                                      <label  style ="color:yellow;" > MSA/Process:
+                                                          <div id="mini-demo-zone" class="demo-zone">
+<!--        <div>optgroup support : </div>-->
+        <div>
+            <label for="dino-select">Choose Theme/Topic :</label>
+
+            <select id="dino-select" multiple size="2" >
+                <optgroup label="Penalties (client)">
+                    <option>Penalty</option>
+                    <option>fine </option>
+                    <option> R&P</option>
+                    <option>Penalty cap </option>
+                    <option> Non compliance penalty </option>
+                    <option> Reward & Penalty</option>
+                    <option> Reward and Penalty</option>
+                    <option>Penalize </option>
+                    <option>Penalties </option>
+                    <option>Discount </option>
+                </optgroup>
+                <optgroup label="Point of Contact">
+                    <option>Security SPOC </option>
+<!--                    <option> </option>-->
+                    <option> Point of Contact </option>
+                    <option> Security Point of Contact</option>
+                    <option> Security Personnel</option>
+                    <option> Dedicated Security</option>
+                    <option> DRI</option>
+                    <option> Risk Manager </option>
+                    <option> Security Professional</option>
+                    <option> Risk Professional</option>
+                    <option> Directly Responsible Individual</option>
+                </optgroup>
+                <optgroup label="Health Insurance">
+                    <option> HIPAA </option>
+                    <option> HiTech</option>
+                    <option> HiTech Certification </option>
+                    <option> HIPAA Certification</option>
+                    <option> Health Insurance Portability and Accountability Act</option>
+                    <option> Health Insurance Act</option>
+                    <option> Health Insurance Portability & Accountability Act</option>
+                    <option> PII</option>
+                    <option> Personal Information</option>
+                     <option> PHI</option>
+                </optgroup>
+                <optgroup label="Liability">
+                    <option> Liability</option>
+                    <option> Unlimited Liability</option>
+                    <option> Limited Liability</option>
+                    <option> No Liability</option>
+                    <option> accountability</option>
+                    <option> debt</option>
+                    <option> Limitation of Liability</option>
+                    <option> Un-limited Liability</option>
+                    <option> Financial Obligation</option>
+                    <option>Monetary Obligation</option>
+                    <option>Monetary Liability</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+
+                                                        <br>
+                                                        <label  style ="color:yellow;" > Theme/Topic:</label>
+                                                        <select name="Theme"  style ="color:red;"multiple="multiple">
+                                                        <option disabled="true" selected>-- Theme/Topic-- </option>
+                                                        <option >Penalties (client)</option>
+                                                        <option >Point of Contact</option>
+                                                        <option >Health Insurance</option>
+                                                        <option >Cyber Liability Insurance</option>
+                                                        <option >PCI</option>
+                                                        <option >Other Security Requirement</option>
+                                                        <option >Liability</option>
+                                                        <option >Fraud Prevention</option>
+                                                        <option >Penetration testing</option>
+                                                        <option >BCP/ DR</option>
+                                                        <option >GDPR</option>
+                                                        <option >ISO 27001 / ISO 22301</option>
+                                                        <option >Call Recording</option>
+                                                        <option >Background Checks required as per client requirement</option>
+                                                        <option >SSAE 18</option>
+                                                        <option >Recording Devices</option>
+                                                        <option >Client ID Management</option>
+                                                        <option >Record Management</option>
+                                                        <option >WAH allowed as per client contract</option>
+                                                        <option >Location Requirements</option>
+                                                        <option >Physical Security</option>
+                                                        <option >Social Engineering</option>
+                                                        <option >Admin Permission for Endpoint</option>
+                                                        <option >Personnel</option>
+                                                        </select>
+                                                        <h8 style ="color:white;">*Hold down the Ctrl (windows) or Command (Mac) button to select multiple options.</h8>
+                                                      <br>
+                                                        <br>
+
+                                                      <br><br>
+                                                      <input type="submit" value="Submit">
+                                                    </form>
+<br>
+                                                    <br>
+
+<!--                                                    <form method = 'post'>-->
+<!--                                                        {% csrf_token %}-->
+<!--                                                        {{form.as_p }}-->
+<!--                                                        <input type= 'sudmit' value='submit' >-->
+<!--                                                    </form>-->
+
+    <a href="{% url 'Contract_Library' %}">
+<!--    <h7 style ="color:white; ">-->
+         <img src="{% static 'images/realtimesearch.png' %}" alt="">
+<!--        Click here for Real-time search-->
+<!--    </h7>-->
+</a>
+    <a href="{% url 'login_page' %}">
+    <h7 style ="color:white;" >
+        <img src="{% static 'images/homepage1.png' %}" alt="">
+<!--        Back to Main page-->
+    </h7>
+<!--                                                        <img src="{% static 'images/slider/6.jpg' %}" alt="">-->
+ </a>
+                                                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                                                            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                                                            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                                                            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                                                            crossorigin="anonymous"></script>
+<!--&lt;!&ndash;						  </div>&ndash;&gt;-->
+                    </div>
+                                        </div>
+<!--                                        </div>-->
+                </div>
+          </div>
+<!--                        </a>-->
+      </div>
+<!--                        </a>-->
+                        <script>
+                        $(document).ready(function(){
+                        $('[data-toggle="tooltip"]').tooltip();
+                           });
+                        </script>
+  </section>
+       </div>
+  </div>
+    </section>
+
+	<div class="demo-zone" style="text-align:left;" id="demo-single">
+		<label>Choose a brand in list : </label><select id="brandsOne"></select>
+		<div class="btns-active">
+			<button class="demo" style="width:140px;" onClick="document.getElementById('brandsOneChoice').innerHTML=document.getElementById('brandsOne').value;">get select value</button>
+			<span id="brandsOneChoice"></span>
+		</div>
+		<div class="btns-inactive"  style="display:none">;
+			<button class="demo" onClick="init('brandsOne')">vanillaSelectBox()</button>
+		</div>
+    </div>
+
+	<div class="demo-zone" id="demo-multiple">
+<!--		<label>Choose several brands : </label>-->
+        <select id="brandsMulti" multiple size="3"></select>
+		<div class="btns-active">
+<!--			<button class="demo" onClick="empty('brandsMulti')">empty()</button>-->
+<!--			<button class="demo" onClick="setValues('brandsMulti',['Lamborghini','Land Rover'])">setValue(['Lamborghini','Land Rover'])</button>-->
+<!--			<button class="demo" onClick="setValues('brandsMulti','all')">setValue('all')</button>-->
+<!--			<button class="demo" onClick="setEnable('brandsMulti',false)">disable()</button>-->
+<!--			<button class="demo" onClick="setEnable('brandsMulti',true)">enable()</button>-->
+<!--			<button class="demo" onClick="doDestroy('brandsMulti')">destroy()</button>-->
+<!--			<br/><br/>-->
+			<button  class="demo" style="width:140px;" onClick="document.getElementById('brandsMultiChoice').innerHTML=(getValues('brandsMulti')).join(',');">
+<!--                get select values-->
+            </button>&nbsp;
+<span id="brandsMultiChoice"></span>
+		</div>
+		<div class="btns-inactive" style="display:none";>
+			<button class="demo" onClick="init('brandsMulti')">vanillaSelectBox()</button>
+		</div>
+    </div>
+    
+    <div class="demo-zone">
+        <label><b>All selected test : </b></label>
+        <select id="demoShort" multiple="" size="3" style="display: inline-block;">
+<!--            <option value="Abarth" selected="true">Abarth</option>-->
+<!--            <option value="Alfa Romeo"  selected="true">Alfa Romeo</option>-->
+<!--            <option value="Alpine" data-test="example" selected="true">Alpine</option>-->
+<!--            <option value="Aston Martin" selected="true">Aston Martin</option>-->
+<!--            <option value="Audi" selected="true">Audi</option>-->
+<!--            <option value="Bentley" selected="true">Bentley</option>-->
+<!--            <option value="BMW" selected="true">BMW</option>-->
+<!--            <option value="Cadillac" selected="true">Cadillac</option>-->
+<!--            <option value="Chevrolet" selected="true">Chevrolet</option>-->
+<!--            <option value="Citroën" selected="true">Citroën</option>-->
+<!--            <option value="Cupra" selected="true">Cupra</option>-->
+<!--            <option value="DACIA" selected="true">DACIA</option>-->
+        </select>
+
+    </div>
+    <div style="width:100%;">
+        <div class="demo-zone" id="demo-stay" style="width:40%;display:inline-block;">
+<!--            <label>Stay open : </label>-->
+            <br/><select id="brandsMultiStay" multiple size="3"></select>
+        </div>
+    
+        <div class="demo-zone" id="demo-stay-right" style="width:50%;text-align:right;display:inline-block;">
+<!--            <label>All countries : </label>-->
+            <br/><select id="allCountries" multiple size="4"></select>
+        </div>
+    </div>
+</div>
+
+<script src="./vanillaSelectBox.js?v0.75"></script>
+
+
+<section id="Works" class="section">
+				<!-- Filtering -->
+                  <div class="title-box text-center">
+                    <h2 class="title">Task: Searching Type</h2>
+                 </div>
+					<div class=" col-md-12 text-center">
+						<!-- Filtering -->
+						<ul class="filtering">
+							<li class="filter" data-filter="Real Time Search">Real Time search</li>
+							<li class="filter" data-filter="Job Scheduler">Job Scheduler</li>
+                            <li class="filter" data-filter="corporate">   <a href="https://console.cloud.google.com/storage/browser?project=sonic-provider-314305&_ga=2.259332110.563961295.1635480911-478963611.1621572459&prefix=">
+                                API's</a></li>
+<!--                            <a href="https://console.cloud.google.com/storage/browser?project=sonic-provider-314305&_ga=2.259332110.563961295.1635480911-478963611.1621572459&prefix=">-->
+						</ul>
+					</div>
+				<div class="work-main">
+					<!-- Work Grid -->
+					<ul class="work-grid">
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix corporate">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img1.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img1.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix fashion wedding">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img2.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img2.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix corporate">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img3.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                   <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img3.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix corporate">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img4.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img4.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix fashion wedding">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img5.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img5.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix event wedding">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img6.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img6.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<!--End Work Item -->
+						<!-- Work Item -->
+						<li class="work-item thumnail-img mix event">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img7.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img7.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+						<li class="work-item thumnail-img mix corporate">
+							<div class="work-image">
+                                <img src="{% static 'images/works/img8.jpg' %}" alt="thumbnail">
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{% url 'single_work' %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <a href="images/works/img8.jpg" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>Project Title</h4>
+                                     <p>Photography</p>
+                                 </div>
+                                 <!--End Caption-->
+                            </div> <!-- /.work-image-->
+						</li>
+                        					</ul>
+				</div>
+			</section>
+    {% endif %}
+<script>
+
+    let brands = ["Abarth", "Alfa Romeo", "Alpine", "Aston Martin", "Audi", "Bentley", "BMW", "Cadillac", "Chevrolet", "Citroën", "Cupra", "DACIA", "DS", "Ferrari", "Fiat", "Ford", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "KIA", "Lamborghini", "Land Rover", "Lexus", "Lotus", "Maserati", "Mazda", "McLaren", "Mercedes-Benz", "MINI", "Mitsubishi", "Nissan", "Opel", "Peugeot", "Porsche", "Renault", "Rolls-Royce", "SEAT", "Skoda", "smart", "Ssangyong", "Subaru", "Suzuki", "Tesla", "Toyota", "Volkswagen", "Volvo"];
+    let select1 = document.getElementById("brandsOne");
+    var option = document.createElement("option");
+    option.value = "";
+    option.text = "";
+    select1.appendChild(option);
+    for (var i = 0;
+     i < brands.length;
+     i++) {
+        var option = document.createElement("option");
+        option.value = brands[i];
+        option.text = brands[i];
+		if (i == 5) option.setAttribute("disabled", "");
+
+        if (i == 23) option.setAttribute("selected", true);
+        let colorClass = "";
+        if (i > 2)
+            option.classList.add(i % 2 == 0 ? "darkRed" : "darkBlue")
+        select1.appendChild(option);
+    }
+    let select2 = document.getElementById("brandsMulti");
+    for (var i = 0;
+     i < brands.length;
+     i++) {
+        var option = document.createElement("option");
+        option.value = brands[i];
+        option.text = brands[i];
+        if (i == 5) option.setAttribute("disabled", "");
+
+        if (i == 23) option.setAttribute("selected", true);
+        if (i >= 3 && i <= 7) option.setAttribute("selected", true);
+        select2.appendChild(option);
+    }
+	    let select3 = document.getElementById("brandsMultiStay");
+    for (var i = 0;
+     i < brands.length;
+     i++) {
+        var option = document.createElement("option");
+        option.value = brands[i];
+        option.text = brands[i];
+        if (i == 15) option.setAttribute("selected", true);
+        if (i >= 3 && i <= 7) option.setAttribute("selected", true);
+        select3.appendChild(option);
+    }
+    let selectBox = null;
+    let selectBox2 = null;
+	let selectBox3 = null;
+    function setEnable(id, isEnabled) {
+        if (id == "brandsOne" && selectBox != null) {
+            if (isEnabled) {
+                selectBox.enable();
+            } else {
+                selectBox.disable();
+            }
+
+        } else if (id == "brandsMulti" && selectBox2 != null) {
+            if (isEnabled) {
+                selectBox2.enable();
+            } else {
+                selectBox2.disable();
+            }
+        }
+    }
+    function empty(id) {
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.empty();
+        } else if (id == "brandsMulti" && selectBox2 != null) {
+            selectBox2.empty();
+        }
+    }
+    function doDestroy(id) {
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.destroy();
+            let zone = document.getElementById("demo-single");
+            buttons = zone.querySelector(".btns-active");
+            buttons.style.display = "none";
+            buttons = zone.querySelector(".btns-inactive");
+            buttons.style.display = "block";
+
+
+        } else if (id == "brandsMulti" && selectBox2 != null) {
+            selectBox2.destroy();
+            let zone = document.getElementById("demo-multiple");
+            buttons = zone.querySelector(".btns-active");
+            buttons.style.display = "none";
+            buttons = zone.querySelector(".btns-inactive");
+            buttons.style.display = "block";
+
+        }
+    }
+    function init(id) {
+        if (id == "brandsOne") {
+            selectBox = new vanillaSelectBox("#brandsOne", { "keepInlineStyles":true,"maxHeight": 200,"maxWidth":178,"minWidth":178, "search": true, "placeHolder": "Choose a brand..." });
+            let zone = document.getElementById("demo-single");
+            buttons = zone.querySelector(".btns-active");
+            buttons.style.display = "block";
+            buttons = zone.querySelector(".btns-inactive");
+            buttons.style.display = "none";
+        } else if (id == "brandsMulti") {
+        
+            selectBox2 = new vanillaSelectBox("#brandsMulti", {"disableSelectAll": true, "maxHeight": 200, "search": true ,"translations": { "all": "All", "items": "items","selectAll":"Check All","clearAll":"Clear All"}});
+            let zone = document.getElementById("demo-multiple");
+            buttons = zone.querySelector(".btns-active");
+            buttons.style.display = "block";
+            buttons = zone.querySelector(".btns-inactive");
+            buttons.style.display = "none";
+
+        }else if (id == "brandsMultiStay") {
+            selectBox3 = new vanillaSelectBox("#brandsMultiStay", { "maxHeight": 200, "search": true,"stayOpen":true });
+        }
+    }
+    function setValues(id, value) {
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.setValue(value);
+        } else if (id == "brandsMulti" && selectBox2 != null) {
+            selectBox2.setValue(value);
+        }
+    }
+    function getValues(id) {
+        let result = [];
+        let collection = document.querySelectorAll("#" + id + " option");
+        collection.forEach(function (x) {
+            if (x.selected) {
+                result.push(x.value);
+            }
+        });
+        return result;
+    }
+
+    function disableItems(id,value){
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.disableItems(value);
+        } 
+    }
+
+    function enableItems(id,value){
+        if (id == "brandsOne" && selectBox != null) {
+            selectBox.enableItems(value);
+        } 
+    }
+
+    init("brandsOne");
+    init("brandsMulti");
+	init("brandsMultiStay");
+    selectBoxTest = new vanillaSelectBox("#demoShort", {
+        "maxHeight": 200, 
+        "search": true ,
+        "translations": { "all": "All", "items": "items","selectAll":"Check All","clearAll":"Clear All","placeHolder": "Choose a brand..."}
+    });
+	
+let allCountries = [
+{"name": "Afghanistan", "code": "AF"},
+{"name": "Åland Islands", "code": "AX"},
+{"name": "Albania", "code": "AL"},
+{"name": "Algeria", "code": "DZ"},
+{"name": "American Samoa", "code": "AS"},
+{"name": "AndorrA", "code": "AD"},
+{"name": "Angola", "code": "AO"},
+{"name": "Anguilla", "code": "AI"},
+{"name": "Antarctica", "code": "AQ"},
+{"name": "Antigua and Barbuda", "code": "AG"},
+{"name": "Argentina", "code": "AR"},
+{"name": "Armenia", "code": "AM"},
+{"name": "Aruba", "code": "AW"},
+{"name": "Australia", "code": "AU"},
+{"name": "Austria", "code": "AT"},
+{"name": "Azerbaijan", "code": "AZ"},
+{"name": "Bahamas", "code": "BS"},
+{"name": "Bahrain", "code": "BH"},
+{"name": "Bangladesh", "code": "BD"},
+{"name": "Barbados", "code": "BB"},
+{"name": "Belarus", "code": "BY"},
+{"name": "Belgium", "code": "BE"},
+{"name": "Belize", "code": "BZ"},
+{"name": "Benin", "code": "BJ"},
+{"name": "Bermuda", "code": "BM"},
+{"name": "Bhutan", "code": "BT"},
+{"name": "Bolivia", "code": "BO"},
+{"name": "Bosnia and Herzegovina", "code": "BA"},
+{"name": "Botswana", "code": "BW"},
+{"name": "Bouvet Island", "code": "BV"},
+{"name": "Brazil", "code": "BR"},
+{"name": "British Indian Ocean Territory", "code": "IO"},
+{"name": "Brunei Darussalam", "code": "BN"},
+{"name": "Bulgaria", "code": "BG"},
+{"name": "Burkina Faso", "code": "BF"},
+{"name": "Burundi", "code": "BI"},
+{"name": "Cambodia", "code": "KH"},
+{"name": "Cameroon", "code": "CM"},
+{"name": "Canada", "code": "CA"},
+{"name": "Cape Verde", "code": "CV"},
+{"name": "Cayman Islands", "code": "KY"},
+{"name": "Central African Republic", "code": "CF"},
+{"name": "Chad", "code": "TD"},
+{"name": "Chile", "code": "CL"},
+{"name": "China", "code": "CN"},
+{"name": "Christmas Island", "code": "CX"},
+{"name": "Cocos (Keeling) Islands", "code": "CC"},
+{"name": "Colombia", "code": "CO"},
+{"name": "Comoros", "code": "KM"},
+{"name": "Congo", "code": "CG"},
+{"name": "Congo, The Democratic Republic of the", "code": "CD"},
+{"name": "Cook Islands", "code": "CK"},
+{"name": "Costa Rica", "code": "CR"},
+{"name": "Cote D\'Ivoire", "code": "CI"},
+{"name": "Croatia", "code": "HR"},
+{"name": "Cuba", "code": "CU"},
+{"name": "Cyprus", "code": "CY"},
+{"name": "Czech Republic", "code": "CZ"},
+{"name": "Denmark", "code": "DK"},
+{"name": "Djibouti", "code": "DJ"},
+{"name": "Dominica", "code": "DM"},
+{"name": "Dominican Republic", "code": "DO"},
+{"name": "Ecuador", "code": "EC"},
+{"name": "Egypt", "code": "EG"},
+{"name": "El Salvador", "code": "SV"},
+{"name": "Equatorial Guinea", "code": "GQ"},
+{"name": "Eritrea", "code": "ER"},
+{"name": "Estonia", "code": "EE"},
+{"name": "Ethiopia", "code": "ET"},
+{"name": "Falkland Islands (Malvinas)", "code": "FK"},
+{"name": "Faroe Islands", "code": "FO"},
+{"name": "Fiji", "code": "FJ"},
+{"name": "Finland", "code": "FI"},
+{"name": "France", "code": "FR"},
+{"name": "French Guiana", "code": "GF"},
+{"name": "French Polynesia", "code": "PF"},
+{"name": "French Southern Territories", "code": "TF"},
+{"name": "Gabon", "code": "GA"},
+{"name": "Gambia", "code": "GM"},
+{"name": "Georgia", "code": "GE"},
+{"name": "Germany", "code": "DE"},
+{"name": "Ghana", "code": "GH"},
+{"name": "Gibraltar", "code": "GI"},
+{"name": "Greece", "code": "GR"},
+{"name": "Greenland", "code": "GL"},
+{"name": "Grenada", "code": "GD"},
+{"name": "Guadeloupe", "code": "GP"},
+{"name": "Guam", "code": "GU"},
+{"name": "Guatemala", "code": "GT"},
+{"name": "Guernsey", "code": "GG"},
+{"name": "Guinea", "code": "GN"},
+{"name": "Guinea-Bissau", "code": "GW"},
+{"name": "Guyana", "code": "GY"},
+{"name": "Haiti", "code": "HT"},
+{"name": "Heard Island and Mcdonald Islands", "code": "HM"},
+{"name": "Holy See (Vatican City State)", "code": "VA"},
+{"name": "Honduras", "code": "HN"},
+{"name": "Hong Kong", "code": "HK"},
+{"name": "Hungary", "code": "HU"},
+{"name": "Iceland", "code": "IS"},
+{"name": "India", "code": "IN"},
+{"name": "Indonesia", "code": "ID"},
+{"name": "Iran, Islamic Republic Of", "code": "IR"},
+{"name": "Iraq", "code": "IQ"},
+{"name": "Ireland", "code": "IE"},
+{"name": "Isle of Man", "code": "IM"},
+{"name": "Israel", "code": "IL"},
+{"name": "Italy", "code": "IT"},
+{"name": "Jamaica", "code": "JM"},
+{"name": "Japan", "code": "JP"},
+{"name": "Jersey", "code": "JE"},
+{"name": "Jordan", "code": "JO"},
+{"name": "Kazakhstan", "code": "KZ"},
+{"name": "Kenya", "code": "KE"},
+{"name": "Kiribati", "code": "KI"},
+{"name": "Korea, Democratic People\'S Republic of", "code": "KP"},
+{"name": "Korea, Republic of", "code": "KR"},
+{"name": "Kuwait", "code": "KW"},
+{"name": "Kyrgyzstan", "code": "KG"},
+{"name": "Lao People\'S Democratic Republic", "code": "LA"},
+{"name": "Latvia", "code": "LV"},
+{"name": "Lebanon", "code": "LB"},
+{"name": "Lesotho", "code": "LS"},
+{"name": "Liberia", "code": "LR"},
+{"name": "Libyan Arab Jamahiriya", "code": "LY"},
+{"name": "Liechtenstein", "code": "LI"},
+{"name": "Lithuania", "code": "LT"},
+{"name": "Luxembourg", "code": "LU"},
+{"name": "Macao", "code": "MO"},
+{"name": "Macedonia, The Former Yugoslav Republic of", "code": "MK"},
+{"name": "Madagascar", "code": "MG"},
+{"name": "Malawi", "code": "MW"},
+{"name": "Malaysia", "code": "MY"},
+{"name": "Maldives", "code": "MV"},
+{"name": "Mali", "code": "ML"},
+{"name": "Malta", "code": "MT"},
+{"name": "Marshall Islands", "code": "MH"},
+{"name": "Martinique", "code": "MQ"},
+{"name": "Mauritania", "code": "MR"},
+{"name": "Mauritius", "code": "MU"},
+{"name": "Mayotte", "code": "YT"},
+{"name": "Mexico", "code": "MX"},
+{"name": "Micronesia, Federated States of", "code": "FM"},
+{"name": "Moldova, Republic of", "code": "MD"},
+{"name": "Monaco", "code": "MC"},
+{"name": "Mongolia", "code": "MN"},
+{"name": "Montserrat", "code": "MS"},
+{"name": "Morocco", "code": "MA"},
+{"name": "Mozambique", "code": "MZ"},
+{"name": "Myanmar", "code": "MM"},
+{"name": "Namibia", "code": "NA"},
+{"name": "Nauru", "code": "NR"},
+{"name": "Nepal", "code": "NP"},
+{"name": "Netherlands", "code": "NL"},
+{"name": "Netherlands Antilles", "code": "AN"},
+{"name": "New Caledonia", "code": "NC"},
+{"name": "New Zealand", "code": "NZ"},
+{"name": "Nicaragua", "code": "NI"},
+{"name": "Niger", "code": "NE"},
+{"name": "Nigeria", "code": "NG"},
+{"name": "Niue", "code": "NU"},
+{"name": "Norfolk Island", "code": "NF"},
+{"name": "Northern Mariana Islands", "code": "MP"},
+{"name": "Norway", "code": "NO"},
+{"name": "Oman", "code": "OM"},
+{"name": "Pakistan", "code": "PK"},
+{"name": "Palau", "code": "PW"},
+{"name": "Palestinian Territory, Occupied", "code": "PS"},
+{"name": "Panama", "code": "PA"},
+{"name": "Papua New Guinea", "code": "PG"},
+{"name": "Paraguay", "code": "PY"},
+{"name": "Peru", "code": "PE"},
+{"name": "Philippines", "code": "PH"},
+{"name": "Pitcairn", "code": "PN"},
+{"name": "Poland", "code": "PL"},
+{"name": "Portugal", "code": "PT"},
+{"name": "Puerto Rico", "code": "PR"},
+{"name": "Qatar", "code": "QA"},
+{"name": "Reunion", "code": "RE"},
+{"name": "Romania", "code": "RO"},
+{"name": "Russian Federation", "code": "RU"},
+{"name": "RWANDA", "code": "RW"},
+{"name": "Saint Helena", "code": "SH"},
+{"name": "Saint Kitts and Nevis", "code": "KN"},
+{"name": "Saint Lucia", "code": "LC"},
+{"name": "Saint Pierre and Miquelon", "code": "PM"},
+{"name": "Saint Vincent and the Grenadines", "code": "VC"},
+{"name": "Samoa", "code": "WS"},
+{"name": "San Marino", "code": "SM"},
+{"name": "Sao Tome and Principe", "code": "ST"},
+{"name": "Saudi Arabia", "code": "SA"},
+{"name": "Senegal", "code": "SN"},
+{"name": "Serbia and Montenegro", "code": "CS"},
+{"name": "Seychelles", "code": "SC"},
+{"name": "Sierra Leone", "code": "SL"},
+{"name": "Singapore", "code": "SG"},
+{"name": "Slovakia", "code": "SK"},
+{"name": "Slovenia", "code": "SI"},
+{"name": "Solomon Islands", "code": "SB"},
+{"name": "Somalia", "code": "SO"},
+{"name": "South Africa", "code": "ZA"},
+{"name": "South Georgia and the South Sandwich Islands", "code": "GS"},
+{"name": "Spain", "code": "ES"},
+{"name": "Sri Lanka", "code": "LK"},
+{"name": "Sudan", "code": "SD"},
+{"name": "Suriname", "code": "SR"},
+{"name": "Svalbard and Jan Mayen", "code": "SJ"},
+{"name": "Swaziland", "code": "SZ"},
+{"name": "Sweden", "code": "SE"},
+{"name": "Switzerland", "code": "CH"},
+{"name": "Syrian Arab Republic", "code": "SY"},
+{"name": "Taiwan, Province of China", "code": "TW"},
+{"name": "Tajikistan", "code": "TJ"},
+{"name": "Tanzania, United Republic of", "code": "TZ"},
+{"name": "Thailand", "code": "TH"},
+{"name": "Timor-Leste", "code": "TL"},
+{"name": "Togo", "code": "TG"},
+{"name": "Tokelau", "code": "TK"},
+{"name": "Tonga", "code": "TO"},
+{"name": "Trinidad and Tobago", "code": "TT"},
+{"name": "Tunisia", "code": "TN"},
+{"name": "Turkey", "code": "TR"},
+{"name": "Turkmenistan", "code": "TM"},
+{"name": "Turks and Caicos Islands", "code": "TC"},
+{"name": "Tuvalu", "code": "TV"},
+{"name": "Uganda", "code": "UG"},
+{"name": "Ukraine", "code": "UA"},
+{"name": "United Arab Emirates", "code": "AE"},
+{"name": "United Kingdom", "code": "GB"},
+{"name": "United States", "code": "US"},
+{"name": "United States Minor Outlying Islands", "code": "UM"},
+{"name": "Uruguay", "code": "UY"},
+{"name": "Uzbekistan", "code": "UZ"},
+{"name": "Vanuatu", "code": "VU"},
+{"name": "Venezuela", "code": "VE"},
+{"name": "Viet Nam", "code": "VN"},
+{"name": "Virgin Islands, British", "code": "VG"},
+{"name": "Virgin Islands, U.S.", "code": "VI"},
+{"name": "Wallis and Futuna", "code": "WF"},
+{"name": "Western Sahara", "code": "EH"},
+{"name": "Yemen", "code": "YE"},
+{"name": "Zambia", "code": "ZM"},
+{"name": "Zimbabwe", "code": "ZW"}
+];
+
+let selectCountries = document.getElementById("allCountries");
+for (var i = 0;i < allCountries.length;i++) {
+    var option = document.createElement("option");
+    option.value = allCountries[i].code;
+    option.text = allCountries[i].name;
+    selectCountries.appendChild(option);
+}
+let selectBox4 = new vanillaSelectBox("#allCountries", { "maxHeight": 200, "search": true,"stayOpen":true,translations: { "all": "All", "items": "Countries" } });
+let selecDino = new vanillaSelectBox("#dino-select",{ "maxHeight": 400,"search": true,translations: { "all": "All", "items": "Themes" } });
+        </script>
+</body>
+</html>
