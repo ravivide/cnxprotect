@@ -31,9 +31,9 @@ DEBUG = False
 # ALLOWED_HOSTS = ['protectcnx.azurewebsites.net','djangowithdocker.azurewebsites.net','localhost']
 # CSRF_TRUSTED_ORIGINS = ['https://protectcnx.azurewebsites.net','https://djangowithdocker.azurewebsites.net','http://localhost:8081/']
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['cnxdeployment.azurewebsites.net']
+ALLOWED_HOSTS = ['cnxprotectdemo.azurewebsites.net']
 
-CSRF_TRUSTED_ORIGINS = ['https://cnxdeployment.azurewebsites.net', 'https://djangowithdocker.azurewebsites.net',
+CSRF_TRUSTED_ORIGINS = ['https://cnxprotectdemo.azurewebsites.net', 'https://djangowithdocker.azurewebsites.net',
                         'http://localhost:8081/']
 # Application definition
 INSTALLED_APPS = [
