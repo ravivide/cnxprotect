@@ -24,13 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-4y#ro1fpk^_w8wy9f@-a=k9#&6@d&1@m#an(9-vd4#y6&)xe0y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # https://protectcnx.azurewebsites.net
 
 # ALLOWED_HOSTS = ['protectcnx.azurewebsites.net','djangowithdocker.azurewebsites.net','localhost']
 # CSRF_TRUSTED_ORIGINS = ['https://protectcnx.azurewebsites.net','https://djangowithdocker.azurewebsites.net','http://localhost:8081/']
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['cnxdeployment.azurewebsites.net']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cnxdeployment.azurewebsites.net']
 
 CSRF_TRUSTED_ORIGINS = ['https://cnxdeployment.azurewebsites.net', 'https://djangowithdocker.azurewebsites.net',
                         'http://localhost:8081/']
@@ -58,7 +58,7 @@ INSTALLED_APPS = [
 # ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -191,4 +191,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
