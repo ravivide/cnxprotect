@@ -8,8 +8,7 @@ requests==2.27.1
 python-docx==0.8.11
 psycopg2==2.9.3
 pypdf4==1.27.0
-pywin32
-psycopg2-binary
+pypiwin32>=219
 easygui==0.98.3
 numpy==1.22.3
 nltk==3.7
